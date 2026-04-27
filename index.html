@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotace a kalkulačky</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #0b0f0c;
+    color: white;
+    padding: 15px;
+}
+
+/* NADPIS */
+h2, h3 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* HOME BUTTON */
+.homeBtn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    background: #1c1f1d;
+    color: #4CAF50;
+    z-index: 1000;
+}
+
+/* GRID MENU */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* DLAŽDICE */
+.tile {
+    background: #151a17;
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 120px;
+}
+
+/* ROTACE větší */
+.tile.big {
+    grid-column: span 2;
+    height: 140px;
+    font-size: 24px;
+}
+
+/* FORM */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    font-size: 18px;
+    background: #1c1f1d;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 6px;
+}
+
+button.action {
+    width: 100%;
+    padding: 18px;
+    margin: 10px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #4CAF50;
+    color: white;
+}
+
+/* VÝSTUP */
+.card {
+    background: #151a17;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* HIDDEN */
+.hidden {
+    display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HOME BUTTON -->
+<button class="homeBtn hidden" onclick="goHome()" id="homeBtn">🏠</button>
+
+<!-- ================= HOME ================= -->
+<div id="home">
+<h2>Rotace a kalkulačky</h2>
+
+<div class="grid">
+    <div class="tile big" onclick="openModule('rotace')">Rotace</div>
+
+    <div class="tile" onclick="openModule('frezky')">Frézky</div>
+    <div class="tile" onclick="openModule('brusy')">Brusy</div>
+
+    <div class="tile" onclick="openModule('pracka')">Pračka</div>
+</div>
+
+</div>
+
+<!-- ================= BRUSY ================= -->
+<div id="brusy" class="hidden">
+
+<h3>Brusy</h3>
+
+<div class="grid">
+    <div class="tile" onclick="vyberStroj('TBKR01')">TBKR01</div>
+    <div class="tile" onclick="vyberStroj('TBKR07')">TBKR07</div>
+</div>
+
+<div id="brusApp" class="hidden">
+
+<h3 id="strojNazev"></h3>
+
+<label>Program:</label>
+<select id="program" onchange="uloz()"></select>
+
+<label>Hotovo kusů z dávky:</label>
+<input type="number" id="hotovoDavka" value="0" oninput="uloz()">
+
+<label>Celkem hotovo kusů:</label>
+<input type="number" id="celkemHotovo" value="0" oninput="uloz()">
+
+<label>Velikost dávky:</label>
+<input type="number" id="davka" value="32" oninput="uloz()">
+
+<button class="action" onclick="spocitej()">Spočítat</button>
+
+<div class="card" id="vystup"></div>
+
+</div>
+
+</div>
+
+<!-- ================= OSTATNÍ ================= -->
+<div id="rotace" class="hidden"><h3>Rotace (zatím prázdné)</h3></div>
+<div id="frezky" class="hidden"><h3>Frézky (zatím prázdné)</h3></div>
+<div id="pracka" class="hidden"><h3>Pračka (zatím prázdné)</h3></div>
+
+<script>
+
+// NAVIGACE
+function openModule(name) {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById(name).classList.remove("hidden");
+    document.getElementById("homeBtn").classList.remove("hidden");
+}
+
+function goHome() {
+    document.getElementById("home").classList.remove("hidden");
+    document.getElementById("homeBtn").classList.add("hidden");
+
+    ["brusy","rotace","frezky","pracka"].forEach(m =>
+        document.getElementById(m).classList.add("hidden")
+    );
+}
+
+// DATA
+let stroje = {
+    TBKR01: {
+        AD: { casKus: 65, interval: 55, casO: 300 },
+        "AD volné": { casKus: 65, interval: 55, casO: 300 },
+        AE: { casKus: 59, interval: 52, casO: 310 },
+        "AE volné": { casKus: 59, interval: 52, casO: 310 },
+        AH: { casKus: 70, interval: 50, casO: 360 }
+    },
+    TBKR07: {
+        AD: { casKus: 65, interval: 55, casO: 300 },
+        "AD volné": { casKus: 65, interval: 55, casO: 300 },
+        AE: { casKus: 59, interval: 52, casO: 310 },
+        "AE volné": { casKus: 59, interval: 52, casO: 310 },
+        AH: { casKus: 70, interval: 50, casO: 360 }
+    }
+};
+
+let aktualniStroj = null;
+
+// BRUSY
+function vyberStroj(stroj) {
+    aktualniStroj = stroj;
+    document.getElementById("brusApp").classList.remove("hidden");
+    document.getElementById("strojNazev").innerText = "Stroj: " + stroj;
+
+    let sel = document.getElementById("program");
+    sel.innerHTML = "";
+
+    for (let p in stroje[stroj]) {
+        let opt = document.createElement("option");
+        opt.value = p;
+        opt.innerText = p;
+        sel.appendChild(opt);
+    }
+
+    uloz();
+}
+
+// SMĚNA
+function konecSmeny() {
+    let now = new Date();
+    let h = now.getHours();
+    let d = now.getDay();
+
+    let end = new Date(now);
+
+    if (d === 0) {
+        if (h >= 6 && h < 14) end.setHours(14,0,0,0);
+        else end.setHours(6,0,0,0), end.setDate(end.getDate()+1);
+    } else {
+        if (h >= 6 && h < 18) end.setHours(18,0,0,0);
+        else end.setHours(6,0,0,0), end.setDate(end.getDate()+1);
+    }
+
+    return end;
+}
+
+// VÝPOČET
+function spocitej() {
+
+    let p = document.getElementById("program").value;
+    let n = stroje[aktualniStroj][p];
+
+    let hotovoDavka = parseInt(document.getElementById("hotovoDavka").value) || 0;
+    let celkemHotovo = parseInt(document.getElementById("celkemHotovo").value) || 0;
+    let davka = parseInt(document.getElementById("davka").value) || 32;
+
+    let now = new Date();
+    let end = konecSmeny();
+    let time = (end - now) / 1000;
+
+    let ks = 0;
+    let doO = n.interval;
+
+    while (time > 0) {
+
+        if (doO <= 0) {
+            time -= n.casO;
+            doO = n.interval;
+            continue;
+        }
+
+        time -= n.casKus;
+        if (time < 0) break;
+
+        ks++;
+        doO--;
+    }
+
+    let total = ks;
+    let finalTotal = celkemHotovo + total;
+
+    let all = hotovoDavka + total;
+
+    let d = Math.floor(all / davka);
+    let r = all % davka;
+
+    document.getElementById("vystup").innerHTML =
+        "<b>Stroj:</b> " + aktualniStroj + "<br>" +
+        "<b>Program:</b> " + p + "<br><br>" +
+        "<b>Vyrobíš:</b> " + total + " ks<br><br>" +
+        "<b>Dávky:</b> " + d + " + " + r + " ks<br><br>" +
+        "<b>Celkem:</b> " + finalTotal + " ks";
+}
+
+// ULOŽENÍ
+function uloz() {
+    let data = {
+        stroj: aktualniStroj,
+        program: document.getElementById("program").value,
+        hotovoDavka: document.getElementById("hotovoDavka").value,
+        celkemHotovo: document.getElementById("celkemHotovo").value,
+        davka: document.getElementById("davka").value
+    };
+    localStorage.setItem("tbkr_data", JSON.stringify(data));
+}
+
+window.onload = function() {
+    let data = JSON.parse(localStorage.getItem("tbkr_data"));
+
+    if (data && data.stroj) {
+        openModule('brusy');
+        vyberStroj(data.stroj);
+
+        setTimeout(() => {
+            document.getElementById("program").value = data.program || "AD";
+            document.getElementById("hotovoDavka").value = data.hotovoDavka || 0;
+            document.getElementById("celkemHotovo").value = data.celkemHotovo || 0;
+            document.getElementById("davka").value = data.davka || 32;
+        }, 100);
+    }
+};
+</script>
+
+</body>
+</html>
