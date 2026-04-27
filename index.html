@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- FAVICON ŠKODA -->
+<!-- FAVICON (ŠKODA LOGO - spolehlivější PNG) -->
 <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Skoda_Auto_logo_2022.svg/64px-Skoda_Auto_logo_2022.svg.png">
 
 <title>Rotace a kalkulačky</title>
@@ -58,7 +58,6 @@ h2, h3 {
     height: 120px;
 }
 
-/* ROTACE větší */
 .tile.big {
     grid-column: span 2;
     height: 140px;
@@ -97,6 +96,15 @@ button.action {
     font-size: 20px;
 }
 
+/* VERZE */
+.version {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
 /* HIDDEN */
 .hidden {
     display: none;
@@ -109,6 +117,9 @@ button.action {
 
 <!-- HOME BUTTON -->
 <button class="homeBtn hidden" onclick="goHome()" id="homeBtn">🏠</button>
+
+<!-- VERSION -->
+<div class="version">Martin Špadrna v0.7</div>
 
 <!-- ================= HOME ================= -->
 <div id="home">
@@ -300,21 +311,20 @@ function uloz() {
     localStorage.setItem("tbkr_data", JSON.stringify(data));
 }
 
+// START → vždy HOME
 window.onload = function() {
+    document.getElementById("home").classList.remove("hidden");
+
     let data = JSON.parse(localStorage.getItem("tbkr_data"));
 
     if (data && data.stroj) {
-        openModule('brusy');
-        vyberStroj(data.stroj);
-
+        // jen předvyplní, ale NEOTEVÍRÁ BRUSY
         setTimeout(() => {
-            document.getElementById("program").value = data.program || "AD";
-            document.getElementById("hotovoDavka").value = data.hotovoDavka || 0;
-            document.getElementById("celkemHotovo").value = data.celkemHotovo || 0;
-            document.getElementById("davka").value = data.davka || 32;
+            aktualniStroj = data.stroj;
         }, 100);
     }
 };
+
 </script>
 
 </body>
