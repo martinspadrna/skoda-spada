@@ -17,15 +17,40 @@ body{
  padding:15px;
 }
 
-h2,h3{text-align:center;color:#4CAF50;}
+h1{
+ text-align:center;
+ margin:8px 0 0 0;
+ font-size:24px;
+ color:#4CAF50;
+}
+
+#shiftTime{
+ text-align:center;
+ font-size:14px;
+ color:#777;
+ margin-top:4px;
+}
+
+.version{
+ position:fixed;
+ bottom:6px;
+ right:10px;
+ font-size:12px;
+ color:#777;
+}
 
 .homeBtn{
- position:fixed;top:10px;right:10px;
- width:45px;height:45px;
- border:none;border-radius:10px;
+ position:fixed;
+ top:10px;
+ right:10px;
+ width:45px;
+ height:45px;
+ border:none;
+ border-radius:10px;
  background:#1c1f1d;
  color:#4CAF50;
  font-size:20px;
+ z-index:999;
 }
 
 .page{display:none;}
@@ -35,6 +60,7 @@ h2,h3{text-align:center;color:#4CAF50;}
  display:grid;
  grid-template-columns:1fr 1fr;
  gap:12px;
+ margin-top:15px;
 }
 
 .tile{
@@ -68,203 +94,262 @@ button{
  border-radius:10px;
 }
 
+input{
+ width:100%;
+ padding:16px;
+ margin-top:6px;
+ margin-bottom:12px;
+ border-radius:10px;
+ border:2px solid #4CAF50;
+ background:#0f1411;
+ color:white;
+ font-size:18px;
+ box-sizing:border-box;
+}
+
+label{
+ display:block;
+ margin-top:8px;
+ color:#ccc;
+ font-size:14px;
+}
+
+/* BRUSY */
 .bgrid{
  display:grid;
  grid-template-columns:1fr 1fr;
  gap:10px;
 }
 
+.indexGrid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:10px;
+}
+
+.freeWrap{
+ display:flex;
+ gap:10px;
+}
+
+.freeWrap .bbtn{flex:1;}
+
 .bbtn{
  padding:14px;
- border:2px solid #4CAF50;
- background:#1c1f1d;
  border-radius:10px;
  text-align:center;
+ cursor:pointer;
+ min-height:48px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ border:2px solid #4CAF50;
+ background:#1c1f1d;
+ user-select:none;
 }
 
-.version{
- position:fixed;
- bottom:6px;
- right:10px;
- font-size:12px;
- color:#777;
+.ad{background:#1a3d5c;}
+.ae{background:#1f4d2f;}
+.ah{background:#6b3f14;}
+.adv{background:#2a2a2a;}
+.aev{background:#2a3b2f;}
+
+.activeMachine{
+ outline:3px solid #7CFF7C;
+}
+
+.activeIndex{
+ outline:3px solid #ffffff;
 }
 </style>
-
 </head>
 
 <body>
 
 <button class="homeBtn" onclick="show('home')">🏠</button>
 
-<div class="version">v0.21 | Martin Špadrna</div>
+<h1>Rotace a kalkulačky</h1>
+<div id="shiftTime">Načítám směnu...</div>
+<div class="version">v0.44 | Martin Špadrna</div>
 
 <!-- HOME -->
 <div id="home" class="page active">
-
-<h2>Rotace a kalkulačky</h2>
-
 <div class="grid">
  <div class="tile big" onclick="show('rotace')">ROTACE</div>
  <div class="tile" onclick="show('frezky')">Frézky</div>
  <div class="tile" onclick="show('brusy')">Brusy</div>
  <div class="tile" onclick="show('pracka')">Pračka</div>
 </div>
-
 </div>
 
 <!-- ROTACE -->
 <div id="rotace" class="page">
-<h3>Rotace</h3>
+<h3 style="text-align:center;">Rotace</h3>
 <p style="text-align:center;">vyšší dívčí, ale snad bude</p>
+</div>
+
+<!-- FREZKY -->
+<div id="frezky" class="page">
+<h3 style="text-align:center;">Frézky</h3>
+
+<label>Hotovo kusů:</label>
+<input id="f_kusy" type="number">
+
+<button onclick="calcF()">Spočítej kolik ještě stihnu</button>
+<div class="card" id="outF"></div>
 </div>
 
 <!-- BRUSY -->
 <div id="brusy" class="page">
-
-<h3>Brusy</h3>
-
-<div class="bgrid">
- <div class="bbtn" onclick="setMachine('TBKR01')">TBKR01</div>
- <div class="bbtn" onclick="setMachine('TBKR07')">TBKR07</div>
-</div>
-
-<p id="machineLabel"></p>
+<h3 style="text-align:center;">Brusy</h3>
 
 <div class="bgrid">
- <div class="bbtn" onclick="setProg('AD')">AD</div>
- <div class="bbtn" onclick="setProg('AE')">AE</div>
- <div class="bbtn" onclick="setProg('AH')">AH</div>
- <div class="bbtn" onclick="setProg('ADV')">AD volné</div>
+ <div class="bbtn" id="m_TBKR01" onclick="setMachine('TBKR01')">TBKR01</div>
+ <div class="bbtn" id="m_TBKR07" onclick="setMachine('TBKR07')">TBKR07</div>
 </div>
 
-<p id="progLabel"></p>
+<div class="indexGrid">
+ <div class="bbtn ad" id="p_AD" onclick="setProg('AD')">AD</div>
+ <div class="bbtn ae" id="p_AE" onclick="setProg('AE')">AE</div>
+ <div class="bbtn ah" id="p_AH" onclick="setProg('AH')">AH</div>
 
-<label>Kusů do orovnávání:</label>
+ <div class="freeWrap">
+  <div class="bbtn adv" id="p_ADV" onclick="setProg('ADV')">AD volné</div>
+  <div class="bbtn aev" id="p_AEV" onclick="setProg('AEV')">AE volné</div>
+ </div>
+</div>
+
+<label>Hotových kusů v dávce:</label>
+<input id="davka" type="number">
+
+<label>Kusů do orovnání:</label>
 <input id="orovnani" type="number">
 
-<label>Celkem hotovo:</label>
+<label>Celkem zatím nabroušeno:</label>
 <input id="celkem" type="number">
 
 <button onclick="calcBrusy()">Spočítej kolik ještě stihnu</button>
 
 <div class="card" id="outB"></div>
-
-</div>
-
-<!-- FREZKY -->
-<div id="frezky" class="page">
-
-<h3>Frézky</h3>
-
-<input id="f_kusy" type="number" placeholder="hotovo kusů">
-
-<button onclick="calcF()">Spočítej kolik ještě stihnu</button>
-
-<div class="card" id="outF"></div>
-
 </div>
 
 <!-- PRAČKA -->
 <div id="pracka" class="page">
+<h3 style="text-align:center;">Pračka</h3>
 
-<h3>Pračka</h3>
+<label>Hotovo kusů:</label>
+<input id="p_kusy" type="number">
 
 <button onclick="calcP()">Spočítej kolik ještě stihnu</button>
-
 <div class="card" id="outP"></div>
-
 </div>
 
 <script>
 
-// NAV
+/* NAV */
 function show(id){
  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
  document.getElementById(id).classList.add("active");
 }
 
-// BRUSY
-const times={
- TBKR01:{AD:65,AE:59,AH:70,ADV:65},
- TBKR07:{AD:68,AE:61,AH:73,ADV:68}
-};
+/* SMĚNA */
+function getShiftEnd(now){
+ let d=new Date(now);
+ let day=d.getDay();
 
+ if(day===0 && d.getHours()>=6 && d.getHours()<14){
+  let e=new Date(d);
+  e.setHours(14,0,0,0);
+  return e;
+ }
+
+ if(d.getHours()>=6 && d.getHours()<18){
+  let e=new Date(d);
+  e.setHours(18,0,0,0);
+  return e;
+ }else{
+  let e=new Date(d);
+  if(d.getHours()>=18) e.setDate(e.getDate()+1);
+  e.setHours(6,0,0,0);
+  return e;
+ }
+}
+
+/* TIMER */
+function updateShift(){
+ let now=new Date();
+ let end=getShiftEnd(now);
+
+ let diff=end-now;
+ let h=Math.floor(diff/3600000);
+ let m=Math.floor((diff%3600000)/60000);
+
+ document.getElementById("shiftTime").innerText=
+ "Do konce směny zbývá "+h+" h "+m+" min";
+}
+setInterval(updateShift,10000);
+updateShift();
+
+/* FREZKY */
+function calcF(){
+ let sec=Math.max(0,(getShiftEnd(new Date())-new Date())/1000);
+ let ks=Math.floor(sec/60);
+
+ let hotovo=parseInt(document.getElementById("f_kusy").value)||0;
+
+ document.getElementById("outF").innerHTML=
+ "Do konce směny: "+ks+" ks<br>Celkem: "+(hotovo+ks);
+}
+
+/* PRAČKA */
+function calcP(){
+ let sec=Math.max(0,(getShiftEnd(new Date())-new Date())/1000);
+ let ks=Math.floor(sec/30);
+
+ let hotovo=parseInt(document.getElementById("p_kusy").value)||0;
+
+ document.getElementById("outP").innerHTML=
+ "Do konce směny: "+ks+" ks<br>Celkem: "+(hotovo+ks);
+}
+
+/* BRUSY */
 let machine="TBKR01";
 let prog="AD";
 
 function setMachine(m){
  machine=m;
- document.getElementById("machineLabel").innerText="Stroj: "+m;
+ updateUI();
 }
 
 function setProg(p){
  prog=p;
- document.getElementById("progLabel").innerText="Program: "+p;
+ updateUI();
 }
 
-// SMĚNA
-function endShift(){
- let d=new Date();
- let e=new Date(d);
+function updateUI(){
 
- if(d.getHours()>=6 && d.getHours()<18){
-  e.setHours(18,0,0,0);
- }else{
-  e.setHours(6,0,0,0);
-  e.setDate(e.getDate()+1);
- }
- return e;
+ document.querySelectorAll(".bbtn").forEach(b=>{
+  b.classList.remove("activeMachine","activeIndex");
+ });
+
+ let m=document.getElementById("m_"+machine);
+ if(m) m.classList.add("activeMachine");
+
+ let p=document.getElementById("p_"+prog);
+ if(p) p.classList.add("activeIndex");
 }
 
-// BRUSY
 function calcBrusy(){
-
- let sec=(endShift()-new Date())/1000;
- let ks=Math.floor(sec/times[machine][prog]);
+ let sec=Math.max(0,(getShiftEnd(new Date())-new Date())/1000);
+ let ks=Math.floor(sec/65);
 
  let celkem=parseInt(document.getElementById("celkem").value)||0;
 
- let total=celkem+ks;
-
- let batch=32;
-
- let d1=Math.floor(ks/batch);
- let d2=Math.floor(total/batch);
-
  document.getElementById("outB").innerHTML=
- "Do konce směny stihneš "+ks+" ks, tj. "+d1+" dávek<br>"+
- "Celkově budeš mít "+total+" ks, "+d2+" dávek";
+ "Do konce směny: "+ks+" ks<br>Celkem: "+(celkem+ks);
 }
 
-// FREZKY
-function calcF(){
-
- let sec=(endShift()-new Date())/1000;
- let ks=Math.floor(sec/60);
-
- let batch=32;
-
- let d=Math.floor(ks/batch);
- let kal=(ks/64).toFixed(2);
-
- document.getElementById("outF").innerHTML=
- "Do konce směny stihneš "+ks+" ks, tj. "+d+" dávek ("+kal+" kalírenských)";
-}
-
-// PRAČKA
-function calcP(){
-
- let sec=(endShift()-new Date())/1000;
- let ks=Math.floor(sec/30);
-
- let batch=32;
-
- let d=Math.floor(ks/batch);
-
- document.getElementById("outP").innerHTML=
- "Do konce směny stihneš "+ks+" ks, tj. "+d+" dávek";
-}
+updateUI();
 
 </script>
 
