@@ -578,9 +578,9 @@ function renderRotace() {
     renderMonth(app.selectedMonth);
   }
 
-  if (statsPanel) {
-    statsPanel.innerHTML = '<div class="card"><div class="sectionTitle">Statistiky</div><div class="smallText" style="margin-top:10px;">Tahle záložka je připravená pro přehledy podle jména, stroje i úklidu. Jakmile ji doplníme, půjde sem dát i filtr po roce.</div></div>';
-  }
+ if (statsPanel && !statsPanel.innerHTML.trim()) {
+  statsPanel.innerHTML = '...';
+}
 
   document.getElementById("adminBox").style.display = app.adminUnlocked ? "block" : "none";
 }
