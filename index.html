@@ -376,7 +376,7 @@ td.missingCell{
 <h1>Rotace a kalkulačky</h1>
 <div id="shiftTime">Načítám směnu...</div>
 <div class="version">
-  v0.61 | <span class="signature" id="signatureTap"></span>
+  v0.65 | <span class="signature" id="signatureTap"></span>
 </div>
 
 <!-- HOME -->
@@ -413,8 +413,24 @@ td.missingCell{
     <div id="monthsGrid" class="listGrid"></div>
     <div class="adminBox" id="adminBox">
       <div class="smallText">
-        Import Excelu: nahraj celý sešit .xlsx. Nové měsíce se přidají, existující se nemění.
+        Import Excelu: nahraj celý sešit .xlsx. Vyber měsíc, který chceš přepsat; ostatní měsíce se jen doplní, pokud chybí.
       </div>
+      <label for="overwriteMonth">Přepsat měsíc:</label>
+      <select id="overwriteMonth">
+        <option value="">— jen doplnit nové měsíce —</option>
+        <option value="1/26">1/26</option>
+        <option value="2/26">2/26</option>
+        <option value="3/26">3/26</option>
+        <option value="4/26">4/26</option>
+        <option value="5/26">5/26</option>
+        <option value="6/26">6/26</option>
+        <option value="7/26">7/26</option>
+        <option value="8/26">8/26</option>
+        <option value="9/26">9/26</option>
+        <option value="10/26">10/26</option>
+        <option value="11/26">11/26</option>
+        <option value="12/26">12/26</option>
+      </select>
       <input type="file" id="excelFile" accept=".xlsx,.xls">
       <button id="importBtn">Import Excelu</button>
     </div>
@@ -654,8 +670,8 @@ function calcBrusy() {
   const ks = Math.floor(sec / 65);
   const celkem = parseInt(document.getElementById("celkem").value) || 0;
   document.getElementById("outB").innerHTML =
-    "Do konce směny: " + ks + " ks<br>" +
-    "Celkem: " + (celkem + ks);
+    "Do konce směny ještě stihneš " + ks + " ks<br>" +
+    "Celkově budeš mít " + (celkem + ks) + " ks";
   saveRotationData();
 }
 
@@ -698,6 +714,19 @@ function normalizeShiftText(text) {
   return dedup.join(" ").trim();
 }
 
+
+function escapeRegExp(text) {
+  return String(text || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function cleanDateLabel(rawDate, shift) {
+  const date = String(rawDate || "").trim().replace(/\s+/g, " ");
+  const sh = String(shift || "").trim();
+  if (!date || !sh) return date;
+  const re = new RegExp("(?:\\s+" + escapeRegExp(sh) + ")+$");
+  return date.replace(re, "").trim();
+}
+
 function parseDateToken(token) {
   const m = /^(\d{1,2})\.(\d{1,2})\.\s*(.*)$/.exec(token || "");
   if (!m) return null;
@@ -729,6 +758,7 @@ function buildNameIndex(rotation) {
           map.get(name).push({
             monthKey,
             date: row.date,
+            dateLabel: cleanDateLabel(row.date, parsed.shift),
             shift: parsed.shift,
             machine,
             sortDate: parsed.sortDate
@@ -816,7 +846,7 @@ function renderPerson(name) {
   let html = "<div class='smallText'><b>" + escapeHtml(name) + "</b></div>";
   around.forEach(e => {
     html += "<div class='personLine'>" +
-      escapeHtml(e.date) + " " + escapeHtml(e.shift) + " // " + escapeHtml(e.machine) +
+      escapeHtml(e.dateLabel || e.date) + " " + escapeHtml(e.shift) + " // " + escapeHtml(e.machine) +
       "</div>";
   });
 
@@ -1007,31 +1037,33 @@ document.getElementById("importBtn").addEventListener("click", async () => {
     return;
   }
 
+  const overwriteMonth = document.getElementById("overwriteMonth")?.value || "";
   const buffer = await file.arrayBuffer();
   const wb = XLSX.read(buffer, { type: "array" });
   const imported = parseWorkbookFromSheetJS(wb);
 
   let added = 0;
-  let updatedEmpty = 0;
+  let overwritten = 0;
 
   Object.entries(imported.months).forEach(([monthKey, monthData]) => {
     const normalized = normalizeMonthForImport(monthData);
     const existing = app.rotation.months[monthKey];
 
-    if (!existing) {
+    if (overwriteMonth && monthKey === overwriteMonth) {
       app.rotation.months[monthKey] = normalized;
-      added += 1;
+      overwritten += 1;
       return;
     }
 
-    if (isEmptyMonth(existing)) {
+    if (!existing) {
       app.rotation.months[monthKey] = normalized;
-      updatedEmpty += 1;
+      added += 1;
     }
   });
 
   saveRotationData();
   renderRotace();
+
   if (app.selectedMonth && app.rotation.months[app.selectedMonth]) {
     renderMonth(app.selectedMonth);
   }
@@ -1039,21 +1071,12 @@ document.getElementById("importBtn").addEventListener("click", async () => {
 
   const msg = [];
   if (added) msg.push("Přidáno nových měsíců: " + added);
-  if (updatedEmpty) msg.push("Doplněno prázdných měsíců: " + updatedEmpty);
-  alert(msg.length ? msg.join(" | ") : "Žádné nové nebo prázdné měsíce nebyly změněny.");
+  if (overwriteMonth && overwritten) msg.push("Přepsán měsíc: " + overwriteMonth);
+  if (!added && !(overwriteMonth && overwritten)) {
+    msg.push("Žádné změny.");
+  }
+  alert(msg.join(" | "));
 });
-
-function showPageAndTrack(id) {
-  showPage(id);
-}
-
-function isEmptyMonth(month) {
-  if (!month) return true;
-  const hardRows = month.hard && Array.isArray(month.hard.rows) ? month.hard.rows : [];
-  const softRows = month.soft && Array.isArray(month.soft.rows) ? month.soft.rows : [];
-  const notes = Array.isArray(month.notes) ? month.notes : [];
-  return hardRows.length === 0 && softRows.length === 0 && notes.length === 0;
-}
 
 function normalizeMonthForImport(monthData) {
   return {
