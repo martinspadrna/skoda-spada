@@ -1,21 +1,25 @@
-const initialRotationData = {"months":{"1/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.1. N","cells":["Střížek","Blažek","Kříž","Kmínek","Starý"]},{"date":"3.1. N","cells":["Synek","Pech","Novotný","Starý","Kmínek"]},{"date":"4.1. N8","cells":["Třasák","Kříž","Špadrna","Blažek","Starý"]},{"date":"7.1. R","cells":["Starý","Kmínek","Střížek","Pech","Kříž"]},{"date":"8.1. R","cells":["Blažek","Starý","Synek","Kříž","Kmínek"]},{"date":"12.1. N","cells":["Pech","Blažek","Třasák","Novotný","Špadrna"]},{"date":"13.1. N","cells":["Špadrna","Pech","Kmínek","Střížek","Blažek"]},{"date":"16.1. R","cells":["Kmínek","Špadrna","Pech","Synek","Starý"]},{"date":"17.1. R","cells":["Novotný","Kmínek","Špadrna","Starý","Blažek"]},{"date":"18.1. R8","cells":["Třasák","Starý","Kmínek","Špadrna","Blažek"]},{"date":"21.1. N","cells":["Střížek","Novotný","Starý","Špadrna","Kříž"]},{"date":"22.1. N","cells":["Synek","Pech","Blažek","Starý","Kmínek"]},{"date":"26.1. R","cells":["Blažek","Kříž","Pech","Třasák","Starý"]},{"date":"27.1. R","cells":["Starý","Kmínek","Synek","Pech","Blažek"]},{"date":"30.1. N","cells":["Kříž","Novotný","Střížek","Blažek","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.1. N","cells":["Třasák","Špadrna","Novotný","Synek","Pech"]},{"date":"3.1. N","cells":["Třasák","Střížek","Kříž","Špadrna","Blažek"]},{"date":"4.1. N8","cells":["Kmínek","Pech","Synek","","Střížek"]},{"date":"7.1. R","cells":["Špadrna","Blažek","Synek","Třasák","Novotný"]},{"date":"8.1. R","cells":["Třasák","Střížek","Špadrna","Novotný","Pech"]},{"date":"12.1. N","cells":["Starý","Střížek","Kmínek","","Synek"]},{"date":"13.1. N","cells":["Třasák","Novotný","Synek","","Starý"]},{"date":"16.1. R","cells":["Novotný","Střížek","Blažek","","Třasák"]},{"date":"17.1. R","cells":["","Střížek","Třasák","","Synek"]},{"date":"18.1. R8","cells":["","Synek","Novotný","","Střížek"]},{"date":"21.1. N","cells":["Třasák","Pech","Synek","Blažek","Kmínek"]},{"date":"22.1. N","cells":["Třasák","Novotný","Kříž","Střížek","Špadrna"]},{"date":"26.1. R","cells":["Kmínek","Střížek","Špadrna","Synek","Novotný"]},{"date":"27.1. R","cells":["Třasák","Špadrna","Střížek","Novotný","Kříž"]},{"date":"30.1. N","cells":["Třasák","Kmínek","Špadrna","","Starý"]},{"date":"31.1. N","cells":["Starý","Novotný","Střížek","","Špadrna"]}]},"notes":[{"date":"2.1. N","shift":"","person":"","code":"","text":"2.1. N"},{"date":"3.1. N","shift":"","person":"","code":"","text":"3.1. N"},{"date":"4.1. N8","shift":"","person":"","code":"","text":"4.1. N8 Novotný D"},{"date":"7.1. R","shift":"","person":"","code":"","text":"7.1. R"},{"date":"8.1. R","shift":"","person":"","code":"","text":"8.1. R"},{"date":"12.1. N","shift":"","person":"","code":"","text":"12.1. N Kříž D"},{"date":"13.1. N","shift":"","person":"","code":"","text":"13.1. N Kříž D"},{"date":"16.1. R","shift":"","person":"","code":"","text":"16.1. R Kříž D"},{"date":"17.1. R","shift":"","person":"","code":"","text":"17.1. R Kříž D"},{"date":"18.1. R8","shift":"","person":"","code":"","text":"18.1. R8 Kříž D"},{"date":"21.1. N","shift":"","person":"","code":"","text":"21.1. N"},{"date":"22.1. N","shift":"","person":"","code":"","text":"22.1. N Starý od 23h"},{"date":"26.1. R","shift":"","person":"","code":"","text":"26.1. R"},{"date":"27.1. R","shift":"","person":"","code":"","text":"27.1. R"},{"date":"30.1. N","shift":"","person":"","code":"","text":"30.1. N Synek D"}]},"2/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.2. N8","cells":["Špadrna","Kříž","Blažek","Třasák","Novotný"]},{"date":"4.2. R","cells":["Novotný","Kříž","Pech","Synek","Starý"]},{"date":"5.2. R","cells":["Starý","Kmínek","Kříž","Střížek","Špadrna"]},{"date":"9.2. N","cells":["Blažek","Starý","Kmínek","Kříž","Pech"]},{"date":"10.2. N","cells":["Třasák","Blažek","Špadrna","Starý","Novotný"]},{"date":"13.2. R","cells":["Střížek","Pech","Blažek","Starý","Kmínek"]},{"date":"14.2. R","cells":["Synek","Kříž","Pech","Blažek","Starý"]},{"date":"15.2. R8","cells":["Starý","Kmínek","Kříž","Pech","Blažek"]},{"date":"18.2. N","cells":["Špadrna","Novotný","Třasák","Kříž","Pech"]},{"date":"19.2. N","cells":["Novotný","Blažek","Střížek","Špadrna","Kříž"]},{"date":"23.2. R","cells":["Kříž","Pech","Synek","Novotný","Kmínek"]},{"date":"24.2. R","cells":["Kmínek","Novotný","Pech","Třasák","Starý"]},{"date":"27.2. N","cells":["Starý","Kmínek","Novotný","Synek","Blažek"]},{"date":"28.2. N","cells":["Blažek","Starý","Kmínek","Střížek","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"4.2. R","cells":["Třasák","Kmínek","Střížek","Špadrna","Blažek"]},{"date":"5.2. R","cells":["Třasák","Pech","Novotný","","Blažek"]},{"date":"9.2. N","cells":["Třasák","Střížek","Špadrna","Synek","Novotný"]},{"date":"10.2. N","cells":["Kříž","Pech","Synek","","Střížek"]},{"date":"13.2. R","cells":["Třasák","Novotný","Synek","Špadrna","Kříž"]},{"date":"14.2. R","cells":["Špadrna","Střížek","Novotný","Třasák","Kmínek"]},{"date":"15.2. R8","cells":["Třasák","Novotný","Synek","","Špadrna"]},{"date":"18.2. N","cells":["Starý","Střížek","Blažek","Synek","Kmínek"]},{"date":"19.2. N","cells":["Třasák","Kmínek","Synek","Pech","Starý"]},{"date":"23.2. R","cells":["Blažek","Střížek","Špadrna","Starý","Třasák"]},{"date":"24.2. R","cells":["Špadrna","Kříž","Synek","Střížek","Blažek"]},{"date":"27.2. N","cells":["Třasák","Špadrna","Pech","","Kříž"]},{"date":"28.2. N","cells":["Špadrna","Novotný","Kříž","Třasák","Synek"]}]},"notes":[{"date":"1.2. N8","shift":"","person":"","code":"","text":"1.2. N8 Kmínek D"},{"date":"4.2. R","shift":"","person":"","code":"","text":"4.2. R"},{"date":"5.2. R","shift":"","person":"","code":"","text":"5.2. R Synek §"},{"date":"9.2. N","shift":"","person":"","code":"","text":"9.2. N"},{"date":"10.2. N","shift":"","person":"","code":"","text":"10.2. N Kmínek"},{"date":"13.2. R","shift":"","person":"","code":"","text":"13.2. R"},{"date":"14.2. R","shift":"","person":"","code":"","text":"14.2. R"},{"date":"15.2. R8","shift":"","person":"","code":"","text":"15.2. R8 Střížek D"},{"date":"18.2. N","shift":"","person":"","code":"","text":"18.2. N"},{"date":"19.2. N","shift":"","person":"","code":"","text":"19.2. N"},{"date":"23.2. R","shift":"","person":"","code":"","text":"23.2. R"},{"date":"24.2. R","shift":"","person":"","code":"","text":"24.2. R"},{"date":"27.2. N","shift":"","person":"","code":"","text":"27.2. N Střížek D"},{"date":"28.2. N","shift":"","person":"","code":"","text":"28.2. N"}]},"3/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.3. N8","cells":["Střížek","Blažek","Starý","Pech","Kříž"]},{"date":"4.3. R","cells":["Třasák","Pech","Blažek","Novotný","Kmínek"]},{"date":"5.3. R","cells":["Synek","Kříž","Pech","Blažek","Starý"]},{"date":"9.3. N","cells":["Špadrna","Novotný","Třasák","Pech","Blažek"]},{"date":"10.3. N","cells":["Novotný","Kmínek","Střížek","Špadrna","Pech"]},{"date":"13.3. R","cells":["Pech","Blažek","Synek","Starý","Kříž"]},{"date":"14.3. R","cells":["Kříž","Pech","Blažek","Třasák","Kmínek"]},{"date":"15.3. R8","cells":["Kmínek","Kříž","Pech","Střížek","Starý"]},{"date":"18.3. N","cells":["Starý","Kmínek","Kříž","Synek","Blažek"]},{"date":"19.3. N","cells":["Pech","Starý","Kmínek","Kříž","Špadrna"]},{"date":"23.3. R","cells":["Novotný","Blažek","Starý","Kmínek","Kříž"]},{"date":"24.3. R","cells":["Kříž","Novotný","Blažek","Starý","Kmínek"]},{"date":"27.3. N","cells":["Kmínek","Kříž","Synek","Blažek","Pech"]},{"date":"28.3. N","cells":["Starý","Pech","Střížek","Kříž","Blažek"]},{"date":"29.3. N8","cells":["Špadrna","Kmínek","Třasák","Střížek","Novotný"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.3. N8","cells":["Špadrna","Třasák","Novotný","Kmínek","Synek"]},{"date":"4.3. R","cells":["Střížek","Kříž","Starý","","Synek"]},{"date":"5.3. R","cells":["Třasák","Novotný","Kmínek","","Střížek"]},{"date":"9.3. N","cells":["Kmínek","Střížek","Kříž","Starý","Synek"]},{"date":"10.3. N","cells":["","Blažek","Synek","","Kříž"]},{"date":"13.3. R","cells":["Třasák","Střížek","Kmínek","Špadrna","Novotný"]},{"date":"14.3. R","cells":["Špadrna","Střížek","Synek","","Novotný"]},{"date":"15.3. R8","cells":["Špadrna","Blažek","Synek","","Třasák"]},{"date":"18.3. N","cells":["Třasák","Střížek","Špadrna","","Pech"]},{"date":"19.3. N","cells":["Třasák","Střížek","Synek","","Blažek"]},{"date":"23.3. R","cells":["Třasák","Střížek","","","Špadrna"]},{"date":"24.3. R","cells":["Třasák","Pech","Špadrna","","Střížek"]},{"date":"27.3. N","cells":["Novotný","Střížek","Špadrna","","Třasák"]},{"date":"28.3. N","cells":["Novotný","Špadrna","Synek","Třasák","Kmínek"]},{"date":"29.3. N8","cells":["Synek","Pech","Starý","Blažek","Kříž"]}]},"notes":[{"date":"1.3. N8","shift":"","person":"","code":"","text":"1.3. N8"},{"date":"4.3. R","shift":"","person":"","code":"","text":"4.3. R Špadrna NV"},{"date":"5.3. R","shift":"","person":"","code":"","text":"5.3. R Špadrna NV"},{"date":"9.3. N","shift":"","person":"","code":"","text":"9.3. N"},{"date":"10.3. N","shift":"","person":"","code":"","text":"10.3. N Třasák NV"},{"date":"13.3. R","shift":"","person":"","code":"","text":"13.3. R"},{"date":"14.3. R","shift":"","person":"","code":"","text":"14.3. R Starý D"},{"date":"15.3. R8","shift":"","person":"","code":"","text":"15.3. R8 Novotný D"},{"date":"18.3. N","shift":"","person":"","code":"","text":"18.3. N Novotný D"},{"date":"19.3. N","shift":"","person":"","code":"","text":"19.3. N Novotný D"},{"date":"23.3. R","shift":"","person":"","code":"","text":"23.3. R Pech D"},{"date":"24.3. R","shift":"","person":"","code":"","text":"24.3. R"},{"date":"27.3. N","shift":"","person":"","code":"","text":"27.3. N Starý D"},{"date":"28.3. N","shift":"","person":"","code":"","text":"28.3. N"},{"date":"29.3. N8","shift":"","person":"","code":"","text":"29.3. N8"}]},"4/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.4. R","cells":["Pech","Blažek","Starý","Synek","Kříž"]},{"date":"2.4. R","cells":["Kříž","Starý","Blažek","Třasák","Kmínek"]},{"date":"7.4. N","cells":["Střížek","Kříž","Pech","Špadrna","Starý"]},{"date":"10.4. R","cells":["Synek","Kmínek","Kříž","Novotný","Špadrna"]},{"date":"11.4. R","cells":["Třasák","Starý","Kmínek","Kříž","Pech"]},{"date":"12.4. R8","cells":["Pech","Blažek","Špadrna","Kmínek","Kříž"]},{"date":"15.4. N","cells":["Špadrna","Pech","Střížek","Starý","Kmínek"]},{"date":"16.4. N","cells":["Novotný","Kříž","Synek","Blažek","Starý"]},{"date":"20.4. R","cells":["Starý","Novotný","Třasák","Pech","Blažek"]},{"date":"21.4. R","cells":["Blažek","Starý","Kmínek","Střížek","Pech"]},{"date":"24.4. N","cells":["Špadrna","Blažek","Starý","Synek","Kříž"]},{"date":"25.4. N","cells":["Novotný","Pech","Blažek","Třasák","Kmínek"]},{"date":"26.4. N8","cells":["Střížek","Novotný","Pech","Blažek","Starý"]},{"date":"29.4. R","cells":["Synek","Kmínek","Kříž","Starý","Blažek"]},{"date":"30.4. R","cells":["Třasák","Novotný","Kmínek","Kříž","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.4. R","cells":["Novotný","Kmínek","Třasák","Špadrna","Střížek"]},{"date":"2.4. R","cells":["Pech","Střížek","Novotný","","Špadrna"]},{"date":"7.4. N","cells":["Blažek","Novotný","Kmínek","Třasák","Synek"]},{"date":"10.4. R","cells":["Pech","Střížek","Blažek","Třasák","Starý"]},{"date":"11.4. R","cells":["Novotný","Střížek","Synek","Špadrna","Blažek"]},{"date":"12.4. R8","cells":["Třasák","Střížek","Starý","","Novotný"]},{"date":"15.4. N","cells":["Třasák","Novotný","Synek","Kříž","Blažek"]},{"date":"16.4. N","cells":["Pech","Střížek","Špadrna","Kmínek","Třasák"]},{"date":"20.4. R","cells":["Špadrna","Střížek","Kmínek","Synek","Kříž"]},{"date":"21.4. R","cells":["Kříž","Špadrna","Synek","Novotný","Třasák"]},{"date":"24.4. N","cells":["Třasák","Pech","Novotný","Střížek","Kmínek"]},{"date":"25.4. N","cells":["Špadrna","Kříž","Starý","Střížek","Synek"]},{"date":"26.4. N8","cells":["Třasák","Kříž","Synek","Špadrna","Kmínek"]},{"date":"29.4. R","cells":["Třasák","Střížek","Novotný","","Pech"]},{"date":"30.4. R","cells":["Blažek","Střížek","Synek","","Starý"]}]},"notes":[{"date":"1.4. R","shift":"","person":"","code":"","text":"1.4. R"},{"date":"2.4. R","shift":"","person":"","code":"","text":"2.4. R Synek D"},{"date":"7.4. N","shift":"","person":"","code":"","text":"7.4. N"},{"date":"10.4. R","shift":"","person":"","code":"","text":"10.4. R"},{"date":"11.4. R","shift":"","person":"","code":"","text":"11.4. R"},{"date":"12.4. R8","shift":"","person":"","code":"","text":"12.4. R8 Synek D"},{"date":"15.4. N","shift":"","person":"","code":"","text":"15.4. N"},{"date":"16.4. N","shift":"","person":"","code":"","text":"16.4. N Starý do 0:00"},{"date":"20.4. R","shift":"","person":"","code":"","text":"20.4. R"},{"date":"21.4. R","shift":"","person":"","code":"","text":"21.4. R"},{"date":"24.4. N","shift":"","person":"","code":"","text":"24.4. N"},{"date":"25.4. N","shift":"","person":"","code":"","text":"25.4. N"},{"date":"26.4. N8","shift":"","person":"","code":"","text":"26.4. N8"},{"date":"29.4. R","shift":"","person":"","code":"","text":"29.4. R Špadrna D"},{"date":"30.4. R","shift":"","person":"","code":"","text":"30.4. R Špadrna D"}]},"5/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"4.5. N","cells":["Pech","Blažek","Střížek","Špadrna","Kříž"]},{"date":"5.5. N","cells":["Kříž","Pech","Synek","Starý","Kmínek"]},{"date":"8.5. R","cells":["Kmínek","Kříž","Třasák","Blažek","Starý"]},{"date":"9.5. R","cells":["Špadrna","Kmínek","Kříž","Střížek","Blažek"]},{"date":"10.5. R8","cells":["Blažek","Starý","Kmínek","Třasák","Pech"]},{"date":"13.5. N","cells":["Pech","Blažek","Starý","Synek","Kříž"]},{"date":"14.5. N","cells":["Třasák","Pech","Blažek","Starý","Kmínek"]},{"date":"18.5. R","cells":["Střížek","Kříž","Starý","Blažek","Pech"]},{"date":"19.5. R","cells":["Synek","Kříž","Novotný","Pech","Blažek"]},{"date":"22.5. N","cells":["Blažek","Starý","Střížek","Kříž","Pech"]},{"date":"23.5. N","cells":["Špadrna","Blažek","Synek","Novotný","Kříž"]},{"date":"24.5. N8","cells":["Špadrna","Kříž","Střížek","Synek","Novotný"]},{"date":"27.5. R","cells":["Novotný","Kříž","Pech","Střížek","Starý"]},{"date":"28.5. R","cells":["Starý","Novotný","Kříž","Synek","Blažek"]},{"date":"4.5. N","cells":["Starý","Kmínek","Synek","","Třasák"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"9.5. R","cells":["","Třasák","Synek","","Pech"]},{"date":"10.5. R8","cells":["Špadrna","Střížek","Synek","","Kříž"]},{"date":"13.5. N","cells":["Třasák","Střížek","Špadrna","","Kmínek"]},{"date":"14.5. N","cells":["Špadrna","Kříž","Synek","","Střížek"]},{"date":"18.5. R","cells":["","Novotný","Synek","","Špadrna"]},{"date":"19.5. R","cells":["","Střížek","Špadrna","","Starý"]},{"date":"22.5. N","cells":["","Špadrna","Synek","","Novotný"]},{"date":"23.5. N","cells":["","Střížek","Pech","","Starý"]},{"date":"24.5. N8","cells":["","Blažek","Pech","","Starý"]},{"date":"27.5. R","cells":["","Špadrna","Blažek","","Synek"]},{"date":"28.5. R","cells":["","Střížek","Špadrna","","Pech"]}]},"notes":[{"date":"4.5. N","shift":"","person":"","code":"","text":"4.5. N Novotný L"},{"date":"5.5. N","shift":"","person":"","code":"","text":"5.5. N Novotný L"},{"date":"8.5. R","shift":"","person":"","code":"","text":"8.5. R Novotný L"},{"date":"9.5. R","shift":"","person":"","code":"","text":"9.5. R Novotný L"},{"date":"10.5. R8","shift":"","person":"","code":"","text":"10.5. R8 Novotný L"},{"date":"13.5. N","shift":"","person":"","code":"","text":"13.5. N Novotný L"},{"date":"14.5. N","shift":"","person":"","code":"","text":"14.5. N Novotný L"},{"date":"18.5. R","shift":"","person":"","code":"","text":"18.5. R Třasák L"},{"date":"19.5. R","shift":"","person":"","code":"","text":"19.5. R Třasák L"},{"date":"22.5. N","shift":"","person":"","code":"","text":"22.5. N Třasák L"},{"date":"23.5. N","shift":"","person":"","code":"","text":"23.5. N Třasák L"},{"date":"24.5. N8","shift":"","person":"","code":"","text":"24.5. N8 Třasák L"},{"date":"27.5. R","shift":"","person":"","code":"","text":"27.5. R Třasák L"},{"date":"28.5. R","shift":"","person":"","code":"","text":"28.5. R Třasák L"}]},"6/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.6. N","cells":["","","","",""]},{"date":"2.6. N","cells":["","","","",""]},{"date":"5.6. R","cells":["","","","",""]},{"date":"6.6. R","cells":["","","","",""]},{"date":"7.6. R8","cells":["","","","",""]},{"date":"10.6. N","cells":["","","","",""]},{"date":"11.6. N","cells":["","","","",""]},{"date":"15.6. R","cells":["","","","",""]},{"date":"16.6. R","cells":["","","","",""]},{"date":"19.6. N","cells":["","","","",""]},{"date":"20.6. N","cells":["","","","",""]},{"date":"21.6. N8","cells":["","","","",""]},{"date":"24.6. R","cells":["","","","",""]},{"date":"25.6. R","cells":["","","","",""]},{"date":"29.6. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.6. N","cells":["","","","",""]},{"date":"2.6. N","cells":["","","","",""]},{"date":"5.6. R","cells":["","","","",""]},{"date":"6.6. R","cells":["","","","",""]},{"date":"7.6. R8","cells":["","","","",""]},{"date":"10.6. N","cells":["","","","",""]},{"date":"11.6. N","cells":["","","","",""]},{"date":"15.6. R","cells":["","","","",""]},{"date":"16.6. R","cells":["","","","",""]},{"date":"19.6. N","cells":["","","","",""]},{"date":"20.6. N","cells":["","","","",""]},{"date":"21.6. N8","cells":["","","","",""]},{"date":"24.6. R","cells":["","","","",""]},{"date":"25.6. R","cells":["","","","",""]},{"date":"29.6. N","cells":["","","","",""]},{"date":"30.6. N","cells":["","","","",""]}]},"notes":[{"date":"1.6. N","shift":"","person":"","code":"","text":"1.6. N"},{"date":"2.6. N","shift":"","person":"","code":"","text":"2.6. N"},{"date":"5.6. R","shift":"","person":"","code":"","text":"5.6. R"},{"date":"6.6. R","shift":"","person":"","code":"","text":"6.6. R"},{"date":"7.6. R8","shift":"","person":"","code":"","text":"7.6. R8"},{"date":"10.6. N","shift":"","person":"","code":"","text":"10.6. N"},{"date":"11.6. N","shift":"","person":"","code":"","text":"11.6. N"},{"date":"15.6. R","shift":"","person":"","code":"","text":"15.6. R"},{"date":"16.6. R","shift":"","person":"","code":"","text":"16.6. R"},{"date":"19.6. N","shift":"","person":"","code":"","text":"19.6. N"},{"date":"20.6. N","shift":"","person":"","code":"","text":"20.6. N"},{"date":"21.6. N8","shift":"","person":"","code":"","text":"21.6. N8"},{"date":"24.6. R","shift":"","person":"","code":"","text":"24.6. R"},{"date":"25.6. R","shift":"","person":"","code":"","text":"25.6. R"},{"date":"29.6. N","shift":"","person":"","code":"","text":"29.6. N"}]},"7/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"3.7. R","cells":["","","","",""]},{"date":"4.7. R","cells":["","","","",""]},{"date":"5.7. R8","cells":["","","","",""]},{"date":"8.7. N","cells":["","","","",""]},{"date":"9.7. N","cells":["","","","",""]},{"date":"13.7. R","cells":["","","","",""]},{"date":"14.7. R","cells":["","","","",""]},{"date":"17.7. N","cells":["","","","",""]},{"date":"18.7. N","cells":["","","","",""]},{"date":"19.7. N8","cells":["","","","",""]},{"date":"22.7. R","cells":["","","","",""]},{"date":"23.7. R","cells":["","","","",""]},{"date":"27.7. N","cells":["","","","",""]},{"date":"28.7. N","cells":["","","","",""]},{"date":"31.7. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"3.7. R","cells":["","","","",""]},{"date":"4.7. R","cells":["","","","",""]},{"date":"5.7. R8","cells":["","","","",""]},{"date":"8.7. N","cells":["","","","",""]},{"date":"9.7. N","cells":["","","","",""]},{"date":"13.7. R","cells":["","","","",""]},{"date":"14.7. R","cells":["","","","",""]},{"date":"17.7. N","cells":["","","","",""]},{"date":"18.7. N","cells":["","","","",""]},{"date":"19.7. N8","cells":["","","","",""]},{"date":"22.7. R","cells":["","","","",""]},{"date":"23.7. R","cells":["","","","",""]},{"date":"27.7. N","cells":["","","","",""]},{"date":"28.7. N","cells":["","","","",""]},{"date":"31.7. R","cells":["","","","",""]}]},"notes":[{"date":"3.7. R","shift":"","person":"","code":"","text":"3.7. R"},{"date":"4.7. R","shift":"","person":"","code":"","text":"4.7. R"},{"date":"5.7. R8","shift":"","person":"","code":"","text":"5.7. R8"},{"date":"8.7. N","shift":"","person":"","code":"","text":"8.7. N"},{"date":"9.7. N","shift":"","person":"","code":"","text":"9.7. N"},{"date":"13.7. R","shift":"","person":"","code":"","text":"13.7. R"},{"date":"14.7. R","shift":"","person":"","code":"","text":"14.7. R"},{"date":"17.7. N","shift":"","person":"","code":"","text":"17.7. N"},{"date":"18.7. N","shift":"","person":"","code":"","text":"18.7. N"},{"date":"19.7. N8","shift":"","person":"","code":"","text":"19.7. N8"},{"date":"22.7. R","shift":"","person":"","code":"","text":"22.7. R"},{"date":"23.7. R","shift":"","person":"","code":"","text":"23.7. R"},{"date":"27.7. N","shift":"","person":"","code":"","text":"27.7. N"},{"date":"28.7. N","shift":"","person":"","code":"","text":"28.7. N"},{"date":"31.7. R","shift":"","person":"","code":"","text":"31.7. R"}]},"8/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.8. R","cells":["","","","",""]},{"date":"2.8. R8","cells":["","","","",""]},{"date":"5.8. N","cells":["","","","",""]},{"date":"6.8. N","cells":["","","","",""]},{"date":"10.8. R","cells":["","","","",""]},{"date":"11.8. R","cells":["","","","",""]},{"date":"14.8. N","cells":["","","","",""]},{"date":"15.8. N","cells":["","","","",""]},{"date":"16.8. N8","cells":["","","","",""]},{"date":"19.8. R","cells":["","","","",""]},{"date":"20.8. R","cells":["","","","",""]},{"date":"24.8. N","cells":["","","","",""]},{"date":"25.8. N","cells":["","","","",""]},{"date":"28.8. R","cells":["","","","",""]},{"date":"29.8. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.8. R","cells":["","","","",""]},{"date":"2.8. R8","cells":["","","","",""]},{"date":"5.8. N","cells":["","","","",""]},{"date":"6.8. N","cells":["","","","",""]},{"date":"10.8. R","cells":["","","","",""]},{"date":"11.8. R","cells":["","","","",""]},{"date":"14.8. N","cells":["","","","",""]},{"date":"15.8. N","cells":["","","","",""]},{"date":"16.8. N8","cells":["","","","",""]},{"date":"19.8. R","cells":["","","","",""]},{"date":"20.8. R","cells":["","","","",""]},{"date":"24.8. N","cells":["","","","",""]},{"date":"25.8. N","cells":["","","","",""]},{"date":"28.8. R","cells":["","","","",""]},{"date":"29.8. R","cells":["","","","",""]},{"date":"30.8. R8","cells":["","","","",""]}]},"notes":[{"date":"1.8. R","shift":"","person":"","code":"","text":"1.8. R"},{"date":"2.8. R8","shift":"","person":"","code":"","text":"2.8. R8"},{"date":"5.8. N","shift":"","person":"","code":"","text":"5.8. N"},{"date":"6.8. N","shift":"","person":"","code":"","text":"6.8. N"},{"date":"10.8. R","shift":"","person":"","code":"","text":"10.8. R"},{"date":"11.8. R","shift":"","person":"","code":"","text":"11.8. R"},{"date":"14.8. N","shift":"","person":"","code":"","text":"14.8. N"},{"date":"15.8. N","shift":"","person":"","code":"","text":"15.8. N"},{"date":"16.8. N8","shift":"","person":"","code":"","text":"16.8. N8"},{"date":"19.8. R","shift":"","person":"","code":"","text":"19.8. R"},{"date":"20.8. R","shift":"","person":"","code":"","text":"20.8. R"},{"date":"24.8. N","shift":"","person":"","code":"","text":"24.8. N"},{"date":"25.8. N","shift":"","person":"","code":"","text":"25.8. N"},{"date":"28.8. R","shift":"","person":"","code":"","text":"28.8. R"},{"date":"29.8. R","shift":"","person":"","code":"","text":"29.8. R"}]},"9/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.9. N","cells":["","","","",""]},{"date":"3.9. N","cells":["","","","",""]},{"date":"7.9. R","cells":["","","","",""]},{"date":"8.9. R","cells":["","","","",""]},{"date":"11.9. N","cells":["","","","",""]},{"date":"12.9. N","cells":["","","","",""]},{"date":"13.9. N8","cells":["","","","",""]},{"date":"16.9. R","cells":["","","","",""]},{"date":"17.9. R","cells":["","","","",""]},{"date":"21.9. N","cells":["","","","",""]},{"date":"22.9. N","cells":["","","","",""]},{"date":"25.9. R","cells":["","","","",""]},{"date":"26.9. R","cells":["","","","",""]},{"date":"27.9. R8","cells":["","","","",""]},{"date":"30.9. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.9. N","cells":["","","","",""]},{"date":"3.9. N","cells":["","","","",""]},{"date":"7.9. R","cells":["","","","",""]},{"date":"8.9. R","cells":["","","","",""]},{"date":"11.9. N","cells":["","","","",""]},{"date":"12.9. N","cells":["","","","",""]},{"date":"13.9. N8","cells":["","","","",""]},{"date":"16.9. R","cells":["","","","",""]},{"date":"17.9. R","cells":["","","","",""]},{"date":"21.9. N","cells":["","","","",""]},{"date":"22.9. N","cells":["","","","",""]},{"date":"25.9. R","cells":["","","","",""]},{"date":"26.9. R","cells":["","","","",""]},{"date":"27.9. R8","cells":["","","","",""]},{"date":"30.9. N","cells":["","","","",""]}]},"notes":[{"date":"2.9. N","shift":"","person":"","code":"","text":"2.9. N"},{"date":"3.9. N","shift":"","person":"","code":"","text":"3.9. N"},{"date":"7.9. R","shift":"","person":"","code":"","text":"7.9. R"},{"date":"8.9. R","shift":"","person":"","code":"","text":"8.9. R"},{"date":"11.9. N","shift":"","person":"","code":"","text":"11.9. N"},{"date":"12.9. N","shift":"","person":"","code":"","text":"12.9. N"},{"date":"13.9. N8","shift":"","person":"","code":"","text":"13.9. N8"},{"date":"16.9. R","shift":"","person":"","code":"","text":"16.9. R"},{"date":"17.9. R","shift":"","person":"","code":"","text":"17.9. R"},{"date":"21.9. N","shift":"","person":"","code":"","text":"21.9. N"},{"date":"22.9. N","shift":"","person":"","code":"","text":"22.9. N"},{"date":"25.9. R","shift":"","person":"","code":"","text":"25.9. R"},{"date":"26.9. R","shift":"","person":"","code":"","text":"26.9. R"},{"date":"27.9. R8","shift":"","person":"","code":"","text":"27.9. R8"},{"date":"30.9. N","shift":"","person":"","code":"","text":"30.9. N"}]},"10/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.10. N","cells":["","","","",""]},{"date":"5.10. R","cells":["","","","",""]},{"date":"6.10. R","cells":["","","","",""]},{"date":"9.10. N","cells":["","","","",""]},{"date":"10.10. N","cells":["","","","",""]},{"date":"11.10. N8","cells":["","","","",""]},{"date":"14.10. R","cells":["","","","",""]},{"date":"15.10. R","cells":["","","","",""]},{"date":"19.10. N","cells":["","","","",""]},{"date":"20.10. N","cells":["","","","",""]},{"date":"23.10. R","cells":["","","","",""]},{"date":"24.10. R","cells":["","","","",""]},{"date":"25.10. R8","cells":["","","","",""]},{"date":"28.10. N","cells":["","","","",""]},{"date":"29.10. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.10. N","cells":["","","","",""]},{"date":"5.10. R","cells":["","","","",""]},{"date":"6.10. R","cells":["","","","",""]},{"date":"9.10. N","cells":["","","","",""]},{"date":"10.10. N","cells":["","","","",""]},{"date":"11.10. N8","cells":["","","","",""]},{"date":"14.10. R","cells":["","","","",""]},{"date":"15.10. R","cells":["","","","",""]},{"date":"19.10. N","cells":["","","","",""]},{"date":"20.10. N","cells":["","","","",""]},{"date":"23.10. R","cells":["","","","",""]},{"date":"24.10. R","cells":["","","","",""]},{"date":"25.10. R8","cells":["","","","",""]},{"date":"28.10. N","cells":["","","","",""]},{"date":"29.10. N","cells":["","","","",""]}]},"notes":[{"date":"1.10. N","shift":"","person":"","code":"","text":"1.10. N"},{"date":"5.10. R","shift":"","person":"","code":"","text":"5.10. R"},{"date":"6.10. R","shift":"","person":"","code":"","text":"6.10. R"},{"date":"9.10. N","shift":"","person":"","code":"","text":"9.10. N"},{"date":"10.10. N","shift":"","person":"","code":"","text":"10.10. N"},{"date":"11.10. N8","shift":"","person":"","code":"","text":"11.10. N8"},{"date":"14.10. R","shift":"","person":"","code":"","text":"14.10. R"},{"date":"15.10. R","shift":"","person":"","code":"","text":"15.10. R"},{"date":"19.10. N","shift":"","person":"","code":"","text":"19.10. N"},{"date":"20.10. N","shift":"","person":"","code":"","text":"20.10. N"},{"date":"23.10. R","shift":"","person":"","code":"","text":"23.10. R"},{"date":"24.10. R","shift":"","person":"","code":"","text":"24.10. R"},{"date":"25.10. R8","shift":"","person":"","code":"","text":"25.10. R8"},{"date":"28.10. N","shift":"","person":"","code":"","text":"28.10. N"},{"date":"29.10. N","shift":"","person":"","code":"","text":"29.10. N"}]},"11/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.11. R","cells":["","","","",""]},{"date":"3.11. R","cells":["","","","",""]},{"date":"6.11. N","cells":["","","","",""]},{"date":"7.11. N","cells":["","","","",""]},{"date":"8.11. N8","cells":["","","","",""]},{"date":"11.11. R","cells":["","","","",""]},{"date":"12.11. R","cells":["","","","",""]},{"date":"16.11. N","cells":["","","","",""]},{"date":"17.11. N","cells":["","","","",""]},{"date":"20.11. R","cells":["","","","",""]},{"date":"21.11. R","cells":["","","","",""]},{"date":"22.11. R8","cells":["","","","",""]},{"date":"25.11. N","cells":["","","","",""]},{"date":"26.11. N","cells":["","","","",""]},{"date":"30.11. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.11. R","cells":["","","","",""]},{"date":"3.11. R","cells":["","","","",""]},{"date":"6.11. N","cells":["","","","",""]},{"date":"7.11. N","cells":["","","","",""]},{"date":"8.11. N8","cells":["","","","",""]},{"date":"11.11. R","cells":["","","","",""]},{"date":"12.11. R","cells":["","","","",""]},{"date":"16.11. N","cells":["","","","",""]},{"date":"17.11. N","cells":["","","","",""]},{"date":"20.11. R","cells":["","","","",""]},{"date":"21.11. R","cells":["","","","",""]},{"date":"22.11. R8","cells":["","","","",""]},{"date":"25.11. N","cells":["","","","",""]},{"date":"26.11. N","cells":["","","","",""]},{"date":"30.11. R","cells":["","","","",""]}]},"notes":[{"date":"2.11. R","shift":"","person":"","code":"","text":"2.11. R"},{"date":"3.11. R","shift":"","person":"","code":"","text":"3.11. R"},{"date":"6.11. N","shift":"","person":"","code":"","text":"6.11. N"},{"date":"7.11. N","shift":"","person":"","code":"","text":"7.11. N"},{"date":"8.11. N8","shift":"","person":"","code":"","text":"8.11. N8"},{"date":"11.11. R","shift":"","person":"","code":"","text":"11.11. R"},{"date":"12.11. R","shift":"","person":"","code":"","text":"12.11. R"},{"date":"16.11. N","shift":"","person":"","code":"","text":"16.11. N"},{"date":"17.11. N","shift":"","person":"","code":"","text":"17.11. N"},{"date":"20.11. R","shift":"","person":"","code":"","text":"20.11. R"},{"date":"21.11. R","shift":"","person":"","code":"","text":"21.11. R"},{"date":"22.11. R8","shift":"","person":"","code":"","text":"22.11. R8"},{"date":"25.11. N","shift":"","person":"","code":"","text":"25.11. N"},{"date":"26.11. N","shift":"","person":"","code":"","text":"26.11. N"},{"date":"30.11. R","shift":"","person":"","code":"","text":"30.11. R"}]},"12/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.12. R","cells":["","","","",""]},{"date":"4.12. N","cells":["","","","",""]},{"date":"5.12. N","cells":["","","","",""]},{"date":"6.12. N8","cells":["","","","",""]},{"date":"9.12. R","cells":["","","","",""]},{"date":"10.12. R","cells":["","","","",""]},{"date":"14.12. N","cells":["","","","",""]},{"date":"15.12. N","cells":["","","","",""]},{"date":"18.12. R","cells":["","","","",""]},{"date":"19.12. R","cells":["","","","",""]},{"date":"20.12. R8","cells":["","","","",""]},{"date":"23.12. N","cells":["","","","",""]},{"date":"24.12. N","cells":["","","","",""]},{"date":"28.12. R","cells":["","","","",""]},{"date":"29.12. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.12. R","cells":["","","","",""]},{"date":"4.12. N","cells":["","","","",""]},{"date":"5.12. N","cells":["","","","",""]},{"date":"6.12. N8","cells":["","","","",""]},{"date":"9.12. R","cells":["","","","",""]},{"date":"10.12. R","cells":["","","","",""]},{"date":"14.12. N","cells":["","","","",""]},{"date":"15.12. N","cells":["","","","",""]},{"date":"18.12. R","cells":["","","","",""]},{"date":"19.12. R","cells":["","","","",""]},{"date":"20.12. R8","cells":["","","","",""]},{"date":"23.12. N","cells":["","","","",""]},{"date":"24.12. N","cells":["","","","",""]},{"date":"28.12. R","cells":["","","","",""]},{"date":"29.12. R","cells":["","","","",""]}]},"notes":[{"date":"1.12. R","shift":"","person":"","code":"","text":"1.12. R"},{"date":"4.12. N","shift":"","person":"","code":"","text":"4.12. N"},{"date":"5.12. N","shift":"","person":"","code":"","text":"5.12. N"},{"date":"6.12. N8","shift":"","person":"","code":"","text":"6.12. N8"},{"date":"9.12. R","shift":"","person":"","code":"","text":"9.12. R"},{"date":"10.12. R","shift":"","person":"","code":"","text":"10.12. R"},{"date":"14.12. N","shift":"","person":"","code":"","text":"14.12. N"},{"date":"15.12. N","shift":"","person":"","code":"","text":"15.12. N"},{"date":"18.12. R","shift":"","person":"","code":"","text":"18.12. R"},{"date":"19.12. R","shift":"","person":"","code":"","text":"19.12. R"},{"date":"20.12. R8","shift":"","person":"","code":"","text":"20.12. R8"},{"date":"23.12. N","shift":"","person":"","code":"","text":"23.12. N"},{"date":"24.12. N","shift":"","person":"","code":"","text":"24.12. N"},{"date":"28.12. R","shift":"","person":"","code":"","text":"28.12. R"},{"date":"29.12. R","shift":"","person":"","code":"","text":"29.12. R"}]}}};
+const initialRotationData = {"months":{"1/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.1. N","cells":["Střížek","Blažek","Kříž","Kmínek","Starý"]},{"date":"3.1. N","cells":["Synek","Pech","Novotný","Starý","Kmínek"]},{"date":"4.1. N8","cells":["Třasák","Kříž","Špadrna","Blažek","Starý"]},{"date":"7.1. R","cells":["Starý","Kmínek","Střížek","Pech","Kříž"]},{"date":"8.1. R","cells":["Blažek","Starý","Synek","Kříž","Kmínek"]},{"date":"12.1. N","cells":["Pech","Blažek","Třasák","Novotný","Špadrna"]},{"date":"13.1. N","cells":["Špadrna","Pech","Kmínek","Střížek","Blažek"]},{"date":"16.1. R","cells":["Kmínek","Špadrna","Pech","Synek","Starý"]},{"date":"17.1. R","cells":["Novotný","Kmínek","Špadrna","Starý","Blažek"]},{"date":"18.1. R8","cells":["Třasák","Starý","Kmínek","Špadrna","Blažek"]},{"date":"21.1. N","cells":["Střížek","Novotný","Starý","Špadrna","Kříž"]},{"date":"22.1. N","cells":["Synek","Pech","Blažek","Starý","Kmínek"]},{"date":"26.1. R","cells":["Blažek","Kříž","Pech","Třasák","Starý"]},{"date":"27.1. R","cells":["Starý","Kmínek","Synek","Pech","Blažek"]},{"date":"30.1. N","cells":["Kříž","Novotný","Střížek","Blažek","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.1. N","cells":["Třasák","Špadrna","Novotný","Synek","Pech"]},{"date":"3.1. N","cells":["Třasák","Střížek","Kříž","Špadrna","Blažek"]},{"date":"4.1. N8","cells":["Kmínek","Pech","Synek","","Střížek"]},{"date":"7.1. R","cells":["Špadrna","Blažek","Synek","Třasák","Novotný"]},{"date":"8.1. R","cells":["Třasák","Střížek","Špadrna","Novotný","Pech"]},{"date":"12.1. N","cells":["Starý","Střížek","Kmínek","","Synek"]},{"date":"13.1. N","cells":["Třasák","Novotný","Synek","","Starý"]},{"date":"16.1. R","cells":["Novotný","Střížek","Blažek","","Třasák"]},{"date":"17.1. R","cells":["","Střížek","Třasák","","Synek"]},{"date":"18.1. R8","cells":["","Synek","Novotný","","Střížek"]},{"date":"21.1. N","cells":["Třasák","Pech","Synek","Blažek","Kmínek"]},{"date":"22.1. N","cells":["Třasák","Novotný","Kříž","Střížek","Špadrna"]},{"date":"26.1. R","cells":["Kmínek","Střížek","Špadrna","Synek","Novotný"]},{"date":"27.1. R","cells":["Třasák","Špadrna","Střížek","Novotný","Kříž"]},{"date":"30.1. N","cells":["Třasák","Kmínek","Špadrna","","Starý"]},{"date":"31.1. N","cells":["Starý","Novotný","Střížek","","Špadrna"]}]},"notes":[{"date":"4.1. N8","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"12.1. N","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"13.1. N","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"16.1. R","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"17.1. R","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"17.1. R","shift":"","person":"Pech","code":"D","text":"Pech D"},{"date":"18.1. R8","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"18.1. R8","shift":"","person":"Pech","code":"D","text":"Pech D"},{"date":"30.1. N","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"31.1. N","shift":"","person":"Synek","code":"D","text":"Synek D"}]},"2/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.2. N8","cells":["Špadrna","Kříž","Blažek","Třasák","Novotný"]},{"date":"4.2. R","cells":["Novotný","Kříž","Pech","Synek","Starý"]},{"date":"5.2. R","cells":["Starý","Kmínek","Kříž","Střížek","Špadrna"]},{"date":"9.2. N","cells":["Blažek","Starý","Kmínek","Kříž","Pech"]},{"date":"10.2. N","cells":["Třasák","Blažek","Špadrna","Starý","Novotný"]},{"date":"13.2. R","cells":["Střížek","Pech","Blažek","Starý","Kmínek"]},{"date":"14.2. R","cells":["Synek","Kříž","Pech","Blažek","Starý"]},{"date":"15.2. R8","cells":["Starý","Kmínek","Kříž","Pech","Blažek"]},{"date":"18.2. N","cells":["Špadrna","Novotný","Třasák","Kříž","Pech"]},{"date":"19.2. N","cells":["Novotný","Blažek","Střížek","Špadrna","Kříž"]},{"date":"23.2. R","cells":["Kříž","Pech","Synek","Novotný","Kmínek"]},{"date":"24.2. R","cells":["Kmínek","Novotný","Pech","Třasák","Starý"]},{"date":"27.2. N","cells":["Starý","Kmínek","Novotný","Synek","Blažek"]},{"date":"28.2. N","cells":["Blažek","Starý","Kmínek","Střížek","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"4.2. R","cells":["Třasák","Kmínek","Střížek","Špadrna","Blažek"]},{"date":"5.2. R","cells":["Třasák","Pech","Novotný","","Blažek"]},{"date":"9.2. N","cells":["Třasák","Střížek","Špadrna","Synek","Novotný"]},{"date":"10.2. N","cells":["Kříž","Pech","Synek","","Střížek"]},{"date":"13.2. R","cells":["Třasák","Novotný","Synek","Špadrna","Kříž"]},{"date":"14.2. R","cells":["Špadrna","Střížek","Novotný","Třasák","Kmínek"]},{"date":"15.2. R8","cells":["Třasák","Novotný","Synek","","Špadrna"]},{"date":"18.2. N","cells":["Starý","Střížek","Blažek","Synek","Kmínek"]},{"date":"19.2. N","cells":["Třasák","Kmínek","Synek","Pech","Starý"]},{"date":"23.2. R","cells":["Blažek","Střížek","Špadrna","Starý","Třasák"]},{"date":"24.2. R","cells":["Špadrna","Kříž","Synek","Střížek","Blažek"]},{"date":"27.2. N","cells":["Třasák","Špadrna","Pech","","Kříž"]},{"date":"28.2. N","cells":["Špadrna","Novotný","Kříž","Třasák","Synek"]}]},"notes":[{"date":"1.2. N8","shift":"","person":"Kmínek","code":"D","text":"Kmínek D"},{"date":"1.2. N8","shift":"","person":"Kříž od 0:00","code":"D","text":"Kříž od 0:00 D"},{"date":"5.2. R","shift":"","person":"Synek","code":"§","text":"Synek §"},{"date":"15.2. R8","shift":"","person":"Střížek","code":"D","text":"Střížek D"},{"date":"27.2. N","shift":"","person":"Střížek","code":"D","text":"Střížek D"}]},"3/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.3. N8","cells":["Střížek","Blažek","Starý","Pech","Kříž"]},{"date":"4.3. R","cells":["Třasák","Pech","Blažek","Novotný","Kmínek"]},{"date":"5.3. R","cells":["Synek","Kříž","Pech","Blažek","Starý"]},{"date":"9.3. N","cells":["Špadrna","Novotný","Třasák","Pech","Blažek"]},{"date":"10.3. N","cells":["Novotný","Kmínek","Střížek","Špadrna","Pech"]},{"date":"13.3. R","cells":["Pech","Blažek","Synek","Starý","Kříž"]},{"date":"14.3. R","cells":["Kříž","Pech","Blažek","Třasák","Kmínek"]},{"date":"15.3. R8","cells":["Kmínek","Kříž","Pech","Střížek","Starý"]},{"date":"18.3. N","cells":["Starý","Kmínek","Kříž","Synek","Blažek"]},{"date":"19.3. N","cells":["Pech","Starý","Kmínek","Kříž","Špadrna"]},{"date":"23.3. R","cells":["Novotný","Blažek","Starý","Kmínek","Kříž"]},{"date":"24.3. R","cells":["Kříž","Novotný","Blažek","Starý","Kmínek"]},{"date":"27.3. N","cells":["Kmínek","Kříž","Synek","Blažek","Pech"]},{"date":"28.3. N","cells":["Starý","Pech","Střížek","Kříž","Blažek"]},{"date":"29.3. N8","cells":["Špadrna","Kmínek","Třasák","Střížek","Novotný"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.3. N8","cells":["Špadrna","Třasák","Novotný","Kmínek","Synek"]},{"date":"4.3. R","cells":["Střížek","Kříž","Starý","","Synek"]},{"date":"5.3. R","cells":["Třasák","Novotný","Kmínek","","Střížek"]},{"date":"9.3. N","cells":["Kmínek","Střížek","Kříž","Starý","Synek"]},{"date":"10.3. N","cells":["","Blažek","Synek","","Kříž"]},{"date":"13.3. R","cells":["Třasák","Střížek","Kmínek","Špadrna","Novotný"]},{"date":"14.3. R","cells":["Špadrna","Střížek","Synek","","Novotný"]},{"date":"15.3. R8","cells":["Špadrna","Blažek","Synek","","Třasák"]},{"date":"18.3. N","cells":["Třasák","Střížek","Špadrna","","Pech"]},{"date":"19.3. N","cells":["Třasák","Střížek","Synek","","Blažek"]},{"date":"23.3. R","cells":["Třasák","Střížek","","","Špadrna"]},{"date":"24.3. R","cells":["Třasák","Pech","Špadrna","","Střížek"]},{"date":"27.3. N","cells":["Novotný","Střížek","Špadrna","","Třasák"]},{"date":"28.3. N","cells":["Novotný","Špadrna","Synek","Třasák","Kmínek"]},{"date":"29.3. N8","cells":["Synek","Pech","Starý","Blažek","Kříž"]}]},"notes":[{"date":"4.3. R","shift":"","person":"Špadrna","code":"NV","text":"Špadrna NV"},{"date":"5.3. R","shift":"","person":"Špadrna","code":"NV","text":"Špadrna NV"},{"date":"10.3. N","shift":"","person":"Třasák","code":"NV","text":"Třasák NV"},{"date":"10.3. N","shift":"","person":"Starý","code":"D","text":"Starý D"},{"date":"14.3. R","shift":"","person":"Starý","code":"D","text":"Starý D"},{"date":"15.3. R8","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"18.3. N","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"19.3. N","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"23.3. R","shift":"","person":"Pech","code":"D","text":"Pech D"},{"date":"23.3. R","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"24.3. R","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"27.3. N","shift":"","person":"Starý","code":"D","text":"Starý D"}]},"4/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.4. R","cells":["Pech","Blažek","Starý","Synek","Kříž"]},{"date":"2.4. R","cells":["Kříž","Starý","Blažek","Třasák","Kmínek"]},{"date":"7.4. N","cells":["Střížek","Kříž","Pech","Špadrna","Starý"]},{"date":"10.4. R","cells":["Synek","Kmínek","Kříž","Novotný","Špadrna"]},{"date":"11.4. R","cells":["Třasák","Starý","Kmínek","Kříž","Pech"]},{"date":"12.4. R8","cells":["Pech","Blažek","Špadrna","Kmínek","Kříž"]},{"date":"15.4. N","cells":["Špadrna","Pech","Střížek","Starý","Kmínek"]},{"date":"16.4. N","cells":["Novotný","Kříž","Synek","Blažek","Starý"]},{"date":"20.4. R","cells":["Starý","Novotný","Třasák","Pech","Blažek"]},{"date":"21.4. R","cells":["Blažek","Starý","Kmínek","Střížek","Pech"]},{"date":"24.4. N","cells":["Špadrna","Blažek","Starý","Synek","Kříž"]},{"date":"25.4. N","cells":["Novotný","Pech","Blažek","Třasák","Kmínek"]},{"date":"26.4. N8","cells":["Střížek","Novotný","Pech","Blažek","Starý"]},{"date":"29.4. R","cells":["Synek","Kmínek","Kříž","Starý","Blažek"]},{"date":"30.4. R","cells":["Třasák","Novotný","Kmínek","Kříž","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.4. R","cells":["Novotný","Kmínek","Třasák","Špadrna","Střížek"]},{"date":"2.4. R","cells":["Pech","Střížek","Novotný","","Špadrna"]},{"date":"7.4. N","cells":["Blažek","Novotný","Kmínek","Třasák","Synek"]},{"date":"10.4. R","cells":["Pech","Střížek","Blažek","Třasák","Starý"]},{"date":"11.4. R","cells":["Novotný","Střížek","Synek","Špadrna","Blažek"]},{"date":"12.4. R8","cells":["Třasák","Střížek","Starý","","Novotný"]},{"date":"15.4. N","cells":["Třasák","Novotný","Synek","Kříž","Blažek"]},{"date":"16.4. N","cells":["Pech","Střížek","Špadrna","Kmínek","Třasák"]},{"date":"20.4. R","cells":["Špadrna","Střížek","Kmínek","Synek","Kříž"]},{"date":"21.4. R","cells":["Kříž","Špadrna","Synek","Novotný","Třasák"]},{"date":"24.4. N","cells":["Třasák","Pech","Novotný","Střížek","Kmínek"]},{"date":"25.4. N","cells":["Špadrna","Kříž","Starý","Střížek","Synek"]},{"date":"26.4. N8","cells":["Třasák","Kříž","Synek","Špadrna","Kmínek"]},{"date":"29.4. R","cells":["Třasák","Střížek","Novotný","","Pech"]},{"date":"30.4. R","cells":["Blažek","Střížek","Synek","","Starý"]}]},"notes":[{"date":"2.4. R","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"12.4. R8","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"29.4. R","shift":"","person":"Špadrna","code":"D","text":"Špadrna D"},{"date":"30.4. R","shift":"","person":"Špadrna","code":"D","text":"Špadrna D"}]},"5/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"4.5. N","cells":["Pech","Blažek","Střížek","Špadrna","Kříž"]},{"date":"5.5. N","cells":["Kříž","Pech","Synek","Starý","Kmínek"]},{"date":"8.5. R","cells":["Kmínek","Kříž","Třasák","Blažek","Starý"]},{"date":"9.5. R","cells":["Špadrna","Kmínek","Kříž","Střížek","Blažek"]},{"date":"10.5. R8","cells":["Blažek","Starý","Kmínek","Třasák","Pech"]},{"date":"13.5. N","cells":["Pech","Blažek","Starý","Synek","Kříž"]},{"date":"14.5. N","cells":["Třasák","Pech","Blažek","Starý","Kmínek"]},{"date":"18.5. R","cells":["Střížek","Kříž","Starý","Blažek","Pech"]},{"date":"19.5. R","cells":["Synek","Kříž","Novotný","Pech","Blažek"]},{"date":"22.5. N","cells":["Blažek","Starý","Střížek","Kříž","Pech"]},{"date":"23.5. N","cells":["Špadrna","Blažek","Synek","Novotný","Kříž"]},{"date":"24.5. N8","cells":["Špadrna","Kříž","Střížek","Synek","Novotný"]},{"date":"27.5. R","cells":["Novotný","Kříž","Pech","Střížek","Starý"]},{"date":"28.5. R","cells":["Starý","Novotný","Kříž","Synek","Blažek"]},{"date":"4.5. N","cells":["Starý","Kmínek","Synek","","Třasák"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"9.5. R","cells":["","Třasák","Synek","","Pech"]},{"date":"10.5. R8","cells":["Špadrna","Střížek","Synek","","Kříž"]},{"date":"13.5. N","cells":["Třasák","Střížek","Špadrna","","Kmínek"]},{"date":"14.5. N","cells":["Špadrna","Kříž","Synek","","Střížek"]},{"date":"18.5. R","cells":["","Novotný","Synek","","Špadrna"]},{"date":"19.5. R","cells":["","Střížek","Špadrna","","Starý"]},{"date":"22.5. N","cells":["","Špadrna","Synek","","Novotný"]},{"date":"23.5. N","cells":["","Střížek","Pech","","Starý"]},{"date":"24.5. N8","cells":["","Blažek","Pech","","Starý"]},{"date":"27.5. R","cells":["","Špadrna","Blažek","","Synek"]},{"date":"28.5. R","cells":["","Střížek","Špadrna","","Pech"]}]},"notes":[{"date":"4.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"5.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"8.5. R","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"9.5. R","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"9.5. R","shift":"","person":"Starý","code":"D","text":"Starý D"},{"date":"10.5. R8","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"13.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"14.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"18.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"18.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"19.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"19.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"22.5. N","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"22.5. N","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"23.5. N","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"23.5. N","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"24.5. N8","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"24.5. N8","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"27.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"27.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"28.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"28.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"}]},"6/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.6. N","cells":["","","","",""]},{"date":"2.6. N","cells":["","","","",""]},{"date":"5.6. R","cells":["","","","",""]},{"date":"6.6. R","cells":["","","","",""]},{"date":"7.6. R8","cells":["","","","",""]},{"date":"10.6. N","cells":["","","","",""]},{"date":"11.6. N","cells":["","","","",""]},{"date":"15.6. R","cells":["","","","",""]},{"date":"16.6. R","cells":["","","","",""]},{"date":"19.6. N","cells":["","","","",""]},{"date":"20.6. N","cells":["","","","",""]},{"date":"21.6. N8","cells":["","","","",""]},{"date":"24.6. R","cells":["","","","",""]},{"date":"25.6. R","cells":["","","","",""]},{"date":"29.6. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.6. N","cells":["","","","",""]},{"date":"2.6. N","cells":["","","","",""]},{"date":"5.6. R","cells":["","","","",""]},{"date":"6.6. R","cells":["","","","",""]},{"date":"7.6. R8","cells":["","","","",""]},{"date":"10.6. N","cells":["","","","",""]},{"date":"11.6. N","cells":["","","","",""]},{"date":"15.6. R","cells":["","","","",""]},{"date":"16.6. R","cells":["","","","",""]},{"date":"19.6. N","cells":["","","","",""]},{"date":"20.6. N","cells":["","","","",""]},{"date":"21.6. N8","cells":["","","","",""]},{"date":"24.6. R","cells":["","","","",""]},{"date":"25.6. R","cells":["","","","",""]},{"date":"29.6. N","cells":["","","","",""]},{"date":"30.6. N","cells":["","","","",""]}]},"notes":[]},"7/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"3.7. R","cells":["","","","",""]},{"date":"4.7. R","cells":["","","","",""]},{"date":"5.7. R8","cells":["","","","",""]},{"date":"8.7. N","cells":["","","","",""]},{"date":"9.7. N","cells":["","","","",""]},{"date":"13.7. R","cells":["","","","",""]},{"date":"14.7. R","cells":["","","","",""]},{"date":"17.7. N","cells":["","","","",""]},{"date":"18.7. N","cells":["","","","",""]},{"date":"19.7. N8","cells":["","","","",""]},{"date":"22.7. R","cells":["","","","",""]},{"date":"23.7. R","cells":["","","","",""]},{"date":"27.7. N","cells":["","","","",""]},{"date":"28.7. N","cells":["","","","",""]},{"date":"31.7. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"3.7. R","cells":["","","","",""]},{"date":"4.7. R","cells":["","","","",""]},{"date":"5.7. R8","cells":["","","","",""]},{"date":"8.7. N","cells":["","","","",""]},{"date":"9.7. N","cells":["","","","",""]},{"date":"13.7. R","cells":["","","","",""]},{"date":"14.7. R","cells":["","","","",""]},{"date":"17.7. N","cells":["","","","",""]},{"date":"18.7. N","cells":["","","","",""]},{"date":"19.7. N8","cells":["","","","",""]},{"date":"22.7. R","cells":["","","","",""]},{"date":"23.7. R","cells":["","","","",""]},{"date":"27.7. N","cells":["","","","",""]},{"date":"28.7. N","cells":["","","","",""]},{"date":"31.7. R","cells":["","","","",""]}]},"notes":[]},"8/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.8. R","cells":["","","","",""]},{"date":"2.8. R8","cells":["","","","",""]},{"date":"5.8. N","cells":["","","","",""]},{"date":"6.8. N","cells":["","","","",""]},{"date":"10.8. R","cells":["","","","",""]},{"date":"11.8. R","cells":["","","","",""]},{"date":"14.8. N","cells":["","","","",""]},{"date":"15.8. N","cells":["","","","",""]},{"date":"16.8. N8","cells":["","","","",""]},{"date":"19.8. R","cells":["","","","",""]},{"date":"20.8. R","cells":["","","","",""]},{"date":"24.8. N","cells":["","","","",""]},{"date":"25.8. N","cells":["","","","",""]},{"date":"28.8. R","cells":["","","","",""]},{"date":"29.8. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.8. R","cells":["","","","",""]},{"date":"2.8. R8","cells":["","","","",""]},{"date":"5.8. N","cells":["","","","",""]},{"date":"6.8. N","cells":["","","","",""]},{"date":"10.8. R","cells":["","","","",""]},{"date":"11.8. R","cells":["","","","",""]},{"date":"14.8. N","cells":["","","","",""]},{"date":"15.8. N","cells":["","","","",""]},{"date":"16.8. N8","cells":["","","","",""]},{"date":"19.8. R","cells":["","","","",""]},{"date":"20.8. R","cells":["","","","",""]},{"date":"24.8. N","cells":["","","","",""]},{"date":"25.8. N","cells":["","","","",""]},{"date":"28.8. R","cells":["","","","",""]},{"date":"29.8. R","cells":["","","","",""]},{"date":"30.8. R8","cells":["","","","",""]}]},"notes":[]},"9/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.9. N","cells":["","","","",""]},{"date":"3.9. N","cells":["","","","",""]},{"date":"7.9. R","cells":["","","","",""]},{"date":"8.9. R","cells":["","","","",""]},{"date":"11.9. N","cells":["","","","",""]},{"date":"12.9. N","cells":["","","","",""]},{"date":"13.9. N8","cells":["","","","",""]},{"date":"16.9. R","cells":["","","","",""]},{"date":"17.9. R","cells":["","","","",""]},{"date":"21.9. N","cells":["","","","",""]},{"date":"22.9. N","cells":["","","","",""]},{"date":"25.9. R","cells":["","","","",""]},{"date":"26.9. R","cells":["","","","",""]},{"date":"27.9. R8","cells":["","","","",""]},{"date":"30.9. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.9. N","cells":["","","","",""]},{"date":"3.9. N","cells":["","","","",""]},{"date":"7.9. R","cells":["","","","",""]},{"date":"8.9. R","cells":["","","","",""]},{"date":"11.9. N","cells":["","","","",""]},{"date":"12.9. N","cells":["","","","",""]},{"date":"13.9. N8","cells":["","","","",""]},{"date":"16.9. R","cells":["","","","",""]},{"date":"17.9. R","cells":["","","","",""]},{"date":"21.9. N","cells":["","","","",""]},{"date":"22.9. N","cells":["","","","",""]},{"date":"25.9. R","cells":["","","","",""]},{"date":"26.9. R","cells":["","","","",""]},{"date":"27.9. R8","cells":["","","","",""]},{"date":"30.9. N","cells":["","","","",""]}]},"notes":[]},"10/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.10. N","cells":["","","","",""]},{"date":"5.10. R","cells":["","","","",""]},{"date":"6.10. R","cells":["","","","",""]},{"date":"9.10. N","cells":["","","","",""]},{"date":"10.10. N","cells":["","","","",""]},{"date":"11.10. N8","cells":["","","","",""]},{"date":"14.10. R","cells":["","","","",""]},{"date":"15.10. R","cells":["","","","",""]},{"date":"19.10. N","cells":["","","","",""]},{"date":"20.10. N","cells":["","","","",""]},{"date":"23.10. R","cells":["","","","",""]},{"date":"24.10. R","cells":["","","","",""]},{"date":"25.10. R8","cells":["","","","",""]},{"date":"28.10. N","cells":["","","","",""]},{"date":"29.10. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.10. N","cells":["","","","",""]},{"date":"5.10. R","cells":["","","","",""]},{"date":"6.10. R","cells":["","","","",""]},{"date":"9.10. N","cells":["","","","",""]},{"date":"10.10. N","cells":["","","","",""]},{"date":"11.10. N8","cells":["","","","",""]},{"date":"14.10. R","cells":["","","","",""]},{"date":"15.10. R","cells":["","","","",""]},{"date":"19.10. N","cells":["","","","",""]},{"date":"20.10. N","cells":["","","","",""]},{"date":"23.10. R","cells":["","","","",""]},{"date":"24.10. R","cells":["","","","",""]},{"date":"25.10. R8","cells":["","","","",""]},{"date":"28.10. N","cells":["","","","",""]},{"date":"29.10. N","cells":["","","","",""]}]},"notes":[]},"11/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.11. R","cells":["","","","",""]},{"date":"3.11. R","cells":["","","","",""]},{"date":"6.11. N","cells":["","","","",""]},{"date":"7.11. N","cells":["","","","",""]},{"date":"8.11. N8","cells":["","","","",""]},{"date":"11.11. R","cells":["","","","",""]},{"date":"12.11. R","cells":["","","","",""]},{"date":"16.11. N","cells":["","","","",""]},{"date":"17.11. N","cells":["","","","",""]},{"date":"20.11. R","cells":["","","","",""]},{"date":"21.11. R","cells":["","","","",""]},{"date":"22.11. R8","cells":["","","","",""]},{"date":"25.11. N","cells":["","","","",""]},{"date":"26.11. N","cells":["","","","",""]},{"date":"30.11. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.11. R","cells":["","","","",""]},{"date":"3.11. R","cells":["","","","",""]},{"date":"6.11. N","cells":["","","","",""]},{"date":"7.11. N","cells":["","","","",""]},{"date":"8.11. N8","cells":["","","","",""]},{"date":"11.11. R","cells":["","","","",""]},{"date":"12.11. R","cells":["","","","",""]},{"date":"16.11. N","cells":["","","","",""]},{"date":"17.11. N","cells":["","","","",""]},{"date":"20.11. R","cells":["","","","",""]},{"date":"21.11. R","cells":["","","","",""]},{"date":"22.11. R8","cells":["","","","",""]},{"date":"25.11. N","cells":["","","","",""]},{"date":"26.11. N","cells":["","","","",""]},{"date":"30.11. R","cells":["","","","",""]}]},"notes":[]},"12/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.12. R","cells":["","","","",""]},{"date":"4.12. N","cells":["","","","",""]},{"date":"5.12. N","cells":["","","","",""]},{"date":"6.12. N8","cells":["","","","",""]},{"date":"9.12. R","cells":["","","","",""]},{"date":"10.12. R","cells":["","","","",""]},{"date":"14.12. N","cells":["","","","",""]},{"date":"15.12. N","cells":["","","","",""]},{"date":"18.12. R","cells":["","","","",""]},{"date":"19.12. R","cells":["","","","",""]},{"date":"20.12. R8","cells":["","","","",""]},{"date":"23.12. N","cells":["","","","",""]},{"date":"24.12. N","cells":["","","","",""]},{"date":"28.12. R","cells":["","","","",""]},{"date":"29.12. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.12. R","cells":["","","","",""]},{"date":"4.12. N","cells":["","","","",""]},{"date":"5.12. N","cells":["","","","",""]},{"date":"6.12. N8","cells":["","","","",""]},{"date":"9.12. R","cells":["","","","",""]},{"date":"10.12. R","cells":["","","","",""]},{"date":"14.12. N","cells":["","","","",""]},{"date":"15.12. N","cells":["","","","",""]},{"date":"18.12. R","cells":["","","","",""]},{"date":"19.12. R","cells":["","","","",""]},{"date":"20.12. R8","cells":["","","","",""]},{"date":"23.12. N","cells":["","","","",""]},{"date":"24.12. N","cells":["","","","",""]},{"date":"28.12. R","cells":["","","","",""]},{"date":"29.12. R","cells":["","","","",""]}]},"notes":[]}}};
 
 
-const APP_KEY = "rotace_kalkulacky_state_v061";
-const ROTATION_BUILD = "2026-04-28-v077-1777387350481";
+const APP_KEY = "rotace_kalkulacky_state_v062";
+const ROTATION_BUILD = "2026-04-29-v089-" + Date.now();
 
 const HARD_MACHINE_HEADERS = ["TNKS01", "TBKR07", "TPKW01", "TPKW02", "TBKR01"];
 const SOFT_MACHINE_HEADERS = ["MSKC01", "MSKC03", "MSKC04", "MFKF06", "MFKF10"];
 
+const appRotation = loadRotationData();
 const app = {
   rotationView: "names",
   selectedMonth: null,
   selectedName: null,
+  selectedStatsName: null,
+  selectedYear: getInitialSelectedYear(appRotation),
+  importYear: getInitialSelectedYear(appRotation),
   importClicks: 0,
   adminUnlocked: false,
   machine: localStorage.getItem("machine") || "TBKR01",
   prog: localStorage.getItem("prog") || "AD",
-  rotation: loadRotationData()
+  rotation: appRotation
 };
 
 // Budoucí rozšíření: statistiky za rok pro jednotlivá jména/stroje/úklid.
@@ -69,8 +73,7 @@ function defaultRotation() {
 function loadRotationData() {
   try {
     const raw = localStorage.getItem(APP_KEY);
-    const storedBuild = localStorage.getItem("rotationBuild");
-    if (!raw || storedBuild !== ROTATION_BUILD) return defaultRotation();
+    if (!raw) return defaultRotation();
     const parsed = JSON.parse(raw);
     if (!parsed || !parsed.months) return defaultRotation();
     return normalizeRotationData(parsed);
@@ -128,22 +131,18 @@ function setRotaceView(view) {
   const tabStats = document.getElementById("tabStats");
   const tabMonths = document.getElementById("tabMonths");
 
-  namesPanel.classList.remove("active");
-  statsPanel.classList.remove("active");
-  monthsPanel.classList.remove("active");
-  tabNames.style.outline = "none";
-  tabStats.style.outline = "none";
-  tabMonths.style.outline = "none";
+  [namesPanel, statsPanel, monthsPanel].forEach(panel => panel && panel.classList.remove("active"));
+  [tabNames, tabStats, tabMonths].forEach(tab => tab && (tab.style.outline = "none"));
 
   if (view === "names") {
-    namesPanel.classList.add("active");
-    tabNames.style.outline = "3px solid #7CFF7C";
+    namesPanel && namesPanel.classList.add("active");
+    tabNames && (tabNames.style.outline = "3px solid #7CFF7C");
   } else if (view === "stats") {
-    statsPanel.classList.add("active");
-    tabStats.style.outline = "3px solid #7CFF7C";
+    statsPanel && statsPanel.classList.add("active");
+    tabStats && (tabStats.style.outline = "3px solid #7CFF7C");
   } else {
-    monthsPanel.classList.add("active");
-    tabMonths.style.outline = "3px solid #7CFF7C";
+    monthsPanel && monthsPanel.classList.add("active");
+    tabMonths && (tabMonths.style.outline = "3px solid #7CFF7C");
   }
 }
 
@@ -196,6 +195,339 @@ function formatDuration(ms) {
   if (hours || parts.length) parts.push(hours + " h");
   parts.push(minutes + " min");
   return parts.join(" ");
+}
+
+function parseMonthKey(monthKey) {
+  const m = /^(\d{1,2})\/(\d{2})$/.exec(String(monthKey || "").trim());
+  if (!m) return null;
+  return {
+    month: parseInt(m[1], 10),
+    year: 2000 + parseInt(m[2], 10)
+  };
+}
+
+function monthKeyFromYearMonth(year, month) {
+  return String(month) + "/" + String(year).slice(-2);
+}
+
+function getAvailableYears(rotation) {
+  const src = rotation || app.rotation || {};
+  const years = new Set();
+  Object.keys(src.months || {}).forEach(monthKey => {
+    const parsed = parseMonthKey(monthKey);
+    if (parsed) years.add(parsed.year);
+  });
+  if (!years.size) years.add(new Date().getFullYear());
+  return [...years].sort((a, b) => a - b);
+}
+
+function getInitialSelectedYear(rotation) {
+  const years = getAvailableYears(rotation);
+  const currentYear = new Date().getFullYear();
+  return years.includes(currentYear) ? currentYear : years[years.length - 1];
+}
+
+function getMonthsForYear(rotation, year) {
+  return Object.keys((rotation || app.rotation || {}).months || {})
+    .filter(monthKey => {
+      const parsed = parseMonthKey(monthKey);
+      return parsed && parsed.year === year;
+    })
+    .sort((a, b) => {
+      const pa = parseMonthKey(a);
+      const pb = parseMonthKey(b);
+      if (pa.year !== pb.year) return pa.year - pb.year;
+      return pa.month - pb.month;
+    });
+}
+
+function formatCount(value) {
+  const num = Number(value) || 0;
+  return Number.isInteger(num) ? String(num) : String(num).replace(".", ",");
+}
+
+function createDateFromMonthKey(monthKey, day) {
+  const parsed = parseMonthKey(monthKey);
+  if (!parsed) return null;
+  return new Date(parsed.year, parsed.month - 1, day, 12, 0, 0, 0);
+}
+
+function isSundayForMonthKey(monthKey, day) {
+  const d = createDateFromMonthKey(monthKey, day);
+  return d ? d.getDay() === 0 : false;
+}
+
+function setSelectedYear(year) {
+  const numeric = parseInt(year, 10);
+  if (!Number.isFinite(numeric)) return;
+  app.selectedYear = numeric;
+
+  const yearMonths = getMonthsForYear(app.rotation, numeric);
+  if (!app.selectedMonth || !yearMonths.includes(app.selectedMonth)) {
+    app.selectedMonth = yearMonths[0] || null;
+  }
+
+  renderRotace();
+}
+
+function setSelectedStatsName(name) {
+  app.selectedStatsName = name || null;
+  renderStatsPanel();
+}
+
+function syncYearControls() {
+  const years = getAvailableYears(app.rotation);
+  const monthYearSelect = document.getElementById("monthYearSelect");
+  const statsYearSelect = document.getElementById("statsYearSelect");
+  const importYearSelect = document.getElementById("importYearSelect");
+  const overwriteMonth = document.getElementById("overwriteMonth");
+
+  const fillSelect = (el, selected) => {
+    if (!el) return;
+    const current = String(selected || "");
+    el.innerHTML = "";
+    years.forEach(year => {
+      const opt = document.createElement("option");
+      opt.value = String(year);
+      opt.textContent = String(year);
+      if (String(year) === current) opt.selected = true;
+      el.appendChild(opt);
+    });
+  };
+
+  fillSelect(monthYearSelect, app.selectedYear);
+  fillSelect(statsYearSelect, app.selectedYear);
+  fillSelect(importYearSelect, app.importYear);
+
+  if (overwriteMonth) {
+    const selectedYear = parseInt(app.importYear, 10) || parseInt(app.selectedYear, 10);
+    const months = getMonthsForYear(app.rotation, selectedYear);
+    overwriteMonth.innerHTML = '<option value="">— jen doplnit nové měsíce —</option>';
+    months.forEach(monthKey => {
+      const opt = document.createElement("option");
+      opt.value = monthKey;
+      opt.textContent = monthKey;
+      overwriteMonth.appendChild(opt);
+    });
+  }
+}
+
+function renderMonthGrid() {
+  const monthGrid = document.getElementById("monthsGrid");
+  if (!monthGrid) return;
+  const months = getMonthsForYear(app.rotation, parseInt(app.selectedYear, 10));
+  monthGrid.innerHTML = "";
+  months.forEach(monthKey => {
+    const el = document.createElement("div");
+    el.className = "listItem" + (app.selectedMonth === monthKey ? " activeChoice" : "");
+    el.textContent = monthKey;
+    el.onclick = () => {
+      app.selectedMonth = monthKey;
+      renderRotace();
+      renderMonth(monthKey);
+      setRotaceView("months");
+    };
+    monthGrid.appendChild(el);
+  });
+  if (!months.length) {
+    monthGrid.innerHTML = "<div class='smallText'>Pro tenhle rok tu zatím nic není.</div>";
+  }
+}
+
+
+function getStatsMachineLabel(machine) {
+  const name = String(machine || "").trim();
+  if (!name) return "";
+
+  if (/^MSKC\d+$/i.test(name)) return "MSK";
+  if (/^MFKF\d+$/i.test(name)) return "MFK";
+  if (name === "TNKS01") return "TNK";
+  if (/^TBKR\d+$/i.test(name)) return "TBK";
+  if (name === "TPKW02") return "W02";
+  if (name === "TPKW01") return "W01";
+
+  return name;
+}
+
+function getStatsMachineOrder(machineKeys) {
+  const preferred = ["MSK", "MFK", "TNK", "TBK", "W02", "W01"];
+  const keys = Array.isArray(machineKeys) ? machineKeys.slice() : [];
+  const out = [];
+
+  preferred.forEach(key => {
+    if (keys.includes(key)) out.push(key);
+  });
+
+  keys
+    .filter(key => !preferred.includes(key))
+    .sort((a, b) => a.localeCompare(b, "cs"))
+    .forEach(key => out.push(key));
+
+  return out;
+}
+
+function buildStatsForYear(year) {
+  const stats = {
+    year,
+    people: {},
+    names: [],
+    machineTotals: {},
+    cleanTotals: {},
+    absenceTotals: {}
+  };
+
+  const ensureColumn = (label) => {
+    const key = String(label || "").trim();
+    if (!key) return "";
+    if (!(key in stats.machineTotals)) {
+      stats.machineTotals[key] = 0;
+      stats.cleanTotals[key] = 0;
+      stats.absenceTotals[key] = 0;
+    }
+    return key;
+  };
+
+  const ensurePerson = (name) => {
+    if (!stats.people[name]) {
+      stats.people[name] = {
+        name,
+        work: {},
+        clean: {},
+        absence: {},
+        totalWork: 0,
+        totalClean: 0,
+        totalAbsence: 0
+      };
+    }
+    return stats.people[name];
+  };
+
+  const nameIndex = buildNameIndex(app.rotation);
+
+  Object.entries(app.rotation.months || {}).forEach(([monthKey, month]) => {
+    const parsedMonth = parseMonthKey(monthKey);
+    if (!parsedMonth || parsedMonth.year !== year) return;
+
+    ["hard", "soft"].forEach(section => {
+      const sec = month[section];
+      if (!sec || !Array.isArray(sec.rows)) return;
+
+      sec.rows.forEach(row => {
+        const parsedDate = parseDateToken(row.date);
+        if (!parsedDate) return;
+        const isSunday = isSundayForMonthKey(monthKey, parsedDate.day);
+        const isSundayMorning = isSunday && /^R/.test(parsedDate.shift || "");
+
+        (row.cells || []).forEach((cell, idx) => {
+          const name = String(cell || "").trim();
+          const machine = (sec.machines || [])[idx] || "";
+          if (!name || !machine) return;
+
+          const column = ensureColumn(getStatsMachineLabel(machine));
+          if (!column) return;
+
+          const person = ensurePerson(name);
+          const isHalfMachine = section === "hard" && (machine === "TNKS01" || machine === "TPKW01");
+          const workWeight = isHalfMachine ? (isSunday ? 1 : 0.5) : 1;
+
+          person.work[column] = (person.work[column] || 0) + workWeight;
+          person.totalWork += workWeight;
+          stats.machineTotals[column] = (stats.machineTotals[column] || 0) + workWeight;
+
+          if (isSundayMorning) {
+            person.clean[column] = (person.clean[column] || 0) + 1;
+            person.totalClean += 1;
+            stats.cleanTotals[column] = (stats.cleanTotals[column] || 0) + 1;
+          }
+        });
+      });
+    });
+  });
+
+  Object.entries(app.rotation.months || {}).forEach(([monthKey, month]) => {
+    const parsedMonth = parseMonthKey(monthKey);
+    if (!parsedMonth || parsedMonth.year !== year) return;
+
+    (month.notes || []).forEach(note => {
+      const n = normalizeNoteEntry(note);
+      if (!n.isAbsence || !n.people || !n.people.length) return;
+
+      const parsedDate = parseDateToken(n.date);
+      const shift = n.shift || (parsedDate ? parsedDate.shift : "");
+
+      n.people.forEach(personName => {
+        const name = String(personName || "").trim();
+        if (!name) return;
+
+        const person = ensurePerson(name);
+        const candidates = (nameIndex[name] || []).filter(entry => {
+          if (entry.absence) return false;
+          if (entry.monthKey !== monthKey) return false;
+          if (entry.date !== n.date) return false;
+          if (shift && entry.shift && entry.shift !== shift) return false;
+          return true;
+        });
+
+        const chosen = candidates[0] || (nameIndex[name] || []).find(entry => !entry.absence && entry.monthKey === monthKey && entry.date === n.date);
+        if (chosen && chosen.machine) {
+          const column = ensureColumn(getStatsMachineLabel(chosen.machine));
+          if (column) {
+            person.absence[column] = (person.absence[column] || 0) + 1;
+            stats.absenceTotals[column] = (stats.absenceTotals[column] || 0) + 1;
+          }
+        }
+        person.totalAbsence += 1;
+      });
+    });
+  });
+
+  stats.names = Object.keys(stats.people).sort((a, b) => a.localeCompare(b, "cs"));
+  stats.machineOrder = getStatsMachineOrder(Object.keys(stats.machineTotals));
+  return stats;
+}
+
+
+function renderStatsPanel() {
+  const statsPanel = document.getElementById("statsView");
+  const statsNameGrid = document.getElementById("statsNameGrid");
+  if (!statsPanel || !statsNameGrid) return;
+
+  const year = parseInt(app.selectedYear, 10) || getInitialSelectedYear(app.rotation);
+  const stats = buildStatsForYear(year);
+
+  statsNameGrid.innerHTML = "";
+  stats.names.forEach(name => {
+    const el = document.createElement("div");
+    el.className = "listItem" + (app.selectedStatsName === name ? " activeChoice" : "");
+    el.textContent = name;
+    el.onclick = () => setSelectedStatsName(name);
+    statsNameGrid.appendChild(el);
+  });
+  if (!stats.names.length) {
+    statsNameGrid.innerHTML = "<div class='smallText'>Pro tenhle rok tu ještě nejsou žádná data.</div>";
+  }
+
+  const name = app.selectedStatsName && stats.people[app.selectedStatsName] ? app.selectedStatsName : "";
+  if (!name) {
+    statsPanel.innerHTML = "<div class='smallText'>Klikni na jméno a ukáže se, jak to vychází za vybraný rok.</div>";
+    return;
+  }
+
+  const person = stats.people[name];
+  let html = "<div class='sectionTitle'>" + escapeHtml(name) + " — " + escapeHtml(String(year)) + "</div>";
+  html += "<div class='statsSummary'>";
+  html += "<div class='tile'><div class='smallText'>Práce celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalWork) + "</div></div>";
+  html += "<div class='tile'><div class='smallText'>Úklid celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalClean) + "</div></div>";
+  html += "<div class='tile'><div class='smallText'>Nepřítomnost celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalAbsence) + "</div></div>";
+  html += "</div>";
+
+  html += "<div class='tableWrap'><table class='statsTable'><thead><tr><th>Stroj</th><th>Práce</th><th>Úklid</th></tr></thead><tbody>";
+  stats.machineOrder.forEach(machine => {
+    html += "<tr><td>" + escapeHtml(machine) + "</td><td>" + formatCount(person.work[machine] || 0) + "</td><td>" + formatCount(person.clean[machine] || 0) + "</td></tr>";
+  });
+  html += "</tbody></table></div>";
+
+  statsPanel.innerHTML = html;
 }
 
 function addDays(base, days) {
@@ -357,9 +689,9 @@ function renderBrusy() {
 }
 
 function monthKeyFromSheetName(sheetName) {
-  const m = /^(\d{2})\.2026$/.exec(sheetName);
+  const m = /^(\d{2})\.(\d{4})$/.exec(String(sheetName || "").trim());
   if (!m) return null;
-  return `${parseInt(m[1], 10)}/26`;
+  return `${parseInt(m[1], 10)}/${String(parseInt(m[2], 10)).slice(-2)}`;
 }
 
 function normalizeShiftText(text) {
@@ -414,6 +746,27 @@ function absenceLabelFromCode(code) {
   return ABSENCE_LABELS[key] || "";
 }
 
+function sanitizeAbsencePersonName(text) {
+  return String(text || "")
+    .trim()
+    .replace(/\s+(?:od|do)\b.*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function splitAbsencePeople(text) {
+  const raw = String(text || "").trim();
+  if (!raw) return [];
+
+  return raw
+    .replace(/\s+(?:a|i|&|\/)\s+/gi, " | ")
+    .replace(/[,;+]/g, " | ")
+    .split(/\s*\|\s*/g)
+    .map(part => part.trim())
+    .filter(Boolean)
+    .filter(part => !/^od\s+\d/i.test(part));
+}
+
 function looksLikeAbsencePerson(text) {
   const t = String(text || "").trim();
   if (!t) return false;
@@ -427,9 +780,10 @@ function normalizeNoteEntry(note) {
   const date = String(note && note.date ? note.date : "").trim();
   const shiftFromDate = parseDateToken(date);
   let shift = normalizeShiftText(String(note && note.shift ? note.shift : (shiftFromDate ? shiftFromDate.shift : "")) || "");
-  let person = String(note && note.person ? note.person : "").trim();
+  let person = sanitizeAbsencePersonName(note && note.person ? note.person : "");
   let code = String(note && note.code ? note.code : "").trim();
   let text = String(note && note.text ? note.text : "").trim();
+  let people = [];
 
   if (!person && text) {
     const tokens = text.split(/\s+/).filter(Boolean);
@@ -450,33 +804,41 @@ function normalizeNoteEntry(note) {
 
     if (remaining.length >= 2 && absenceLabelFromCode(remaining[remaining.length - 1])) {
       code = code || remaining[remaining.length - 1];
-      person = remaining.slice(0, -1).join(" ").trim();
+      const peopleText = remaining.slice(0, -1).join(" ").trim();
+      people = splitAbsencePeople(peopleText).map(sanitizeAbsencePersonName).filter(Boolean);
+      person = sanitizeAbsencePersonName(people[0] || peopleText);
     } else if (remaining.length === 1 && !absenceLabelFromCode(remaining[0])) {
-      person = remaining[0];
+      person = sanitizeAbsencePersonName(remaining[0]);
     } else if (remaining.length > 1 && !code && looksLikeAbsencePerson(remaining[0])) {
       // fallback: "Jméno" without an explicit code means vacation
-      person = remaining[0];
+      person = sanitizeAbsencePersonName(remaining[0]);
       code = "D";
     }
   }
+
+  person = sanitizeAbsencePersonName(person);
 
   if (!code && person && looksLikeAbsencePerson(person)) {
     code = "D";
   }
 
   const label = absenceLabelFromCode(code);
+  if (!people.length && person) people = splitAbsencePeople(person).map(sanitizeAbsencePersonName).filter(Boolean);
+  if (!people.length && person) people = [person];
   const isAbsence = !!label && !!person;
 
   return {
     date,
     shift,
     person,
+    people,
     code,
     label,
     isAbsence,
     text
   };
 }
+
 
 function buildNameIndex(rotation) {
   const map = new Map();
@@ -506,18 +868,22 @@ function buildNameIndex(rotation) {
 
     (month.notes || []).forEach(note => {
       const n = normalizeNoteEntry(note);
-      if (!n.isAbsence || !n.person) return;
-      if (!map.has(n.person)) map.set(n.person, []);
+      if (!n.isAbsence || !n.people || !n.people.length) return;
       const parsed = parseDateToken(n.date);
       const shift = n.shift || (parsed ? parsed.shift : "");
-      map.get(n.person).push({
-        monthKey,
-        date: n.date,
-        dateLabel: cleanDateLabel(n.date, shift),
-        shift,
-        machine: n.label || "Dovolená",
-        absence: true,
-        sortDate: parsed ? parsed.sortDate : new Date(2026, 0, 1).toISOString()
+      n.people.forEach(personName => {
+        const name = String(personName || "").trim();
+        if (!name) return;
+        if (!map.has(name)) map.set(name, []);
+        map.get(name).push({
+          monthKey,
+          date: n.date,
+          dateLabel: cleanDateLabel(n.date, shift),
+          shift,
+          machine: n.label || "Dovolená",
+          absence: true,
+          sortDate: parsed ? parsed.sortDate : new Date(2026, 0, 1).toISOString()
+        });
       });
     });
   });
@@ -528,12 +894,31 @@ function buildNameIndex(rotation) {
   return result;
 }
 
+
+
+function formatAbsenceNoteLine(note) {
+  const n = normalizeNoteEntry(note);
+  if (!n.isAbsence) return "";
+  const people = (n.people && n.people.length)
+    ? n.people.join(" a ")
+    : (n.person || "");
+  const code = n.code ? " " + n.code : "";
+  return [n.date, people, n.label && !people ? n.label : ""].filter(Boolean).join(" ");
+}
+
 function renderRotace() {
   const namesGrid = document.getElementById("namesGrid");
-  const monthGrid = document.getElementById("monthsGrid");
-  const monthView = document.getElementById("monthView");
   const personView = document.getElementById("personView");
-  const statsPanel = document.getElementById("rotaceStatsPanel");
+  const monthView = document.getElementById("monthView");
+
+  const year = parseInt(app.selectedYear, 10) || getInitialSelectedYear(app.rotation);
+  const availableYears = getAvailableYears(app.rotation);
+  if (!availableYears.includes(year)) {
+    app.selectedYear = getInitialSelectedYear(app.rotation);
+  }
+
+  syncYearControls();
+  renderMonthGrid();
 
   const nameIndex = buildNameIndex(app.rotation);
   const names = Object.keys(nameIndex);
@@ -551,23 +936,6 @@ function renderRotace() {
     namesGrid.appendChild(el);
   });
 
-  const months = Object.keys(app.rotation.months || {})
-    .sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
-
-  monthGrid.innerHTML = "";
-  months.forEach(monthKey => {
-    const el = document.createElement("div");
-    el.className = "listItem" + (app.selectedMonth === monthKey ? " activeChoice" : "");
-    el.textContent = monthKey;
-    el.onclick = () => {
-      app.selectedMonth = monthKey;
-      renderRotace();
-      renderMonth(monthKey);
-      setRotaceView("months");
-    };
-    monthGrid.appendChild(el);
-  });
-
   if (app.selectedName && nameIndex[app.selectedName]) {
     renderPerson(app.selectedName);
   } else {
@@ -576,12 +944,11 @@ function renderRotace() {
 
   if (app.selectedMonth && app.rotation.months[app.selectedMonth]) {
     renderMonth(app.selectedMonth);
+  } else if (monthView) {
+    monthView.innerHTML = "<div class='smallText'>Vyber měsíc.</div>";
   }
 
- if (statsPanel && !statsPanel.innerHTML.trim()) {
-  statsPanel.innerHTML = '...';
-}
-
+  renderStatsPanel();
   document.getElementById("adminBox").style.display = app.adminUnlocked ? "block" : "none";
 }
 
@@ -625,8 +992,8 @@ function renderPerson(name) {
 
 function renderMonth(monthKey) {
   const month = app.rotation.months[monthKey];
-  if (!month) return;
   const monthView = document.getElementById("monthView");
+  if (!month || !monthView) return;
 
   let html = "<div class='sectionTitle'>" + escapeHtml(monthKey) + "</div>";
 
@@ -661,10 +1028,22 @@ function renderMonth(monthKey) {
   html += renderTable("soft", "Měkota");
 
   html += "<div class='smallText' style='margin-top:12px;font-weight:bold;'>Dovolené / absence</div>";
-  if (month.notes && month.notes.length) {
+  const absNotes = (month.notes || []).map(normalizeNoteEntry).filter(n => n.isAbsence);
+  if (absNotes.length) {
+    const grouped = new Map();
+    absNotes.forEach(n => {
+      const key = n.date || "";
+      if (!grouped.has(key)) grouped.set(key, []);
+      grouped.get(key).push(n);
+    });
+
     html += "<div class='noteList'>";
-    month.notes.forEach(n => {
-      html += "<div class='noteItem'>" + escapeHtml(n.date) + " — " + escapeHtml(n.text) + "</div>";
+    [...grouped.entries()].forEach(([date, items]) => {
+      const parts = items.map(n => {
+        const people = (n.people && n.people.length) ? n.people.join(" a ") : (n.person || "");
+        return escapeHtml([people, n.code || ""].filter(Boolean).join(" "));
+      }).filter(Boolean);
+      html += "<div class='noteItem'><span class='noteDate'>" + escapeHtml(date) + "</span><span class='noteInline'>" + parts.join(" · ") + "</span></div>";
     });
     html += "</div>";
   } else {
@@ -684,15 +1063,17 @@ function showMonthByKey(monthKey) {
 function refreshInitialUI() {
   restoreInputs();
   renderBrusy();
-  renderRotace();
-  const months = Object.keys(app.rotation.months || {}).sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
-  const currentMonth = `${new Date().getMonth() + 1}/26`;
-  app.selectedMonth = months.includes(currentMonth) ? currentMonth : (months[0] || null);
+  const currentYear = new Date().getFullYear();
+  const currentMonth = monthKeyFromYearMonth(currentYear, new Date().getMonth() + 1);
+  const currentYearMonths = getMonthsForYear(app.rotation, currentYear);
+  app.selectedYear = getAvailableYears(app.rotation).includes(currentYear) ? currentYear : getInitialSelectedYear(app.rotation);
+  app.importYear = app.selectedYear;
+  app.selectedMonth = currentYearMonths.includes(currentMonth) ? currentMonth : (currentYearMonths[0] || null);
   app.selectedName = null;
+  app.selectedStatsName = null;
   setRotaceView(app.rotationView || "names");
   renderRotace();
   if (app.selectedMonth) renderMonth(app.selectedMonth);
-  if (app.selectedName) renderPerson(app.selectedName);
   updateImportBoxVisibility();
 }
 
@@ -734,31 +1115,61 @@ document.getElementById("signatureTap").addEventListener("click", () => {
   }
 });
 
+document.getElementById("monthYearSelect")?.addEventListener("change", (e) => {
+  setSelectedYear(e.target.value);
+});
+
+document.getElementById("statsYearSelect")?.addEventListener("change", (e) => {
+  setSelectedYear(e.target.value);
+});
+
+document.getElementById("importYearSelect")?.addEventListener("change", (e) => {
+  app.importYear = parseInt(e.target.value, 10) || getInitialSelectedYear(app.rotation);
+  syncYearControls();
+});
 
 
-function exportCurrentHtml() {
-  const exportBuild = "2026-04-28-v078-" + Date.now();
+
+async function exportCurrentHtml() {
+  const exportBuild = "2026-04-29-v086-" + Date.now();
+
+  const [cssText, jsText] = await Promise.all([
+    fetch("styles.css").then(r => {
+      if (!r.ok) throw new Error("Nepodařilo se načíst styles.css");
+      return r.text();
+    }),
+    fetch("app.js").then(r => {
+      if (!r.ok) throw new Error("Nepodařilo se načíst app.js");
+      return r.text();
+    })
+  ]);
+
   const rotationJson = JSON.stringify(app.rotation);
 
-  const pages = [...document.querySelectorAll('.page')];
-  const previousActive = pages.find(p => p.classList.contains('active'))?.id || 'home';
-  pages.forEach(p => p.classList.remove('active'));
-  const home = document.getElementById('home');
-  if (home) home.classList.add('active');
+  const pages = [...document.querySelectorAll(".page")];
+  const previousActive = pages.find(p => p.classList.contains("active"))?.id || "home";
+  pages.forEach(p => p.classList.remove("active"));
+  const home = document.getElementById("home");
+  if (home) home.classList.add("active");
 
-  const html = document.documentElement.outerHTML
+  const bundledJs = jsText
     .replace(/const ROTATION_BUILD = "[^"]*";/, `const ROTATION_BUILD = "${exportBuild}";`)
     .replace(/const initialRotationData = [\s\S]*?;\n/, `const initialRotationData = ${rotationJson};\n`);
 
-  pages.forEach(p => p.classList.remove('active'));
+  let html = document.documentElement.outerHTML;
+  html = html.replace('<link rel="stylesheet" href="styles.css">', `<style>\n${cssText}\n</style>`);
+  html = html.replace('<script src="app.js"></script>', `<script>\n${bundledJs.replace(/<\/script>/g, "<\\/script>")}\n</script>`);
+  html = "<!DOCTYPE html>\n" + html;
+
+  pages.forEach(p => p.classList.remove("active"));
   const restore = document.getElementById(previousActive);
-  if (restore) restore.classList.add('active');
+  if (restore) restore.classList.add("active");
 
   const blob = new Blob([html], { type: "text/html;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "rotace_a_kalkulacky_v078.html";
+  a.download = "rotace_a_kalkulacky_v089.html";
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -789,7 +1200,7 @@ function parseWorkbookFromSheetJS(workbook) {
   const out = { months: {} };
 
   workbook.SheetNames.forEach(sheetName => {
-    if (!/^\d{2}\.2026$/.test(sheetName)) return;
+    if (!/^\d{2}\.\d{4}$/.test(sheetName)) return;
 
     const monthKey = monthKeyFromSheetName(sheetName);
     if (!monthKey) return;
@@ -807,18 +1218,27 @@ function parseWorkbookFromSheetJS(workbook) {
       for (let r = startIdx; r <= endIdx && r < rows.length; r++) {
         const row = rows[r] || [];
         const date = String(row[0] || "").trim();
-        if (!/^\d{1,2}\.\d{1,2}\./.test(date)) continue;
+        if (!/^\d{1,2}\.\d{1,2}\.\d/.test(date)) continue;
 
         const cells = row.slice(1, 6).map(v => String(v || "").trim());
         sectionRows.push({ date, cells });
 
         if (includeNotes) {
-          const noteParts = [];
-          for (let c = 7; c <= 9; c++) {
-            const val = String(row[c] || "").trim();
-            if (val) noteParts.push(val);
+          const noteDate = String(row[7] || "").trim();
+          if (/^\d{1,2}\.\d{1,2}\.\d/.test(noteDate)) {
+            for (let c = 8; c <= 15; c += 2) {
+              const person = String(row[c] || "").trim();
+              let code = String(row[c + 1] || "").trim();
+              if (!person && !code) continue;
+              if (person && !code) code = "D";
+              notes.push({
+                date: noteDate,
+                person,
+                code,
+                text: [person, code].filter(Boolean).join(" ")
+              });
+            }
           }
-          if (noteParts.length) notes.push({ date, text: noteParts.join(" ") });
         }
       }
 
@@ -875,6 +1295,9 @@ document.getElementById("importBtn").addEventListener("click", async () => {
   });
 
   app.rotation = normalizeRotationData(app.rotation);
+  if (!getAvailableYears(app.rotation).includes(parseInt(app.selectedYear, 10))) {
+    app.selectedYear = getInitialSelectedYear(app.rotation);
+  }
   saveRotationData();
   renderRotace();
 

@@ -18,7 +18,7 @@
 <h1>Rotace a kalkulačky</h1>
 <div id="shiftTime">Do konce směny zbývá 1 h 17 min</div>
 <div class="version">
-  v0.81 | <span class="signature" id="signatureTap">Martin Špadrna</span>
+  v0.89 | <span class="signature" id="signatureTap">Martin Špadrna</span>
 </div>
 
 <!-- HOME -->
@@ -28,7 +28,8 @@
     <div class="tile" onclick="showPage('frezky')">Frézky</div>
     <div class="tile" onclick="showPage('brusy')">Brusy</div>
     <div class="tile" onclick="showPage('pracka')">Pračka</div>
-    <div class="tile" onclick="showPage('jidlo')">Jídelní lístek</div>
+    <div class="tile" onclick="window.open('https://sa.gthcatering.cz/restaurant/c1/', '_blank', 'noopener')">Jídelní lístek</div>
+    <div class="tile" onclick="window.open('https://space.skoda.vwgroup.com/', '_blank', 'noopener')">Eportal</div>
   </div>
 </div>
 
@@ -54,42 +55,34 @@
   <div id="rotaceStatsPanel" class="subPanel">
     <div class="card">
       <div class="sectionTitle">Statistiky</div>
-      <div class="smallText" style="margin-top:10px;">
-        Tady později přibude přehled podle jména: kolikrát kdo dělal na kterém stroji od začátku roku
-        a kolikrát který stroj uklízel.
-      </div>
+      <label for="statsYearSelect">Rok</label>
+      <select id="statsYearSelect"></select>
+      <div class="smallText" style="margin-top:10px;">Klikni na jméno a ukáže se práce i úklid za vybraný rok.</div>
+      <div id="statsNameGrid" class="listGrid"></div>
+      <div id="statsView" class="personCard"><div class="smallText">Klikni na jméno a ukáže se práce, úklid i nepřítomnost za vybraný rok.</div></div>
     </div>
   </div>
 
   <div id="rotaceMonthsPanel" class="subPanel active">
-    <div id="monthsGrid" class="listGrid"><div class="listItem">1/26</div><div class="listItem">2/26</div><div class="listItem">3/26</div><div class="listItem">4/26</div><div class="listItem activeChoice">5/26</div><div class="listItem">6/26</div><div class="listItem">7/26</div><div class="listItem">8/26</div><div class="listItem">9/26</div><div class="listItem">10/26</div><div class="listItem">11/26</div><div class="listItem">12/26</div></div>
+    <div class="card" style="padding:12px;">
+      <label for="monthYearSelect">Rok</label>
+      <select id="monthYearSelect"></select>
+      <div id="monthsGrid" class="listGrid"></div>
+    </div>
     <div class="adminBox" id="adminBox" style="display: block;">
       <div class="smallText">
-        Import Excelu: nahraj celý sešit .xlsx. Vyber měsíc, který chceš přepsat; ostatní měsíce se jen doplní, pokud chybí.
+        Import Excelu: nahraj celý sešit .xlsx. Rok pro přepsání si vyber nahoře; ostatní měsíce se jen doplní, pokud chybí.
       </div>
-      <label for="overwriteMonth">Přepsat měsíc:</label>
-      <select id="overwriteMonth">
-        <option value="">— jen doplnit nové měsíce —</option>
-        <option value="1/26">1/26</option>
-        <option value="2/26">2/26</option>
-        <option value="3/26">3/26</option>
-        <option value="4/26">4/26</option>
-        <option value="5/26">5/26</option>
-        <option value="6/26">6/26</option>
-        <option value="7/26">7/26</option>
-        <option value="8/26">8/26</option>
-        <option value="9/26">9/26</option>
-        <option value="10/26">10/26</option>
-        <option value="11/26">11/26</option>
-        <option value="12/26">12/26</option>
-      </select>
+      <label for="importYearSelect">Rok importu</label>
+      <select id="importYearSelect"></select>
+      <label for="overwriteMonth">Přepsat měsíc</label>
+      <select id="overwriteMonth"></select>
       <input type="file" id="excelFile" accept=".xlsx,.xls">
       <div class="adminActions"><button id="importBtn">Import Excelu</button><button id="exportBtn">Export HTML</button><button id="githubBtn" style="grid-column:1 / -1;">Otevřít GitHub upload</button></div>
     </div>
-    <div id="monthView" class="card"><div class="sectionTitle">5/26</div><div class="smallText" style="margin-top:10px;font-weight:bold;">Tvrdota</div><div class="tableWrap"><table class="rotTable"><thead><tr><th>Datum</th><th>TNKS01</th><th>TBKR07</th><th>TPKW01</th><th>TPKW02</th><th>TBKR01</th></tr></thead><tbody><tr><td class="dateCell">4.5. N</td><td>Pech</td><td>Blažek</td><td>Střížek</td><td>Špadrna</td><td>Kříž</td></tr><tr><td class="dateCell">5.5. N</td><td>Kříž</td><td>Pech</td><td>Synek</td><td>Starý</td><td>Kmínek</td></tr><tr><td class="dateCell">8.5. R</td><td>Kmínek</td><td>Kříž</td><td>Třasák</td><td>Blažek</td><td>Starý</td></tr><tr><td class="dateCell">9.5. R</td><td>Špadrna</td><td>Kmínek</td><td>Kříž</td><td>Střížek</td><td>Blažek</td></tr><tr><td class="dateCell">10.5. R8</td><td>Blažek</td><td>Starý</td><td>Kmínek</td><td>Třasák</td><td>Pech</td></tr><tr><td class="dateCell">13.5. N</td><td>Pech</td><td>Blažek</td><td>Starý</td><td>Synek</td><td>Kříž</td></tr><tr><td class="dateCell">14.5. N</td><td>Třasák</td><td>Pech</td><td>Blažek</td><td>Starý</td><td>Kmínek</td></tr><tr><td class="dateCell">18.5. R</td><td>Střížek</td><td>Kříž</td><td>Starý</td><td>Blažek</td><td>Pech</td></tr><tr><td class="dateCell">19.5. R</td><td>Synek</td><td>Kříž</td><td>Novotný</td><td>Pech</td><td>Blažek</td></tr><tr><td class="dateCell">22.5. N</td><td>Blažek</td><td>Starý</td><td>Střížek</td><td>Kříž</td><td>Pech</td></tr><tr><td class="dateCell">23.5. N</td><td>Špadrna</td><td>Blažek</td><td>Synek</td><td>Novotný</td><td>Kříž</td></tr><tr><td class="dateCell">24.5. N8</td><td>Špadrna</td><td>Kříž</td><td>Střížek</td><td>Synek</td><td>Novotný</td></tr><tr><td class="dateCell">27.5. R</td><td>Novotný</td><td>Kříž</td><td>Pech</td><td>Střížek</td><td>Starý</td></tr><tr><td class="dateCell">28.5. R</td><td>Starý</td><td>Novotný</td><td>Kříž</td><td>Synek</td><td>Blažek</td></tr><tr><td class="dateCell">4.5. N</td><td>Starý</td><td>Kmínek</td><td>Synek</td><td class="missingCell">—</td><td>Třasák</td></tr></tbody></table></div><div class="smallText" style="margin-top:10px;font-weight:bold;">Měkota</div><div class="tableWrap"><table class="rotTable"><thead><tr><th>Datum</th><th>MSKC01</th><th>MSKC03</th><th>MSKC04</th><th>MFKF06</th><th>MFKF10</th></tr></thead><tbody><tr><td class="dateCell">9.5. R</td><td class="missingCell">—</td><td>Třasák</td><td>Synek</td><td class="missingCell">—</td><td>Pech</td></tr><tr><td class="dateCell">10.5. R8</td><td>Špadrna</td><td>Střížek</td><td>Synek</td><td class="missingCell">—</td><td>Kříž</td></tr><tr><td class="dateCell">13.5. N</td><td>Třasák</td><td>Střížek</td><td>Špadrna</td><td class="missingCell">—</td><td>Kmínek</td></tr><tr><td class="dateCell">14.5. N</td><td>Špadrna</td><td>Kříž</td><td>Synek</td><td class="missingCell">—</td><td>Střížek</td></tr><tr><td class="dateCell">18.5. R</td><td class="missingCell">—</td><td>Novotný</td><td>Synek</td><td class="missingCell">—</td><td>Špadrna</td></tr><tr><td class="dateCell">19.5. R</td><td class="missingCell">—</td><td>Střížek</td><td>Špadrna</td><td class="missingCell">—</td><td>Starý</td></tr><tr><td class="dateCell">22.5. N</td><td class="missingCell">—</td><td>Špadrna</td><td>Synek</td><td class="missingCell">—</td><td>Novotný</td></tr><tr><td class="dateCell">23.5. N</td><td class="missingCell">—</td><td>Střížek</td><td>Pech</td><td class="missingCell">—</td><td>Starý</td></tr><tr><td class="dateCell">24.5. N8</td><td class="missingCell">—</td><td>Blažek</td><td>Pech</td><td class="missingCell">—</td><td>Starý</td></tr><tr><td class="dateCell">27.5. R</td><td class="missingCell">—</td><td>Špadrna</td><td>Blažek</td><td class="missingCell">—</td><td>Synek</td></tr><tr><td class="dateCell">28.5. R</td><td class="missingCell">—</td><td>Střížek</td><td>Špadrna</td><td class="missingCell">—</td><td>Pech</td></tr></tbody></table></div><div class="smallText" style="margin-top:12px;font-weight:bold;">Dovolené / absence</div><div class="noteList"><div class="noteItem">4.5. N — 4.5. N Novotný L</div><div class="noteItem">5.5. N — 5.5. N Novotný L</div><div class="noteItem">8.5. R — 8.5. R Novotný L</div><div class="noteItem">9.5. R — 9.5. R Novotný L</div><div class="noteItem">10.5. R8 — 10.5. R8 Novotný L</div><div class="noteItem">13.5. N — 13.5. N Novotný L</div><div class="noteItem">14.5. N — 14.5. N Novotný L</div><div class="noteItem">18.5. R — 18.5. R Třasák L</div><div class="noteItem">19.5. R — 19.5. R Třasák L</div><div class="noteItem">22.5. N — 22.5. N Třasák L</div><div class="noteItem">23.5. N — 23.5. N Třasák L</div><div class="noteItem">24.5. N8 — 24.5. N8 Třasák L</div><div class="noteItem">27.5. R — 27.5. R Třasák L</div><div class="noteItem">28.5. R — 28.5. R Třasák L</div></div></div>
+    <div id="monthView" class="card"></div>
   </div>
 </div>
-
 
 <!-- JÍDELNÍ LÍSTEK -->
 <div id="jidlo" class="page">
