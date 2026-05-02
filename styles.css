@@ -45,7 +45,7 @@ h1{
 .version{
  position:fixed;
  bottom:6px;
- right:40px;
+ right:24px;
  font-size:12px;
  color:var(--muted);
  z-index:998;
@@ -387,6 +387,50 @@ td.missingCell{
  color:#d9dfdc;
 }
 
+.noteTable{
+ width:100%;
+ border-collapse:collapse;
+ margin-top:10px;
+}
+
+.noteTable th,
+.noteTable td{
+ border:1px solid #333;
+ padding:8px 6px;
+ text-align:left;
+ font-size:13px;
+ white-space:nowrap;
+}
+
+.noteTable th{
+ background:#202523;
+ color:#d9dfdc;
+ text-align:center;
+}
+
+.noteTable td:nth-child(1){
+ width:110px;
+ font-weight:bold;
+}
+
+.noteTable td:nth-child(3){
+ white-space:normal;
+}
+
+.noteTable th.noteSpacer,
+.noteTable td.noteSpacer{
+ width:14px;
+ min-width:14px;
+ padding:0;
+ background:transparent;
+ border:none;
+}
+
+.noteTable td.emptyCell{
+ color:var(--muted);
+ text-align:center;
+}
+
 .statsSummary{
  margin-top:10px;
  display:grid;
@@ -410,3 +454,43 @@ td.missingCell{
 .noteItem{display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap;}
 .noteDate{font-weight:bold;white-space:nowrap;color:#d9dfdc;}
 .noteInline{flex:1;min-width:0;}
+
+
+.homeDivider{
+  height:1px;
+  margin:16px 4px 14px;
+  background:linear-gradient(90deg, transparent, rgba(124,255,124,.75), transparent);
+  opacity:.85;
+}
+
+
+.noteSpacer{
+  width:14px;
+  min-width:14px;
+  padding:0 !important;
+  border:none !important;
+  background:transparent !important;
+}
+
+
+.statsToggle{
+ margin-top:10px;
+ padding:10px 12px;
+ border:1px solid var(--green);
+ border-radius:10px;
+ background:var(--panel2);
+ color:var(--green2);
+ font-weight:700;
+ text-align:center;
+ cursor:pointer;
+ user-select:none;
+}
+
+.soustruhModePanel{
+  margin-top:10px;
+}
+.soustruhResultCard{
+  margin-top:10px;
+}
+
+.bbtn.activeChoice{outline:3px solid var(--green2);}

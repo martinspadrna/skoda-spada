@@ -1,11 +1,48 @@
-const initialRotationData = {"months":{"1/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.1. N","cells":["Střížek","Blažek","Kříž","Kmínek","Starý"]},{"date":"3.1. N","cells":["Synek","Pech","Novotný","Starý","Kmínek"]},{"date":"4.1. N8","cells":["Třasák","Kříž","Špadrna","Blažek","Starý"]},{"date":"7.1. R","cells":["Starý","Kmínek","Střížek","Pech","Kříž"]},{"date":"8.1. R","cells":["Blažek","Starý","Synek","Kříž","Kmínek"]},{"date":"12.1. N","cells":["Pech","Blažek","Třasák","Novotný","Špadrna"]},{"date":"13.1. N","cells":["Špadrna","Pech","Kmínek","Střížek","Blažek"]},{"date":"16.1. R","cells":["Kmínek","Špadrna","Pech","Synek","Starý"]},{"date":"17.1. R","cells":["Novotný","Kmínek","Špadrna","Starý","Blažek"]},{"date":"18.1. R8","cells":["Třasák","Starý","Kmínek","Špadrna","Blažek"]},{"date":"21.1. N","cells":["Střížek","Novotný","Starý","Špadrna","Kříž"]},{"date":"22.1. N","cells":["Synek","Pech","Blažek","Starý","Kmínek"]},{"date":"26.1. R","cells":["Blažek","Kříž","Pech","Třasák","Starý"]},{"date":"27.1. R","cells":["Starý","Kmínek","Synek","Pech","Blažek"]},{"date":"30.1. N","cells":["Kříž","Novotný","Střížek","Blažek","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.1. N","cells":["Třasák","Špadrna","Novotný","Synek","Pech"]},{"date":"3.1. N","cells":["Třasák","Střížek","Kříž","Špadrna","Blažek"]},{"date":"4.1. N8","cells":["Kmínek","Pech","Synek","","Střížek"]},{"date":"7.1. R","cells":["Špadrna","Blažek","Synek","Třasák","Novotný"]},{"date":"8.1. R","cells":["Třasák","Střížek","Špadrna","Novotný","Pech"]},{"date":"12.1. N","cells":["Starý","Střížek","Kmínek","","Synek"]},{"date":"13.1. N","cells":["Třasák","Novotný","Synek","","Starý"]},{"date":"16.1. R","cells":["Novotný","Střížek","Blažek","","Třasák"]},{"date":"17.1. R","cells":["","Střížek","Třasák","","Synek"]},{"date":"18.1. R8","cells":["","Synek","Novotný","","Střížek"]},{"date":"21.1. N","cells":["Třasák","Pech","Synek","Blažek","Kmínek"]},{"date":"22.1. N","cells":["Třasák","Novotný","Kříž","Střížek","Špadrna"]},{"date":"26.1. R","cells":["Kmínek","Střížek","Špadrna","Synek","Novotný"]},{"date":"27.1. R","cells":["Třasák","Špadrna","Střížek","Novotný","Kříž"]},{"date":"30.1. N","cells":["Třasák","Kmínek","Špadrna","","Starý"]},{"date":"31.1. N","cells":["Starý","Novotný","Střížek","","Špadrna"]}]},"notes":[{"date":"4.1. N8","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"12.1. N","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"13.1. N","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"16.1. R","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"17.1. R","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"17.1. R","shift":"","person":"Pech","code":"D","text":"Pech D"},{"date":"18.1. R8","shift":"","person":"Kříž","code":"D","text":"Kříž D"},{"date":"18.1. R8","shift":"","person":"Pech","code":"D","text":"Pech D"},{"date":"30.1. N","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"31.1. N","shift":"","person":"Synek","code":"D","text":"Synek D"}]},"2/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.2. N8","cells":["Špadrna","Kříž","Blažek","Třasák","Novotný"]},{"date":"4.2. R","cells":["Novotný","Kříž","Pech","Synek","Starý"]},{"date":"5.2. R","cells":["Starý","Kmínek","Kříž","Střížek","Špadrna"]},{"date":"9.2. N","cells":["Blažek","Starý","Kmínek","Kříž","Pech"]},{"date":"10.2. N","cells":["Třasák","Blažek","Špadrna","Starý","Novotný"]},{"date":"13.2. R","cells":["Střížek","Pech","Blažek","Starý","Kmínek"]},{"date":"14.2. R","cells":["Synek","Kříž","Pech","Blažek","Starý"]},{"date":"15.2. R8","cells":["Starý","Kmínek","Kříž","Pech","Blažek"]},{"date":"18.2. N","cells":["Špadrna","Novotný","Třasák","Kříž","Pech"]},{"date":"19.2. N","cells":["Novotný","Blažek","Střížek","Špadrna","Kříž"]},{"date":"23.2. R","cells":["Kříž","Pech","Synek","Novotný","Kmínek"]},{"date":"24.2. R","cells":["Kmínek","Novotný","Pech","Třasák","Starý"]},{"date":"27.2. N","cells":["Starý","Kmínek","Novotný","Synek","Blažek"]},{"date":"28.2. N","cells":["Blažek","Starý","Kmínek","Střížek","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"4.2. R","cells":["Třasák","Kmínek","Střížek","Špadrna","Blažek"]},{"date":"5.2. R","cells":["Třasák","Pech","Novotný","","Blažek"]},{"date":"9.2. N","cells":["Třasák","Střížek","Špadrna","Synek","Novotný"]},{"date":"10.2. N","cells":["Kříž","Pech","Synek","","Střížek"]},{"date":"13.2. R","cells":["Třasák","Novotný","Synek","Špadrna","Kříž"]},{"date":"14.2. R","cells":["Špadrna","Střížek","Novotný","Třasák","Kmínek"]},{"date":"15.2. R8","cells":["Třasák","Novotný","Synek","","Špadrna"]},{"date":"18.2. N","cells":["Starý","Střížek","Blažek","Synek","Kmínek"]},{"date":"19.2. N","cells":["Třasák","Kmínek","Synek","Pech","Starý"]},{"date":"23.2. R","cells":["Blažek","Střížek","Špadrna","Starý","Třasák"]},{"date":"24.2. R","cells":["Špadrna","Kříž","Synek","Střížek","Blažek"]},{"date":"27.2. N","cells":["Třasák","Špadrna","Pech","","Kříž"]},{"date":"28.2. N","cells":["Špadrna","Novotný","Kříž","Třasák","Synek"]}]},"notes":[{"date":"1.2. N8","shift":"","person":"Kmínek","code":"D","text":"Kmínek D"},{"date":"1.2. N8","shift":"","person":"Kříž od 0:00","code":"D","text":"Kříž od 0:00 D"},{"date":"5.2. R","shift":"","person":"Synek","code":"§","text":"Synek §"},{"date":"15.2. R8","shift":"","person":"Střížek","code":"D","text":"Střížek D"},{"date":"27.2. N","shift":"","person":"Střížek","code":"D","text":"Střížek D"}]},"3/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.3. N8","cells":["Střížek","Blažek","Starý","Pech","Kříž"]},{"date":"4.3. R","cells":["Třasák","Pech","Blažek","Novotný","Kmínek"]},{"date":"5.3. R","cells":["Synek","Kříž","Pech","Blažek","Starý"]},{"date":"9.3. N","cells":["Špadrna","Novotný","Třasák","Pech","Blažek"]},{"date":"10.3. N","cells":["Novotný","Kmínek","Střížek","Špadrna","Pech"]},{"date":"13.3. R","cells":["Pech","Blažek","Synek","Starý","Kříž"]},{"date":"14.3. R","cells":["Kříž","Pech","Blažek","Třasák","Kmínek"]},{"date":"15.3. R8","cells":["Kmínek","Kříž","Pech","Střížek","Starý"]},{"date":"18.3. N","cells":["Starý","Kmínek","Kříž","Synek","Blažek"]},{"date":"19.3. N","cells":["Pech","Starý","Kmínek","Kříž","Špadrna"]},{"date":"23.3. R","cells":["Novotný","Blažek","Starý","Kmínek","Kříž"]},{"date":"24.3. R","cells":["Kříž","Novotný","Blažek","Starý","Kmínek"]},{"date":"27.3. N","cells":["Kmínek","Kříž","Synek","Blažek","Pech"]},{"date":"28.3. N","cells":["Starý","Pech","Střížek","Kříž","Blažek"]},{"date":"29.3. N8","cells":["Špadrna","Kmínek","Třasák","Střížek","Novotný"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.3. N8","cells":["Špadrna","Třasák","Novotný","Kmínek","Synek"]},{"date":"4.3. R","cells":["Střížek","Kříž","Starý","","Synek"]},{"date":"5.3. R","cells":["Třasák","Novotný","Kmínek","","Střížek"]},{"date":"9.3. N","cells":["Kmínek","Střížek","Kříž","Starý","Synek"]},{"date":"10.3. N","cells":["","Blažek","Synek","","Kříž"]},{"date":"13.3. R","cells":["Třasák","Střížek","Kmínek","Špadrna","Novotný"]},{"date":"14.3. R","cells":["Špadrna","Střížek","Synek","","Novotný"]},{"date":"15.3. R8","cells":["Špadrna","Blažek","Synek","","Třasák"]},{"date":"18.3. N","cells":["Třasák","Střížek","Špadrna","","Pech"]},{"date":"19.3. N","cells":["Třasák","Střížek","Synek","","Blažek"]},{"date":"23.3. R","cells":["Třasák","Střížek","","","Špadrna"]},{"date":"24.3. R","cells":["Třasák","Pech","Špadrna","","Střížek"]},{"date":"27.3. N","cells":["Novotný","Střížek","Špadrna","","Třasák"]},{"date":"28.3. N","cells":["Novotný","Špadrna","Synek","Třasák","Kmínek"]},{"date":"29.3. N8","cells":["Synek","Pech","Starý","Blažek","Kříž"]}]},"notes":[{"date":"4.3. R","shift":"","person":"Špadrna","code":"NV","text":"Špadrna NV"},{"date":"5.3. R","shift":"","person":"Špadrna","code":"NV","text":"Špadrna NV"},{"date":"10.3. N","shift":"","person":"Třasák","code":"NV","text":"Třasák NV"},{"date":"10.3. N","shift":"","person":"Starý","code":"D","text":"Starý D"},{"date":"14.3. R","shift":"","person":"Starý","code":"D","text":"Starý D"},{"date":"15.3. R8","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"18.3. N","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"19.3. N","shift":"","person":"Novotný","code":"D","text":"Novotný D"},{"date":"23.3. R","shift":"","person":"Pech","code":"D","text":"Pech D"},{"date":"23.3. R","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"24.3. R","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"27.3. N","shift":"","person":"Starý","code":"D","text":"Starý D"}]},"4/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.4. R","cells":["Pech","Blažek","Starý","Synek","Kříž"]},{"date":"2.4. R","cells":["Kříž","Starý","Blažek","Třasák","Kmínek"]},{"date":"7.4. N","cells":["Střížek","Kříž","Pech","Špadrna","Starý"]},{"date":"10.4. R","cells":["Synek","Kmínek","Kříž","Novotný","Špadrna"]},{"date":"11.4. R","cells":["Třasák","Starý","Kmínek","Kříž","Pech"]},{"date":"12.4. R8","cells":["Pech","Blažek","Špadrna","Kmínek","Kříž"]},{"date":"15.4. N","cells":["Špadrna","Pech","Střížek","Starý","Kmínek"]},{"date":"16.4. N","cells":["Novotný","Kříž","Synek","Blažek","Starý"]},{"date":"20.4. R","cells":["Starý","Novotný","Třasák","Pech","Blažek"]},{"date":"21.4. R","cells":["Blažek","Starý","Kmínek","Střížek","Pech"]},{"date":"24.4. N","cells":["Špadrna","Blažek","Starý","Synek","Kříž"]},{"date":"25.4. N","cells":["Novotný","Pech","Blažek","Třasák","Kmínek"]},{"date":"26.4. N8","cells":["Střížek","Novotný","Pech","Blažek","Starý"]},{"date":"29.4. R","cells":["Synek","Kmínek","Kříž","Starý","Blažek"]},{"date":"30.4. R","cells":["Třasák","Novotný","Kmínek","Kříž","Pech"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.4. R","cells":["Novotný","Kmínek","Třasák","Špadrna","Střížek"]},{"date":"2.4. R","cells":["Pech","Střížek","Novotný","","Špadrna"]},{"date":"7.4. N","cells":["Blažek","Novotný","Kmínek","Třasák","Synek"]},{"date":"10.4. R","cells":["Pech","Střížek","Blažek","Třasák","Starý"]},{"date":"11.4. R","cells":["Novotný","Střížek","Synek","Špadrna","Blažek"]},{"date":"12.4. R8","cells":["Třasák","Střížek","Starý","","Novotný"]},{"date":"15.4. N","cells":["Třasák","Novotný","Synek","Kříž","Blažek"]},{"date":"16.4. N","cells":["Pech","Střížek","Špadrna","Kmínek","Třasák"]},{"date":"20.4. R","cells":["Špadrna","Střížek","Kmínek","Synek","Kříž"]},{"date":"21.4. R","cells":["Kříž","Špadrna","Synek","Novotný","Třasák"]},{"date":"24.4. N","cells":["Třasák","Pech","Novotný","Střížek","Kmínek"]},{"date":"25.4. N","cells":["Špadrna","Kříž","Starý","Střížek","Synek"]},{"date":"26.4. N8","cells":["Třasák","Kříž","Synek","Špadrna","Kmínek"]},{"date":"29.4. R","cells":["Třasák","Střížek","Novotný","","Pech"]},{"date":"30.4. R","cells":["Blažek","Střížek","Synek","","Starý"]}]},"notes":[{"date":"2.4. R","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"12.4. R8","shift":"","person":"Synek","code":"D","text":"Synek D"},{"date":"29.4. R","shift":"","person":"Špadrna","code":"D","text":"Špadrna D"},{"date":"30.4. R","shift":"","person":"Špadrna","code":"D","text":"Špadrna D"}]},"5/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"4.5. N","cells":["Pech","Blažek","Střížek","Špadrna","Kříž"]},{"date":"5.5. N","cells":["Kříž","Pech","Synek","Starý","Kmínek"]},{"date":"8.5. R","cells":["Kmínek","Kříž","Třasák","Blažek","Starý"]},{"date":"9.5. R","cells":["Špadrna","Kmínek","Kříž","Střížek","Blažek"]},{"date":"10.5. R8","cells":["Blažek","Starý","Kmínek","Třasák","Pech"]},{"date":"13.5. N","cells":["Pech","Blažek","Starý","Synek","Kříž"]},{"date":"14.5. N","cells":["Třasák","Pech","Blažek","Starý","Kmínek"]},{"date":"18.5. R","cells":["Střížek","Kříž","Starý","Blažek","Pech"]},{"date":"19.5. R","cells":["Synek","Kříž","Novotný","Pech","Blažek"]},{"date":"22.5. N","cells":["Blažek","Starý","Střížek","Kříž","Pech"]},{"date":"23.5. N","cells":["Špadrna","Blažek","Synek","Novotný","Kříž"]},{"date":"24.5. N8","cells":["Špadrna","Kříž","Střížek","Synek","Novotný"]},{"date":"27.5. R","cells":["Novotný","Kříž","Pech","Střížek","Starý"]},{"date":"28.5. R","cells":["Starý","Novotný","Kříž","Synek","Blažek"]},{"date":"4.5. N","cells":["Starý","Kmínek","Synek","","Třasák"]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"9.5. R","cells":["","Třasák","Synek","","Pech"]},{"date":"10.5. R8","cells":["Špadrna","Střížek","Synek","","Kříž"]},{"date":"13.5. N","cells":["Třasák","Střížek","Špadrna","","Kmínek"]},{"date":"14.5. N","cells":["Špadrna","Kříž","Synek","","Střížek"]},{"date":"18.5. R","cells":["","Novotný","Synek","","Špadrna"]},{"date":"19.5. R","cells":["","Střížek","Špadrna","","Starý"]},{"date":"22.5. N","cells":["","Špadrna","Synek","","Novotný"]},{"date":"23.5. N","cells":["","Střížek","Pech","","Starý"]},{"date":"24.5. N8","cells":["","Blažek","Pech","","Starý"]},{"date":"27.5. R","cells":["","Špadrna","Blažek","","Synek"]},{"date":"28.5. R","cells":["","Střížek","Špadrna","","Pech"]}]},"notes":[{"date":"4.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"5.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"8.5. R","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"9.5. R","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"9.5. R","shift":"","person":"Starý","code":"D","text":"Starý D"},{"date":"10.5. R8","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"13.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"14.5. N","shift":"","person":"Novotný","code":"L","text":"Novotný L"},{"date":"18.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"18.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"19.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"19.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"22.5. N","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"22.5. N","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"23.5. N","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"23.5. N","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"24.5. N8","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"24.5. N8","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"27.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"27.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"},{"date":"28.5. R","shift":"","person":"Třasák","code":"L","text":"Třasák L"},{"date":"28.5. R","shift":"","person":"Kmínek","code":"L","text":"Kmínek L"}]},"6/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.6. N","cells":["","","","",""]},{"date":"2.6. N","cells":["","","","",""]},{"date":"5.6. R","cells":["","","","",""]},{"date":"6.6. R","cells":["","","","",""]},{"date":"7.6. R8","cells":["","","","",""]},{"date":"10.6. N","cells":["","","","",""]},{"date":"11.6. N","cells":["","","","",""]},{"date":"15.6. R","cells":["","","","",""]},{"date":"16.6. R","cells":["","","","",""]},{"date":"19.6. N","cells":["","","","",""]},{"date":"20.6. N","cells":["","","","",""]},{"date":"21.6. N8","cells":["","","","",""]},{"date":"24.6. R","cells":["","","","",""]},{"date":"25.6. R","cells":["","","","",""]},{"date":"29.6. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.6. N","cells":["","","","",""]},{"date":"2.6. N","cells":["","","","",""]},{"date":"5.6. R","cells":["","","","",""]},{"date":"6.6. R","cells":["","","","",""]},{"date":"7.6. R8","cells":["","","","",""]},{"date":"10.6. N","cells":["","","","",""]},{"date":"11.6. N","cells":["","","","",""]},{"date":"15.6. R","cells":["","","","",""]},{"date":"16.6. R","cells":["","","","",""]},{"date":"19.6. N","cells":["","","","",""]},{"date":"20.6. N","cells":["","","","",""]},{"date":"21.6. N8","cells":["","","","",""]},{"date":"24.6. R","cells":["","","","",""]},{"date":"25.6. R","cells":["","","","",""]},{"date":"29.6. N","cells":["","","","",""]},{"date":"30.6. N","cells":["","","","",""]}]},"notes":[]},"7/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"3.7. R","cells":["","","","",""]},{"date":"4.7. R","cells":["","","","",""]},{"date":"5.7. R8","cells":["","","","",""]},{"date":"8.7. N","cells":["","","","",""]},{"date":"9.7. N","cells":["","","","",""]},{"date":"13.7. R","cells":["","","","",""]},{"date":"14.7. R","cells":["","","","",""]},{"date":"17.7. N","cells":["","","","",""]},{"date":"18.7. N","cells":["","","","",""]},{"date":"19.7. N8","cells":["","","","",""]},{"date":"22.7. R","cells":["","","","",""]},{"date":"23.7. R","cells":["","","","",""]},{"date":"27.7. N","cells":["","","","",""]},{"date":"28.7. N","cells":["","","","",""]},{"date":"31.7. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"3.7. R","cells":["","","","",""]},{"date":"4.7. R","cells":["","","","",""]},{"date":"5.7. R8","cells":["","","","",""]},{"date":"8.7. N","cells":["","","","",""]},{"date":"9.7. N","cells":["","","","",""]},{"date":"13.7. R","cells":["","","","",""]},{"date":"14.7. R","cells":["","","","",""]},{"date":"17.7. N","cells":["","","","",""]},{"date":"18.7. N","cells":["","","","",""]},{"date":"19.7. N8","cells":["","","","",""]},{"date":"22.7. R","cells":["","","","",""]},{"date":"23.7. R","cells":["","","","",""]},{"date":"27.7. N","cells":["","","","",""]},{"date":"28.7. N","cells":["","","","",""]},{"date":"31.7. R","cells":["","","","",""]}]},"notes":[]},"8/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.8. R","cells":["","","","",""]},{"date":"2.8. R8","cells":["","","","",""]},{"date":"5.8. N","cells":["","","","",""]},{"date":"6.8. N","cells":["","","","",""]},{"date":"10.8. R","cells":["","","","",""]},{"date":"11.8. R","cells":["","","","",""]},{"date":"14.8. N","cells":["","","","",""]},{"date":"15.8. N","cells":["","","","",""]},{"date":"16.8. N8","cells":["","","","",""]},{"date":"19.8. R","cells":["","","","",""]},{"date":"20.8. R","cells":["","","","",""]},{"date":"24.8. N","cells":["","","","",""]},{"date":"25.8. N","cells":["","","","",""]},{"date":"28.8. R","cells":["","","","",""]},{"date":"29.8. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.8. R","cells":["","","","",""]},{"date":"2.8. R8","cells":["","","","",""]},{"date":"5.8. N","cells":["","","","",""]},{"date":"6.8. N","cells":["","","","",""]},{"date":"10.8. R","cells":["","","","",""]},{"date":"11.8. R","cells":["","","","",""]},{"date":"14.8. N","cells":["","","","",""]},{"date":"15.8. N","cells":["","","","",""]},{"date":"16.8. N8","cells":["","","","",""]},{"date":"19.8. R","cells":["","","","",""]},{"date":"20.8. R","cells":["","","","",""]},{"date":"24.8. N","cells":["","","","",""]},{"date":"25.8. N","cells":["","","","",""]},{"date":"28.8. R","cells":["","","","",""]},{"date":"29.8. R","cells":["","","","",""]},{"date":"30.8. R8","cells":["","","","",""]}]},"notes":[]},"9/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.9. N","cells":["","","","",""]},{"date":"3.9. N","cells":["","","","",""]},{"date":"7.9. R","cells":["","","","",""]},{"date":"8.9. R","cells":["","","","",""]},{"date":"11.9. N","cells":["","","","",""]},{"date":"12.9. N","cells":["","","","",""]},{"date":"13.9. N8","cells":["","","","",""]},{"date":"16.9. R","cells":["","","","",""]},{"date":"17.9. R","cells":["","","","",""]},{"date":"21.9. N","cells":["","","","",""]},{"date":"22.9. N","cells":["","","","",""]},{"date":"25.9. R","cells":["","","","",""]},{"date":"26.9. R","cells":["","","","",""]},{"date":"27.9. R8","cells":["","","","",""]},{"date":"30.9. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.9. N","cells":["","","","",""]},{"date":"3.9. N","cells":["","","","",""]},{"date":"7.9. R","cells":["","","","",""]},{"date":"8.9. R","cells":["","","","",""]},{"date":"11.9. N","cells":["","","","",""]},{"date":"12.9. N","cells":["","","","",""]},{"date":"13.9. N8","cells":["","","","",""]},{"date":"16.9. R","cells":["","","","",""]},{"date":"17.9. R","cells":["","","","",""]},{"date":"21.9. N","cells":["","","","",""]},{"date":"22.9. N","cells":["","","","",""]},{"date":"25.9. R","cells":["","","","",""]},{"date":"26.9. R","cells":["","","","",""]},{"date":"27.9. R8","cells":["","","","",""]},{"date":"30.9. N","cells":["","","","",""]}]},"notes":[]},"10/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.10. N","cells":["","","","",""]},{"date":"5.10. R","cells":["","","","",""]},{"date":"6.10. R","cells":["","","","",""]},{"date":"9.10. N","cells":["","","","",""]},{"date":"10.10. N","cells":["","","","",""]},{"date":"11.10. N8","cells":["","","","",""]},{"date":"14.10. R","cells":["","","","",""]},{"date":"15.10. R","cells":["","","","",""]},{"date":"19.10. N","cells":["","","","",""]},{"date":"20.10. N","cells":["","","","",""]},{"date":"23.10. R","cells":["","","","",""]},{"date":"24.10. R","cells":["","","","",""]},{"date":"25.10. R8","cells":["","","","",""]},{"date":"28.10. N","cells":["","","","",""]},{"date":"29.10. N","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.10. N","cells":["","","","",""]},{"date":"5.10. R","cells":["","","","",""]},{"date":"6.10. R","cells":["","","","",""]},{"date":"9.10. N","cells":["","","","",""]},{"date":"10.10. N","cells":["","","","",""]},{"date":"11.10. N8","cells":["","","","",""]},{"date":"14.10. R","cells":["","","","",""]},{"date":"15.10. R","cells":["","","","",""]},{"date":"19.10. N","cells":["","","","",""]},{"date":"20.10. N","cells":["","","","",""]},{"date":"23.10. R","cells":["","","","",""]},{"date":"24.10. R","cells":["","","","",""]},{"date":"25.10. R8","cells":["","","","",""]},{"date":"28.10. N","cells":["","","","",""]},{"date":"29.10. N","cells":["","","","",""]}]},"notes":[]},"11/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"2.11. R","cells":["","","","",""]},{"date":"3.11. R","cells":["","","","",""]},{"date":"6.11. N","cells":["","","","",""]},{"date":"7.11. N","cells":["","","","",""]},{"date":"8.11. N8","cells":["","","","",""]},{"date":"11.11. R","cells":["","","","",""]},{"date":"12.11. R","cells":["","","","",""]},{"date":"16.11. N","cells":["","","","",""]},{"date":"17.11. N","cells":["","","","",""]},{"date":"20.11. R","cells":["","","","",""]},{"date":"21.11. R","cells":["","","","",""]},{"date":"22.11. R8","cells":["","","","",""]},{"date":"25.11. N","cells":["","","","",""]},{"date":"26.11. N","cells":["","","","",""]},{"date":"30.11. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"2.11. R","cells":["","","","",""]},{"date":"3.11. R","cells":["","","","",""]},{"date":"6.11. N","cells":["","","","",""]},{"date":"7.11. N","cells":["","","","",""]},{"date":"8.11. N8","cells":["","","","",""]},{"date":"11.11. R","cells":["","","","",""]},{"date":"12.11. R","cells":["","","","",""]},{"date":"16.11. N","cells":["","","","",""]},{"date":"17.11. N","cells":["","","","",""]},{"date":"20.11. R","cells":["","","","",""]},{"date":"21.11. R","cells":["","","","",""]},{"date":"22.11. R8","cells":["","","","",""]},{"date":"25.11. N","cells":["","","","",""]},{"date":"26.11. N","cells":["","","","",""]},{"date":"30.11. R","cells":["","","","",""]}]},"notes":[]},"12/26":{"hard":{"title":"Rotace tvrdota","machines":["TNKS01","TBKR07","TPKW01","TPKW02","TBKR01"],"rows":[{"date":"1.12. R","cells":["","","","",""]},{"date":"4.12. N","cells":["","","","",""]},{"date":"5.12. N","cells":["","","","",""]},{"date":"6.12. N8","cells":["","","","",""]},{"date":"9.12. R","cells":["","","","",""]},{"date":"10.12. R","cells":["","","","",""]},{"date":"14.12. N","cells":["","","","",""]},{"date":"15.12. N","cells":["","","","",""]},{"date":"18.12. R","cells":["","","","",""]},{"date":"19.12. R","cells":["","","","",""]},{"date":"20.12. R8","cells":["","","","",""]},{"date":"23.12. N","cells":["","","","",""]},{"date":"24.12. N","cells":["","","","",""]},{"date":"28.12. R","cells":["","","","",""]},{"date":"29.12. R","cells":["","","","",""]}]},"soft":{"title":"Rotace měkota","machines":["MSKC01","MSKC03","MSKC04","MFKF06","MFKF10"],"rows":[{"date":"1.12. R","cells":["","","","",""]},{"date":"4.12. N","cells":["","","","",""]},{"date":"5.12. N","cells":["","","","",""]},{"date":"6.12. N8","cells":["","","","",""]},{"date":"9.12. R","cells":["","","","",""]},{"date":"10.12. R","cells":["","","","",""]},{"date":"14.12. N","cells":["","","","",""]},{"date":"15.12. N","cells":["","","","",""]},{"date":"18.12. R","cells":["","","","",""]},{"date":"19.12. R","cells":["","","","",""]},{"date":"20.12. R8","cells":["","","","",""]},{"date":"23.12. N","cells":["","","","",""]},{"date":"24.12. N","cells":["","","","",""]},{"date":"28.12. R","cells":["","","","",""]},{"date":"29.12. R","cells":["","","","",""]}]},"notes":[]}}};
-
-
-const APP_KEY = "rotace_kalkulacky_state_v062";
-const ROTATION_BUILD = "2026-04-29-v089-" + Date.now();
+const APP_KEY = "rotace_kalkulacky_state_v122";
+const ROTATION_BUILD = "2026-05-02-v133-" + Date.now();
 
 const HARD_MACHINE_HEADERS = ["TNKS01", "TBKR07", "TPKW01", "TPKW02", "TBKR01"];
 const SOFT_MACHINE_HEADERS = ["MSKC01", "MSKC03", "MSKC04", "MFKF06", "MFKF10"];
+
+const KNOWN_STAT_NAMES = new Set(["Blažek", "Kmínek", "Kříž", "Novotný", "Pech", "Starý", "Střížek", "Synek", "Třasák", "Špadrna"]);
+
+
+const NO_START_HOLIDAYS = new Set(["1-1", "4-3", "4-6", "5-1", "5-8", "7-5", "7-6", "9-28", "10-17", "10-28", "12-24", "12-25", "12-26"]);
+
+function dateKeyMD(date) {
+  return (date.getMonth() + 1) + "-" + date.getDate();
+}
+
+function isShiftStartBlocked(date) {
+  return !!getSpecialWorkInfo(date);
+}
+
+function getSpecialWorkInfo(now) {
+  const key = dateKeyMD(now);
+  const HOLIDAY_LABELS = {
+    "1-1": "Nový rok",
+    "4-3": "Velký pátek",
+    "4-6": "Velikonoční pondělí",
+    "5-1": "Svátek práce",
+    "5-8": "Den vítězství",
+    "7-5": "Cyril a Metoděj",
+    "7-6": "Jan Hus",
+    "9-28": "Den české státnosti",
+    "10-17": "Svátek",
+    "10-28": "Vznik ČSR",
+    "11-17": "Den boje za svobodu a demokracii",
+    "12-24": "Štědrý den",
+    "12-25": "1. svátek vánoční",
+    "12-26": "2. svátek vánoční"
+  };
+  if (HOLIDAY_LABELS[key]) return { type: "holiday", label: HOLIDAY_LABELS[key] };
+  if (key === "10-24" || key === "10-25") return { type: "czd", label: "CZD – celozávodní dovolená" };
+  if ((now >= new Date(2026, 6, 19, 14, 0, 0, 0) && now < new Date(2026, 7, 2, 18, 0, 0, 0)) ||
+      (now >= new Date(2026, 11, 23, 18, 0, 0, 0) && now < new Date(2027, 0, 2, 6, 0, 0, 0))) {
+    return { type: "czd", label: "CZD – celozávodní dovolená" };
+  }
+  return null;
+}
 
 const appRotation = loadRotationData();
 const app = {
@@ -13,8 +50,14 @@ const app = {
   selectedMonth: null,
   selectedName: null,
   selectedStatsName: null,
-  selectedYear: getInitialSelectedYear(appRotation),
-  importYear: getInitialSelectedYear(appRotation),
+  selectedStatsMachine: null,
+  soustruhMode: "lis",
+  soustruhFirstBatch: "",
+  soustruhPlan: "",
+  soustruh126Start: 32,
+  soustruh106Counts: ["", "", "", ""],
+  selectedYear: new Date().getFullYear(),
+  importYear: new Date().getFullYear(),
   importClicks: 0,
   adminUnlocked: false,
   machine: localStorage.getItem("machine") || "TBKR01",
@@ -23,6 +66,24 @@ const app = {
 };
 
 // Budoucí rozšíření: statistiky za rok pro jednotlivá jména/stroje/úklid.
+
+const BRUS_CONFIG = {
+  TBKR01: {
+    AD:   { pieceSec: 58.5, dressEvery: 58, dressSec: 240, label: "AD" },
+    ADV:  { pieceSec: 62.7, dressEvery: 45, dressSec: 240, label: "AD volné" },
+    AE:   { pieceSec: 57.0, dressEvery: 58, dressSec: 240, label: "AE" },
+    AEV:  { pieceSec: 60.0, dressEvery: 45, dressSec: 240, label: "AE volné" },
+    AH:   { pieceSec: 63.0, dressEvery: 65, dressSec: 240, label: "AH" }
+  },
+  TBKR07: {
+    AD:   { pieceSec: 58.2, dressEvery: 59, dressSec: 240, label: "AD" },
+    ADV:  { pieceSec: 60.3, dressEvery: 45, dressSec: 240, label: "AD volné" },
+    AE:   { pieceSec: 56.4, dressEvery: 58, dressSec: 240, label: "AE" },
+    AEV:  { pieceSec: 60.0, dressEvery: 45, dressSec: 240, label: "AE volné" },
+    AH:   { pieceSec: 63.0, dressEvery: 65, dressSec: 240, label: "AH" }
+  }
+};
+
 
 function clone(obj) {
   return JSON.parse(JSON.stringify(obj));
@@ -35,43 +96,101 @@ function normalizeRows(rows) {
   }));
 }
 
-function normalizeMonthForImport(monthData) {
+function canonicalAbsenceKey(note) {
+  const n = normalizeNoteEntry(note);
+  const people = (n.people && n.people.length) ? n.people.join(" a ") : (n.person || "");
+  if (n.isAbsence) {
+    return ["ABS", n.date, n.shift, people, n.code].join("|");
+  }
+  return ["NOTE", n.date, n.shift, n.text || people || ""].join("|");
+}
+
+function mergeNotes(primaryNotes, fallbackNotes) {
+  const out = [];
+  const seen = new Set();
+
+  const pushNote = (note) => {
+    const normalized = normalizeNoteEntry(note);
+    const peopleText = (normalized.people && normalized.people.length)
+      ? normalized.people.join(" a ")
+      : normalized.person;
+
+    const item = {
+      date: normalized.date,
+      shift: normalized.shift,
+      person: peopleText,
+      code: normalized.code,
+      text: normalized.text || [normalized.date, peopleText, normalized.code].filter(Boolean).join(" ").trim()
+    };
+
+    const key = canonicalAbsenceKey(item);
+    if (!seen.has(key)) {
+      seen.add(key);
+      out.push(item);
+    }
+  };
+
+  (Array.isArray(primaryNotes) ? primaryNotes : []).forEach(pushNote);
+  (Array.isArray(fallbackNotes) ? fallbackNotes : []).forEach(pushNote);
+  return out;
+}
+
+function normalizeMonthForImport(monthData, fallbackMonthData) {
+  const normalizeSection = (section, fallbackMachines) => {
+    const incoming = monthData && monthData[section] ? monthData[section] : null;
+    const fallback = fallbackMonthData && fallbackMonthData[section] ? fallbackMonthData[section] : null;
+    const incomingRows = Array.isArray(incoming && incoming.rows) ? normalizeRows(incoming.rows) : null;
+    const fallbackRows = Array.isArray(fallback && fallback.rows) ? normalizeRows(fallback.rows) : [];
+    const rows = incomingRows !== null ? incomingRows : fallbackRows;
+
+    const machines = (incoming && Array.isArray(incoming.machines) && incoming.machines.length)
+      ? incoming.machines.slice()
+      : ((fallback && Array.isArray(fallback.machines) && fallback.machines.length)
+          ? fallback.machines.slice()
+          : fallbackMachines.slice());
+    const title = (incoming && incoming.title) || (fallback && fallback.title) || (section === "hard" ? "Rotace tvrdota" : "Rotace měkota");
+    return { title, machines, rows };
+  };
+
+  const normalizeNotesArray = (arr) => (Array.isArray(arr) ? arr : []).map(n => ({
+    date: String(n && n.date ? n.date : "").trim(),
+    shift: String(n && n.shift ? n.shift : "").trim(),
+    person: String(n && n.person ? n.person : "").trim(),
+    code: String(n && n.code ? n.code : "").trim(),
+    text: String(n && n.text ? n.text : "").trim()
+  }));
+
+  const hasNotes = monthData && Object.prototype.hasOwnProperty.call(monthData, "notes");
+  const incomingNotes = hasNotes ? normalizeNotesArray(monthData.notes) : null;
+  const fallbackNotes = fallbackMonthData && Array.isArray(fallbackMonthData.notes) ? normalizeNotesArray(fallbackMonthData.notes) : [];
+
   return {
-    hard: {
-      title: (monthData && monthData.hard && monthData.hard.title) || "Rotace tvrdota",
-      machines: HARD_MACHINE_HEADERS.slice(),
-      rows: normalizeRows(monthData && monthData.hard && monthData.hard.rows)
-    },
-    soft: {
-      title: (monthData && monthData.soft && monthData.soft.title) || "Rotace měkota",
-      machines: SOFT_MACHINE_HEADERS.slice(),
-      rows: normalizeRows(monthData && monthData.soft && monthData.soft.rows)
-    },
-    notes: Array.isArray(monthData && monthData.notes) ? monthData.notes.map(n => ({
-      date: String(n && n.date ? n.date : "").trim(),
-      shift: String(n && n.shift ? n.shift : "").trim(),
-      person: String(n && n.person ? n.person : "").trim(),
-      code: String(n && n.code ? n.code : "").trim(),
-      text: String(n && n.text ? n.text : "").trim()
-    })) : []
+    hard: normalizeSection("hard", HARD_MACHINE_HEADERS),
+    soft: normalizeSection("soft", SOFT_MACHINE_HEADERS),
+    notes: incomingNotes !== null ? incomingNotes : fallbackNotes
   };
 }
 
 function normalizeRotationData(rotation) {
-  const src = rotation && rotation.months ? clone(rotation) : clone(initialRotationData);
-  if (!src.months || typeof src.months !== "object") src.months = {};
-  Object.entries(src.months).forEach(([monthKey, monthData]) => {
-    src.months[monthKey] = normalizeMonthForImport(monthData);
+  const src = clone(initialRotationData);
+  const incoming = rotation && rotation.months && typeof rotation.months === "object" ? rotation.months : {};
+  Object.entries(incoming).forEach(([monthKey, monthData]) => {
+    const fallbackMonthData = initialRotationData.months ? initialRotationData.months[monthKey] : null;
+    src.months[monthKey] = normalizeMonthForImport(monthData, fallbackMonthData);
   });
   return src;
 }
 
 function defaultRotation() {
-  return normalizeRotationData(clone(initialRotationData));
+  return normalizeRotationData({ months: {} });
 }
 
 function loadRotationData() {
   try {
+    const savedBuild = localStorage.getItem("rotationBuild");
+    if (savedBuild && savedBuild !== ROTATION_BUILD) {
+      return defaultRotation();
+    }
     const raw = localStorage.getItem(APP_KEY);
     if (!raw) return defaultRotation();
     const parsed = JSON.parse(raw);
@@ -95,6 +214,11 @@ function saveRotationData() {
     localStorage.setItem("davka", document.getElementById("davka")?.value || "");
     localStorage.setItem("orovnani", document.getElementById("orovnani")?.value || "");
     localStorage.setItem("celkem", document.getElementById("celkem")?.value || "");
+    localStorage.setItem("soustruhMode", app.soustruhMode);
+    localStorage.setItem("soustruhFirstBatch", app.soustruhFirstBatch || "");
+    localStorage.setItem("soustruhPlan", app.soustruhPlan || "");
+    localStorage.setItem("soustruh126Start", String(app.soustruh126Start || 32));
+    localStorage.setItem("soustruh106Counts", JSON.stringify(app.soustruh106Counts || ["", "", "", ""]));
   } catch (e) {}
 }
 
@@ -108,6 +232,21 @@ function restoreInputs() {
   setVal("davka", "davka");
   setVal("orovnani", "orovnani");
   setVal("celkem", "celkem");
+  setVal("lis_first", "soustruhFirstBatch");
+  setVal("lis_plan", "soustruhPlan");
+  setVal("v126_first", "soustruhFirstBatch");
+  setVal("v126_plan", "soustruhPlan");
+  setVal("v106_first", "soustruhFirstBatch");
+  setVal("v106_plan", "soustruhPlan");
+  try {
+    const arr = JSON.parse(localStorage.getItem("soustruh106Counts") || "[\"\",\"\",\"\",\"\"]");
+    ["v106_c1","v106_c2","v106_c3","v106_c4"].forEach((id, idx) => { const el = document.getElementById(id); if (el && !el.value) el.value = arr[idx] || ""; });
+  } catch (e) {}
+  app.soustruhMode = localStorage.getItem("soustruhMode") || app.soustruhMode || "lis";
+  app.soustruhFirstBatch = localStorage.getItem("soustruhFirstBatch") || "";
+  app.soustruhPlan = localStorage.getItem("soustruhPlan") || "";
+  app.soustruh126Start = parseInt(localStorage.getItem("soustruh126Start"), 10) || 32;
+  try { app.soustruh106Counts = JSON.parse(localStorage.getItem("soustruh106Counts") || "[\"\",\"\",\"\",\"\"]"); } catch (e) { app.soustruh106Counts = ["", "", "", ""]; }
 }
 
 function showPage(id) {
@@ -119,6 +258,9 @@ function showPage(id) {
   }
   if (id === "brusy") {
     renderBrusy();
+  }
+  if (id === "soustruhy") {
+    renderSoustruhy();
   }
 }
 
@@ -206,6 +348,14 @@ function parseMonthKey(monthKey) {
   };
 }
 
+function makeSortDateFromMonthKey(monthKey, day, month) {
+  const parsed = parseMonthKey(monthKey);
+  const year = parsed ? parsed.year : 2026;
+  const mm = Number.isFinite(month) ? month : (parsed ? parsed.month : 1);
+  const dd = Number.isFinite(day) ? day : 1;
+  return new Date(year, mm - 1, dd, 12, 0, 0, 0).toISOString();
+}
+
 function monthKeyFromYearMonth(year, month) {
   return String(month) + "/" + String(year).slice(-2);
 }
@@ -219,6 +369,18 @@ function getAvailableYears(rotation) {
   });
   if (!years.size) years.add(new Date().getFullYear());
   return [...years].sort((a, b) => a - b);
+}
+
+function getImportYears(rotation) {
+  const available = getAvailableYears(rotation);
+  const currentYear = new Date().getFullYear();
+  const minYear = available.length ? Math.min(...available) : currentYear;
+  const maxYear = available.length ? Math.max(...available) : currentYear;
+  const start = Math.min(minYear - 1, currentYear - 1);
+  const end = Math.max(maxYear + 1, currentYear + 2);
+  const years = [];
+  for (let y = start; y <= end; y += 1) years.push(y);
+  return years;
 }
 
 function getInitialSelectedYear(rotation) {
@@ -246,6 +408,12 @@ function formatCount(value) {
   return Number.isInteger(num) ? String(num) : String(num).replace(".", ",");
 }
 
+function formatDoses(value) {
+  const num = Number(value) || 0;
+  const rounded = Math.round((num / 32) * 10) / 10;
+  return formatCount(rounded);
+}
+
 function createDateFromMonthKey(monthKey, day) {
   const parsed = parseMonthKey(monthKey);
   if (!parsed) return null;
@@ -271,22 +439,27 @@ function setSelectedYear(year) {
 }
 
 function setSelectedStatsName(name) {
-  app.selectedStatsName = name || null;
+  app.selectedStatsName = app.selectedStatsName === name ? null : (name || null);
   renderStatsPanel();
 }
 
+function setSelectedStatsMachine(machine) {
+  app.selectedStatsMachine = app.selectedStatsMachine === machine ? null : (machine || null);
+  renderStatsPanel();
+}
+
+
 function syncYearControls() {
-  const years = getAvailableYears(app.rotation);
   const monthYearSelect = document.getElementById("monthYearSelect");
   const statsYearSelect = document.getElementById("statsYearSelect");
   const importYearSelect = document.getElementById("importYearSelect");
   const overwriteMonth = document.getElementById("overwriteMonth");
 
-  const fillSelect = (el, selected) => {
+  const fillSelect = (el, values, selected) => {
     if (!el) return;
     const current = String(selected || "");
     el.innerHTML = "";
-    years.forEach(year => {
+    values.forEach(year => {
       const opt = document.createElement("option");
       opt.value = String(year);
       opt.textContent = String(year);
@@ -295,9 +468,9 @@ function syncYearControls() {
     });
   };
 
-  fillSelect(monthYearSelect, app.selectedYear);
-  fillSelect(statsYearSelect, app.selectedYear);
-  fillSelect(importYearSelect, app.importYear);
+  fillSelect(monthYearSelect, getAvailableYears(app.rotation), app.selectedYear);
+  fillSelect(statsYearSelect, getAvailableYears(app.rotation), app.selectedYear);
+  fillSelect(importYearSelect, getImportYears(app.rotation), app.importYear);
 
   if (overwriteMonth) {
     const selectedYear = parseInt(app.importYear, 10) || parseInt(app.selectedYear, 10);
@@ -396,13 +569,15 @@ function buildStatsForYear(year) {
         absence: {},
         totalWork: 0,
         totalClean: 0,
-        totalAbsence: 0
+        totalAbsence: 0,
+        workDays: new Set()
       };
     }
     return stats.people[name];
   };
 
   const nameIndex = buildNameIndex(app.rotation);
+  const knownStatNames = getKnownStatNames();
 
   Object.entries(app.rotation.months || {}).forEach(([monthKey, month]) => {
     const parsedMonth = parseMonthKey(monthKey);
@@ -418,26 +593,55 @@ function buildStatsForYear(year) {
         const isSunday = isSundayForMonthKey(monthKey, parsedDate.day);
         const isSundayMorning = isSunday && /^R/.test(parsedDate.shift || "");
 
+        const rowNames = new Set();
+
         (row.cells || []).forEach((cell, idx) => {
           const name = String(cell || "").trim();
           const machine = (sec.machines || [])[idx] || "";
-          if (!name || !machine) return;
+          if (!name || !machine || !knownStatNames.has(name)) return;
 
-          const column = ensureColumn(getStatsMachineLabel(machine));
-          if (!column) return;
-
+          rowNames.add(name);
           const person = ensurePerson(name);
-          const isHalfMachine = section === "hard" && (machine === "TNKS01" || machine === "TPKW01");
-          const workWeight = isHalfMachine ? (isSunday ? 1 : 0.5) : 1;
+          const isPairMachine = section === "hard" && (machine === "TNKS01" || machine === "TPKW01");
 
-          person.work[column] = (person.work[column] || 0) + workWeight;
-          person.totalWork += workWeight;
-          stats.machineTotals[column] = (stats.machineTotals[column] || 0) + workWeight;
+          if (isPairMachine) {
+            if (isSunday) {
+              const column = ensureColumn(getStatsMachineLabel(machine));
+              if (column) {
+                person.work[column] = (person.work[column] || 0) + 1;
+                stats.machineTotals[column] = (stats.machineTotals[column] || 0) + 1;
+              }
+            } else {
+              ["TNK", "W01"].forEach(columnName => {
+                const column = ensureColumn(columnName);
+                if (!column) return;
+                person.work[column] = (person.work[column] || 0) + 0.5;
+                stats.machineTotals[column] = (stats.machineTotals[column] || 0) + 0.5;
+              });
+            }
+          } else {
+            const column = ensureColumn(getStatsMachineLabel(machine));
+            if (!column) return;
+            person.work[column] = (person.work[column] || 0) + 1;
+            stats.machineTotals[column] = (stats.machineTotals[column] || 0) + 1;
+          }
 
           if (isSundayMorning) {
-            person.clean[column] = (person.clean[column] || 0) + 1;
-            person.totalClean += 1;
-            stats.cleanTotals[column] = (stats.cleanTotals[column] || 0) + 1;
+            const cleanColumn = ensureColumn(getStatsMachineLabel(machine));
+            if (cleanColumn) {
+              person.clean[cleanColumn] = (person.clean[cleanColumn] || 0) + 1;
+              person.totalClean += 1;
+              stats.cleanTotals[cleanColumn] = (stats.cleanTotals[cleanColumn] || 0) + 1;
+            }
+          }
+        });
+
+        rowNames.forEach(name => {
+          const person = ensurePerson(name);
+          const dayKey = `${monthKey}|${row.date}|${name}`;
+          if (!person.workDays.has(dayKey)) {
+            person.workDays.add(dayKey);
+            person.totalWork += 1;
           }
         });
       });
@@ -457,7 +661,7 @@ function buildStatsForYear(year) {
 
       n.people.forEach(personName => {
         const name = String(personName || "").trim();
-        if (!name) return;
+        if (!name || !knownStatNames.has(name)) return;
 
         const person = ensurePerson(name);
         const candidates = (nameIndex[name] || []).filter(entry => {
@@ -481,19 +685,39 @@ function buildStatsForYear(year) {
     });
   });
 
-  stats.names = Object.keys(stats.people).sort((a, b) => a.localeCompare(b, "cs"));
+  Object.values(stats.people).forEach(person => {
+    ["TNK", "W01"].forEach(column => {
+      if (typeof person.work[column] === "number") person.work[column] = Math.round(person.work[column]);
+    });
+  });
+  ["TNK", "W01"].forEach(column => {
+    if (typeof stats.machineTotals[column] === "number") stats.machineTotals[column] = Math.round(stats.machineTotals[column]);
+  });
+
+  stats.names = Object.keys(stats.people).filter(name => KNOWN_STAT_NAMES.has(name)).sort((a, b) => a.localeCompare(b, "cs"));
   stats.machineOrder = getStatsMachineOrder(Object.keys(stats.machineTotals));
   return stats;
 }
 
 
+
+
 function renderStatsPanel() {
-  const statsPanel = document.getElementById("statsView");
   const statsNameGrid = document.getElementById("statsNameGrid");
-  if (!statsPanel || !statsNameGrid) return;
+  const statsMachineGrid = document.getElementById("statsMachineGrid");
+  const statsNameView = document.getElementById("statsNameView");
+  const statsMachineView = document.getElementById("statsMachineView");
+  if (!statsNameGrid || !statsMachineGrid || !statsNameView || !statsMachineView) return;
 
   const year = parseInt(app.selectedYear, 10) || getInitialSelectedYear(app.rotation);
   const stats = buildStatsForYear(year);
+
+  if (app.selectedStatsMachine && !stats.machineOrder.includes(app.selectedStatsMachine)) {
+    app.selectedStatsMachine = null;
+  }
+  if (app.selectedStatsName && !stats.people[app.selectedStatsName]) {
+    app.selectedStatsName = null;
+  }
 
   statsNameGrid.innerHTML = "";
   stats.names.forEach(name => {
@@ -507,28 +731,87 @@ function renderStatsPanel() {
     statsNameGrid.innerHTML = "<div class='smallText'>Pro tenhle rok tu ještě nejsou žádná data.</div>";
   }
 
-  const name = app.selectedStatsName && stats.people[app.selectedStatsName] ? app.selectedStatsName : "";
-  if (!name) {
-    statsPanel.innerHTML = "<div class='smallText'>Klikni na jméno a ukáže se, jak to vychází za vybraný rok.</div>";
-    return;
+  statsMachineGrid.innerHTML = "";
+  stats.machineOrder.forEach(machine => {
+    const el = document.createElement("div");
+    el.className = "listItem" + (app.selectedStatsMachine === machine ? " activeChoice" : "");
+    el.textContent = machine;
+    el.dataset.machine = machine;
+    el.onclick = () => setSelectedStatsMachine(machine);
+    statsMachineGrid.appendChild(el);
+  });
+  if (!stats.machineOrder.length) {
+    statsMachineGrid.innerHTML = "<div class='smallText'>Pro tenhle rok tu ještě nejsou žádné stroje.</div>";
   }
 
-  const person = stats.people[name];
-  let html = "<div class='sectionTitle'>" + escapeHtml(name) + " — " + escapeHtml(String(year)) + "</div>";
-  html += "<div class='statsSummary'>";
-  html += "<div class='tile'><div class='smallText'>Práce celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalWork) + "</div></div>";
-  html += "<div class='tile'><div class='smallText'>Úklid celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalClean) + "</div></div>";
-  html += "<div class='tile'><div class='smallText'>Nepřítomnost celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalAbsence) + "</div></div>";
-  html += "</div>";
+  if (app.selectedStatsName) {
+    const person = stats.people[app.selectedStatsName];
+    if (person) {
+      let title = escapeHtml(person.name) + " — " + escapeHtml(String(year));
+      statsNameView.innerHTML =
+        "<div class='sectionTitle'>" + title + "</div>" +
+        "<div class='statsSummary'>" +
+        "<div class='tile'><div class='smallText'>Práce celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalWork) + "</div></div>" +
+        "<div class='tile'><div class='smallText'>Úklid celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalClean) + "</div></div>" +
+        "<div class='tile'><div class='smallText'>Nepřítomnost celkem</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(person.totalAbsence) + "</div></div>" +
+        "</div>" +
+        "<div class='tableWrap'><table class='statsTable'><thead><tr><th>Stroj</th><th>Práce</th><th>Úklid</th></tr></thead><tbody>" +
+        stats.machineOrder.map(machine => "<tr><td>" + escapeHtml(machine) + "</td><td>" + formatCount(person.work[machine] || 0) + "</td><td>" + formatCount(person.clean[machine] || 0) + "</td></tr>").join("") +
+        "</tbody></table></div>";
+    } else {
+      statsNameView.innerHTML = "";
+    }
+  } else {
+    statsNameView.innerHTML = "";
+  }
 
-  html += "<div class='tableWrap'><table class='statsTable'><thead><tr><th>Stroj</th><th>Práce</th><th>Úklid</th></tr></thead><tbody>";
-  stats.machineOrder.forEach(machine => {
-    html += "<tr><td>" + escapeHtml(machine) + "</td><td>" + formatCount(person.work[machine] || 0) + "</td><td>" + formatCount(person.clean[machine] || 0) + "</td></tr>";
-  });
-  html += "</tbody></table></div>";
+  if (app.selectedStatsMachine) {
+    const machine = app.selectedStatsMachine;
+    const machineStats = Object.values(stats.people)
+      .map(p => ({
+        name: p.name,
+        work: Number(p.work[machine] || 0),
+        clean: Number(p.clean[machine] || 0)
+      }))
+      .filter(p => p.work > 0 || p.clean > 0)
+      .sort((a, b) => {
+        if (b.work !== a.work) return b.work - a.work;
+        if (b.clean !== a.clean) return b.clean - a.clean;
+        return a.name.localeCompare(b.name, "cs");
+      });
 
-  statsPanel.innerHTML = html;
+    const top3 = machineStats.filter(p => p.work > 0).slice(0, 3);
+    const topClean2 = machineStats
+      .filter(p => p.clean > 0)
+      .sort((a, b) => {
+        if (b.clean !== a.clean) return b.clean - a.clean;
+        if (b.work !== a.work) return b.work - a.work;
+        return a.name.localeCompare(b.name, "cs");
+      })
+      .slice(0, 2);
+
+    let html = "";
+    html += "<div class='sectionTitle'>Stroj " + escapeHtml(machine) + "</div>";
+    html += "<div class='statsSummary'>";
+    html += "<div class='tile'><div class='smallText'>Top 3 jména</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(top3.length) + "</div></div>";
+    html += "<div class='tile'><div class='smallText'>Úklid #1</div><div style='font-size:18px;margin-top:6px;'>" + escapeHtml(topClean2[0] ? topClean2[0].name + " (" + formatCount(topClean2[0].clean) + ")" : "—") + "</div></div>";
+    html += "<div class='tile'><div class='smallText'>Úklid #2</div><div style='font-size:18px;margin-top:6px;'>" + escapeHtml(topClean2[1] ? topClean2[1].name + " (" + formatCount(topClean2[1].clean) + ")" : "—") + "</div></div>";
+    html += "</div>";
+    html += "<div class='tableWrap'><table class='statsTable'><thead><tr><th>Pořadí</th><th>Jméno</th><th>Práce</th></tr></thead><tbody>";
+    if (top3.length) {
+      top3.forEach((item, idx) => {
+        html += "<tr><td>" + (idx + 1) + "</td><td>" + escapeHtml(item.name) + "</td><td>" + formatCount(item.work) + "</td></tr>";
+      });
+    } else {
+      html += "<tr><td colspan='3'>Na tenhle stroj tu ještě nejsou žádná data.</td></tr>";
+    }
+    html += "</tbody></table></div>";
+    statsMachineView.innerHTML = html;
+  } else {
+    statsMachineView.innerHTML = "";
+  }
 }
+
 
 function addDays(base, days) {
   const d = new Date(base);
@@ -546,24 +829,34 @@ function buildShiftIntervals(weekStart, cycleIndex) {
     });
   };
 
+  const pushIfAllowed = (dayOffset, startHour, startMinute, endDayOffset, endHour, endMinute, label) => {
+    const start = new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + dayOffset, startHour, startMinute, 0, 0);
+    if (isShiftStartBlocked(start)) return;
+    intervals.push({
+      start,
+      end: new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + endDayOffset, endHour, endMinute, 0, 0),
+      label
+    });
+  };
+
   if (cycleIndex === 0) { // B
-    add(0, 6, 0, 0, 18, 0, "ranní");
-    add(1, 6, 0, 1, 18, 0, "ranní");
-    add(4, 18, 0, 5, 6, 0, "noční");
-    add(5, 18, 0, 6, 6, 0, "noční");
-    add(6, 22, 0, 7, 6, 0, "noční");
+    pushIfAllowed(0, 6, 0, 0, 18, 0, "ranní");
+    pushIfAllowed(1, 6, 0, 1, 18, 0, "ranní");
+    pushIfAllowed(4, 18, 0, 5, 6, 0, "noční");
+    pushIfAllowed(5, 18, 0, 6, 6, 0, "noční");
+    pushIfAllowed(6, 22, 0, 7, 6, 0, "noční");
   } else if (cycleIndex === 1) { // D
-    add(2, 6, 0, 2, 18, 0, "ranní");
-    add(3, 6, 0, 3, 18, 0, "ranní");
+    pushIfAllowed(2, 6, 0, 2, 18, 0, "ranní");
+    pushIfAllowed(3, 6, 0, 3, 18, 0, "ranní");
   } else if (cycleIndex === 2) { // A
-    add(0, 18, 0, 1, 6, 0, "noční");
-    add(1, 18, 0, 2, 6, 0, "noční");
-    add(4, 6, 0, 4, 18, 0, "ranní");
-    add(5, 6, 0, 5, 18, 0, "ranní");
-    add(6, 6, 0, 6, 14, 0, "ranní");
+    pushIfAllowed(0, 18, 0, 1, 6, 0, "noční");
+    pushIfAllowed(1, 18, 0, 2, 6, 0, "noční");
+    pushIfAllowed(4, 6, 0, 4, 18, 0, "ranní");
+    pushIfAllowed(5, 6, 0, 5, 18, 0, "ranní");
+    pushIfAllowed(6, 6, 0, 6, 14, 0, "ranní");
   } else if (cycleIndex === 3) { // C
-    add(2, 18, 0, 3, 6, 0, "noční");
-    add(3, 18, 0, 4, 6, 0, "noční");
+    pushIfAllowed(2, 18, 0, 3, 6, 0, "noční");
+    pushIfAllowed(3, 18, 0, 4, 6, 0, "noční");
   }
 
   return intervals;
@@ -589,7 +882,7 @@ function getTeamShiftState(now, team) {
   }
 
   const next = intervals
-    .filter(item => item.start > now)
+    .filter(item => item.start > now && !isShiftStartBlocked(item.start))
     .sort((a, b) => a.start - b.start)[0] || null;
 
   return { active: false, next };
@@ -598,7 +891,7 @@ function getTeamShiftState(now, team) {
 function getActiveShiftNow(now) {
   for (const team of SHIFT_CYCLE_ORDER) {
     const state = getTeamShiftState(now, team);
-    if (state.active) return { team, label: state.label, end: state.end };
+    if (state.active) return { team, label: state.label, start: state.start, end: state.end };
   }
   return null;
 }
@@ -607,10 +900,20 @@ function updateShift() {
   const now = new Date();
   const active = getActiveShiftNow(now);
   const dState = getTeamShiftState(now, "D");
+  const special = getSpecialWorkInfo(now);
+  const sameDay = (a, b) => a && b && a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  const showSpecial = special && (!active || sameDay(active.start, now));
 
   const lines = [];
-  if (active) {
+  if (active && !showSpecial) {
     lines.push("Aktuálně v práci: směna " + active.team + (active.label ? " (" + active.label + ")" : ""));
+  } else if (special) {
+    if (special.type === "holiday") {
+      lines.push("Svátek – " + special.label);
+    } else {
+      lines.push("CZD – celozávodní dovolená");
+    }
+    lines.push("Dnes se nepracuje");
   } else {
     lines.push("Aktuálně není žádná směna");
   }
@@ -618,7 +921,7 @@ function updateShift() {
   if (dState.active) {
     lines.push("Směna D: do konce zbývá " + formatDuration(dState.end - now));
   } else if (dState.next) {
-    lines.push("Směna D: začíná za " + formatDuration(dState.next.start - now));
+    lines.push("Směna D začne za: " + formatDuration(dState.next.start - now));
   } else {
     lines.push("Směna D: bez dalšího termínu");
   }
@@ -627,6 +930,23 @@ function updateShift() {
 }
 setInterval(updateShift, 10000);
 updateShift();
+
+
+function resetSoustruhy() {
+  ["lis_first", "lis_plan", "v126_first", "v126_plan", "v106_first", "v106_plan", "v106_c1", "v106_c2", "v106_c3", "v106_c4"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+  ["soustruhyLisResult", "soustruhy126Result", "soustruhy106Result"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = "";
+  });
+  app.soustruhMode = "lis";
+  app.soustruh126Start = 32;
+  app.soustruh106Counts = ["", "", "", ""];
+  renderSoustruhy();
+  saveRotationData();
+}
 
 function resetFields(ids) {
   ids.forEach(id => {
@@ -640,9 +960,10 @@ function calcF() {
   const sec = Math.max(0, (getShiftEnd(new Date()) - new Date()) / 1000);
   const ks = Math.floor(sec / 60);
   const hotovo = parseInt(document.getElementById("f_kusy").value) || 0;
+  const celkem = hotovo + ks;
   document.getElementById("outF").innerHTML =
-    "Do konce směny ještě stihneš " + ks + " ks<br>" +
-    "Celkově budeš mít " + (hotovo + ks) + " ks";
+    "Do konce směny ještě stihneš " + ks + " ks, tj. " + formatDoses(ks) + " dávek.<br>" +
+    "Celkově budeš mít " + celkem + " ks, tj. " + formatDoses(celkem) + " dávek.";
   saveRotationData();
 }
 
@@ -650,42 +971,244 @@ function calcP() {
   const sec = Math.max(0, (getShiftEnd(new Date()) - new Date()) / 1000);
   const ks = Math.floor(sec / 30);
   const hotovo = parseInt(document.getElementById("p_kusy").value) || 0;
+  const celkem = hotovo + ks;
   document.getElementById("outP").innerHTML =
-    "Do konce směny ještě stihneš " + ks + " ks<br>" +
-    "Celkově budeš mít " + (hotovo + ks) + " ks";
+    "Do konce směny ještě stihneš " + ks + " ks, tj. " + formatDoses(ks) + " dávek.<br>" +
+    "Celkově budeš mít " + celkem + " ks, tj. " + formatDoses(celkem) + " dávek.";
   saveRotationData();
 }
 
 function calcBrusy() {
   const sec = Math.max(0, (getShiftEnd(new Date()) - new Date()) / 1000);
-  const ks = Math.floor(sec / 65);
+  const cfg = getBrusConfig(app.machine, app.prog);
+  const ks = countBrusyPieces(sec, cfg);
   const celkem = parseInt(document.getElementById("celkem").value) || 0;
+  const celkove = celkem + ks;
   document.getElementById("outB").innerHTML =
-    "Do konce směny ještě stihneš " + ks + " ks<br>" +
-    "Celkově budeš mít " + (celkem + ks) + " ks";
+    "Do konce směny ještě stihneš " + ks + " ks, tj. " + formatDoses(ks) + " dávek.<br>" +
+    "Celkově budeš mít " + celkove + " ks, tj. " + formatDoses(celkove) + " dávek.";
   saveRotationData();
 }
 
 function setMachine(m) {
   app.machine = m;
   renderBrusy();
+  renderSoustruhy();
   saveRotationData();
 }
 
 function setProg(p) {
   app.prog = p;
   renderBrusy();
+  renderSoustruhy();
   saveRotationData();
 }
 
+function getBrusConfig(machine, prog) {
+  const machineCfg = BRUS_CONFIG[machine] || BRUS_CONFIG.TBKR01;
+  const cfg = machineCfg[prog] || machineCfg.AD;
+  return {
+    machine,
+    prog,
+    label: cfg.label || prog,
+    pieceSec: Number(cfg.pieceSec) || 0,
+    dressEvery: Number(cfg.dressEvery) || 0,
+    dressSec: Number(cfg.dressSec) || 0
+  };
+}
+
+function formatBrusSeconds(value) {
+  return String(Number(value) || 0).replace(".", ",");
+}
+
+function countBrusyPieces(availableSec, cfg) {
+  const pieceSec = Number(cfg.pieceSec) || 0;
+  const dressEvery = Math.max(1, Math.floor(Number(cfg.dressEvery) || 1));
+  const dressSec = Math.max(0, Number(cfg.dressSec) || 0);
+  if (pieceSec <= 0) return 0;
+
+  let low = 0;
+  let high = Math.max(1, Math.floor(availableSec / pieceSec) + 1);
+
+  const needed = (pieces) => {
+    if (pieces <= 0) return 0;
+    return pieces * pieceSec + Math.floor((pieces - 1) / dressEvery) * dressSec;
+  };
+
+  while (low < high) {
+    const mid = Math.ceil((low + high) / 2);
+    if (needed(mid) <= availableSec) low = mid;
+    else high = mid - 1;
+  }
+  return low;
+}
+
+
+function getSoustruhBatchList(firstBatch, sizes, plan) {
+  const batches = [];
+  const start = parseInt(firstBatch, 10);
+  const target = parseInt(plan, 10);
+  if (!Number.isFinite(start) || !Number.isFinite(target) || target <= 0 || !Array.isArray(sizes) || !sizes.length) return batches;
+
+  let produced = 0;
+  let batchNo = start;
+  let index = 0;
+  while (produced < target && batches.length < 1000) {
+    const size = Number(sizes[index % sizes.length]) || 0;
+    if (size <= 0) break;
+    produced += size;
+    batches.push({ batchNo, size, produced });
+    batchNo += 1;
+    index += 1;
+  }
+  return batches;
+}
+
+function renderBatchResult(title, batches, target, firstBatch) {
+  if (!batches.length) return "<div class='smallText'>Doplň vstupy, ať se to spočítá.</div>";
+  const lastBatch = batches[batches.length - 1].batchNo;
+  const total = batches[batches.length - 1].produced;
+  let html = "<div class='smallText' style='margin-bottom:10px;'>" + escapeHtml(title) + "</div>";
+  html += "<div class='statsSummary'>";
+  html += "<div class='tile'><div class='smallText'>Dávek</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(batches.length) + "</div></div>";
+  html += "<div class='tile'><div class='smallText'>Poslední dávka</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(lastBatch) + "</div></div>";
+  html += "<div class='tile'><div class='smallText'>Vyrobeno</div><div style='font-size:22px;margin-top:4px;'>" + formatCount(total) + "</div></div>";
+  html += "</div>";
+  html += "<div class='tableWrap'><table class='statsTable'><thead><tr><th>Dávka</th><th>Ks</th><th>Součet</th></tr></thead><tbody>";
+  batches.forEach(item => {
+    html += "<tr><td>" + formatCount(item.batchNo) + "</td><td>" + formatCount(item.size) + "</td><td>" + formatCount(item.produced) + "</td></tr>";
+  });
+  html += "</tbody></table></div>";
+  return html;
+}
+
+function setSoustruhMode(mode) {
+  app.soustruhMode = mode;
+  renderSoustruhy();
+  saveRotationData();
+}
+
+function setSoustruh126Start(size) {
+  app.soustruh126Start = Number(size) === 31 ? 31 : 32;
+  renderSoustruhy();
+  saveRotationData();
+}
+
+function renderSoustruhy() {
+  const modeButtons = document.querySelectorAll('[data-soustruh-mode]');
+  const panels = {
+    lis: document.getElementById('soustruhyLisPanel'),
+    "126": document.getElementById('soustruhy126Panel'),
+    "106": document.getElementById('soustruhy106Panel')
+  };
+
+  modeButtons.forEach(btn => {
+    const mode = btn.getAttribute('data-soustruh-mode');
+    btn.classList.toggle('activeChoice', app.soustruhMode === mode);
+  });
+
+  Object.entries(panels).forEach(([mode, panel]) => {
+    if (panel) panel.classList.toggle('active', app.soustruhMode === mode);
+  });
+
+  const lisFirst = document.getElementById('lis_first');
+  const lisPlan = document.getElementById('lis_plan');
+  const v126First = document.getElementById('v126_first');
+  const v126Plan = document.getElementById('v126_plan');
+  const v106First = document.getElementById('v106_first');
+  const v106Plan = document.getElementById('v106_plan');
+  const v106C1 = document.getElementById('v106_c1');
+  const v106C2 = document.getElementById('v106_c2');
+  const v106C3 = document.getElementById('v106_c3');
+  const v106C4 = document.getElementById('v106_c4');
+
+  if (lisFirst && !lisFirst.value) lisFirst.value = app.soustruhFirstBatch || '';
+  if (lisPlan && !lisPlan.value) lisPlan.value = app.soustruhPlan || '';
+  if (v126First && !v126First.value) v126First.value = app.soustruhFirstBatch || '';
+  if (v126Plan && !v126Plan.value) v126Plan.value = app.soustruhPlan || '';
+  if (v106First && !v106First.value) v106First.value = app.soustruhFirstBatch || '';
+  if (v106Plan && !v106Plan.value) v106Plan.value = app.soustruhPlan || '';
+  if (v106C1 && !v106C1.value) v106C1.value = app.soustruh106Counts[0] || '';
+  if (v106C2 && !v106C2.value) v106C2.value = app.soustruh106Counts[1] || '';
+  if (v106C3 && !v106C3.value) v106C3.value = app.soustruh106Counts[2] || '';
+  if (v106C4 && !v106C4.value) v106C4.value = app.soustruh106Counts[3] || '';
+
+  const startButtons = document.querySelectorAll('[data-startsize]');
+  startButtons.forEach(btn => {
+    const size = Number(btn.getAttribute('data-startsize'));
+    btn.classList.toggle('activeChoice', app.soustruh126Start === size);
+  });
+}
+
+function calcSoustruhyLis() {
+  const first = parseInt(document.getElementById('lis_first').value, 10);
+  const plan = parseInt(document.getElementById('lis_plan').value, 10);
+  const out = document.getElementById('soustruhyLisResult');
+  if (!Number.isFinite(first) || !Number.isFinite(plan) || plan <= 0) {
+    out.innerHTML = "<div class='smallText'>Doplň první dávku a plán.</div>";
+    return;
+  }
+  app.soustruhFirstBatch = String(first);
+  app.soustruhPlan = String(plan);
+  const batches = getSoustruhBatchList(first, [32], plan);
+  out.innerHTML = renderBatchResult('Lis', batches, plan, first);
+  saveRotationData();
+}
+
+function calcSoustruhy126() {
+  const first = parseInt(document.getElementById('v126_first').value, 10);
+  const plan = parseInt(document.getElementById('v126_plan').value, 10);
+  const out = document.getElementById('soustruhy126Result');
+  if (!Number.isFinite(first) || !Number.isFinite(plan) || plan <= 0) {
+    out.innerHTML = "<div class='smallText'>Doplň první dávku a plán.</div>";
+    return;
+  }
+  app.soustruhFirstBatch = String(first);
+  app.soustruhPlan = String(plan);
+  const startSize = app.soustruh126Start === 31 ? 31 : 32;
+  const sizes = startSize === 32 ? [32, 31] : [31, 32];
+  const batches = getSoustruhBatchList(first, sizes, plan);
+  out.innerHTML = renderBatchResult('Volné 126 ks', batches, plan, first);
+  saveRotationData();
+}
+
+function calcSoustruhy106() {
+  const first = parseInt(document.getElementById('v106_first').value, 10);
+  const plan = parseInt(document.getElementById('v106_plan').value, 10);
+  const counts = [
+    parseInt(document.getElementById('v106_c1').value, 10),
+    parseInt(document.getElementById('v106_c2').value, 10),
+    parseInt(document.getElementById('v106_c3').value, 10),
+    parseInt(document.getElementById('v106_c4').value, 10)
+  ];
+  const out = document.getElementById('soustruhy106Result');
+  if (!Number.isFinite(first) || !Number.isFinite(plan) || plan <= 0 || counts.some(v => !Number.isFinite(v) || v <= 0)) {
+    out.innerHTML = "<div class='smallText'>Doplň první dávku, plán a první čtyři dávky.</div>";
+    return;
+  }
+  app.soustruhFirstBatch = String(first);
+  app.soustruhPlan = String(plan);
+  app.soustruh106Counts = counts.map(v => String(v));
+  const batches = getSoustruhBatchList(first, counts, plan);
+  out.innerHTML = renderBatchResult('Volné 106 ks', batches, plan, first);
+  saveRotationData();
+}
 function renderBrusy() {
   document.querySelectorAll("#brusy .bbtn").forEach(b => {
-    b.classList.remove("activeMachine", "activeIndex");
+    b.classList.remove("activeMachine", "activeIndex", "activeChoice");
   });
   const machineBtn = document.querySelector(`#brusy [data-machine="${app.machine}"]`);
   const progBtn = document.querySelector(`#brusy [data-prog="${app.prog}"]`);
-  if (machineBtn) machineBtn.classList.add("activeMachine");
-  if (progBtn) progBtn.classList.add("activeIndex");
+  if (machineBtn) machineBtn.classList.add("activeMachine", "activeChoice");
+  if (progBtn) progBtn.classList.add("activeIndex", "activeChoice");
+
+  const info = document.getElementById("brusyInfo");
+  if (info) {
+    const cfg = getBrusConfig(app.machine, app.prog);
+    info.innerHTML =
+      "<div><b>" + escapeHtml(app.machine) + " / " + escapeHtml(cfg.label) + "</b></div>" +
+      "<div class='smallText'>Vyroba kusu: " + formatBrusSeconds(cfg.pieceSec) + " s · Orovnává po " + formatCount(cfg.dressEvery) + " ks · Orovnává " + formatCount(Math.round(cfg.dressSec / 60)) + " min</div>";
+  }
 }
 
 function monthKeyFromSheetName(sheetName) {
@@ -732,7 +1255,7 @@ function parseDateToken(token) {
   };
 }
 
-const ABSENCE_LABELS = {
+var ABSENCE_LABELS = {
   "D": "Dovolená",
   "NV": "Náhradní volno",
   "Š": "Školení",
@@ -742,8 +1265,12 @@ const ABSENCE_LABELS = {
 };
 
 function absenceLabelFromCode(code) {
-  const key = String(code || "").trim().toUpperCase();
-  return ABSENCE_LABELS[key] || "";
+  const raw = String(code || "").trim();
+  if (!raw) return "";
+  const key = raw.toUpperCase();
+  if (ABSENCE_LABELS && ABSENCE_LABELS[key]) return ABSENCE_LABELS[key];
+  if (/^\d+(?:[.,]\d+)?$/.test(raw)) return "";
+  return raw;
 }
 
 function sanitizeAbsencePersonName(text) {
@@ -818,7 +1345,7 @@ function normalizeNoteEntry(note) {
 
   person = sanitizeAbsencePersonName(person);
 
-  if (!code && person && looksLikeAbsencePerson(person)) {
+  if (!code && person) {
     code = "D";
   }
 
@@ -851,16 +1378,17 @@ function buildNameIndex(rotation) {
         if (!parsed) return;
         (row.cells || []).forEach((cell, idx) => {
           const name = (cell || "").trim();
-          if (!name) return;
+          if (!name || !KNOWN_STAT_NAMES.has(name)) return;
           if (!map.has(name)) map.set(name, []);
           const machine = (sec.machines && sec.machines[idx]) ? sec.machines[idx] : "";
           map.get(name).push({
             monthKey,
+            section,
             date: row.date,
             dateLabel: cleanDateLabel(row.date, parsed.shift),
             shift: parsed.shift,
             machine,
-            sortDate: parsed.sortDate
+            sortDate: makeSortDateFromMonthKey(monthKey, parsed.day, parsed.month)
           });
         });
       });
@@ -873,16 +1401,17 @@ function buildNameIndex(rotation) {
       const shift = n.shift || (parsed ? parsed.shift : "");
       n.people.forEach(personName => {
         const name = String(personName || "").trim();
-        if (!name) return;
+        if (!name || !KNOWN_STAT_NAMES.has(name)) return;
         if (!map.has(name)) map.set(name, []);
         map.get(name).push({
           monthKey,
+          section: "notes",
           date: n.date,
           dateLabel: cleanDateLabel(n.date, shift),
           shift,
           machine: n.label || "Dovolená",
           absence: true,
-          sortDate: parsed ? parsed.sortDate : new Date(2026, 0, 1).toISOString()
+          sortDate: parsed ? makeSortDateFromMonthKey(monthKey, parsed.day, parsed.month) : new Date(2026, 0, 1).toISOString()
         });
       });
     });
@@ -892,6 +1421,10 @@ function buildNameIndex(rotation) {
     result[name] = map.get(name).sort((a, b) => a.sortDate.localeCompare(b.sortDate));
   });
   return result;
+}
+
+function getKnownStatNames() {
+  return KNOWN_STAT_NAMES;
 }
 
 
@@ -929,9 +1462,8 @@ function renderRotace() {
     el.className = "listItem" + (app.selectedName === name ? " activeChoice" : "");
     el.textContent = name;
     el.onclick = () => {
-      app.selectedName = name;
+      app.selectedName = app.selectedName === name ? null : name;
       renderRotace();
-      renderPerson(name);
     };
     namesGrid.appendChild(el);
   });
@@ -939,7 +1471,7 @@ function renderRotace() {
   if (app.selectedName && nameIndex[app.selectedName]) {
     renderPerson(app.selectedName);
   } else {
-    personView.innerHTML = "<div class='smallText'>Klikni na jméno a ukáže se, kam jde.</div>";
+    personView.innerHTML = "";
   }
 
   if (app.selectedMonth && app.rotation.months[app.selectedMonth]) {
@@ -954,36 +1486,83 @@ function renderRotace() {
 
 function renderPerson(name) {
   const personView = document.getElementById("personView");
-  const entries = (buildNameIndex(app.rotation)[name] || []).slice();
+  const rawEntries = (buildNameIndex(app.rotation)[name] || []).slice();
+
+  if (!rawEntries.length) {
+    personView.innerHTML = "<div class='smallText'>Pro tohle jméno zatím nejsou žádné směny.</div>";
+    return;
+  }
+
+  const dayKey = (d) => {
+    const date = new Date(d);
+    return date.getFullYear() + "-" + String(date.getMonth() + 1).padStart(2, "0") + "-" + String(date.getDate()).padStart(2, "0");
+  };
+
+  const priorityOf = (entry) => {
+    if (entry && entry.absence) return 3;
+    if ((entry && entry.section) === "soft") return 2;
+    if ((entry && entry.section) === "hard") return 1;
+    return 0;
+  };
+
+  const groups = new Map();
+  rawEntries.forEach(entry => {
+    const dateObj = new Date(entry.sortDate);
+    if (Number.isNaN(dateObj.getTime())) return;
+    if (getSpecialWorkInfo(dateObj)) return;
+
+    const key = dayKey(dateObj);
+    if (!groups.has(key)) {
+      groups.set(key, {
+        sortDate: new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate(), 12, 0, 0, 0).toISOString(),
+        dateLabel: entry.dateLabel || entry.date || "",
+        bestEntry: null
+      });
+    }
+
+    const group = groups.get(key);
+    if (!group.dateLabel && entry.dateLabel) group.dateLabel = entry.dateLabel;
+    if (!group.bestEntry || priorityOf(entry) > priorityOf(group.bestEntry)) {
+      group.bestEntry = entry;
+    }
+  });
+
+  const entries = [...groups.values()]
+    .map(group => {
+      const best = group.bestEntry || {};
+      return {
+        sortDate: group.sortDate,
+        dateLabel: group.dateLabel || best.dateLabel || best.date || "",
+        shift: best.shift || "",
+        target: best.absence ? (best.machine || "Dovolená") : (best.machine || "")
+      };
+    })
+    .sort((a, b) => a.sortDate.localeCompare(b.sortDate));
 
   if (!entries.length) {
-    personView.innerHTML = "<div class='smallText'>Pro tohle jméno zatím nejsou žádné směny.</div>";
+    personView.innerHTML = "<div class='smallText'>Pro tohle jméno nejsou v aktuálním rozpisu žádné směny.</div>";
     return;
   }
 
   const today = new Date();
   const todayDay = new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime();
 
-  let currentIdx = entries.findIndex(e => {
-    const t = new Date(e.sortDate).getTime();
-    return t === todayDay;
-  });
-
+  let currentIdx = entries.findIndex(e => new Date(e.sortDate).getTime() === todayDay);
   if (currentIdx === -1) {
     currentIdx = entries.findIndex(e => new Date(e.sortDate).getTime() > todayDay);
     if (currentIdx === -1) currentIdx = entries.length - 1;
   }
 
-  const start = Math.max(0, currentIdx - 1);
-  const end = Math.min(entries.length, currentIdx + 4);
-  const around = entries.slice(start, end);
+  const startIdx = Math.max(0, currentIdx - 1);
+  const endIdx = Math.min(entries.length, currentIdx + 4);
+  const around = entries.slice(startIdx, endIdx);
 
   let html = "<div class='smallText'><b>" + escapeHtml(name) + "</b></div>";
   around.forEach((e, i) => {
-    const idx = start + i;
-    const target = e.absence ? (e.machine || "Dovolená") : e.machine;
+    const idx = startIdx + i;
     html += "<div class='personLine" + (idx === currentIdx ? " current" : "") + "'>" +
-      escapeHtml(e.dateLabel || e.date) + " " + escapeHtml(e.shift) + " → " + escapeHtml(target) +
+      escapeHtml(e.dateLabel || "") + (e.shift ? " " + escapeHtml(e.shift) : "") +
+      " → " + escapeHtml(e.target || "") +
       "</div>";
   });
 
@@ -1029,6 +1608,7 @@ function renderMonth(monthKey) {
 
   html += "<div class='smallText' style='margin-top:12px;font-weight:bold;'>Dovolené / absence</div>";
   const absNotes = (month.notes || []).map(normalizeNoteEntry).filter(n => n.isAbsence);
+
   if (absNotes.length) {
     const grouped = new Map();
     absNotes.forEach(n => {
@@ -1037,15 +1617,39 @@ function renderMonth(monthKey) {
       grouped.get(key).push(n);
     });
 
-    html += "<div class='noteList'>";
-    [...grouped.entries()].forEach(([date, items]) => {
-      const parts = items.map(n => {
-        const people = (n.people && n.people.length) ? n.people.join(" a ") : (n.person || "");
-        return escapeHtml([people, n.code || ""].filter(Boolean).join(" "));
-      }).filter(Boolean);
-      html += "<div class='noteItem'><span class='noteDate'>" + escapeHtml(date) + "</span><span class='noteInline'>" + parts.join(" · ") + "</span></div>";
+    const rows = [...grouped.entries()].map(([date, items]) => ({
+      date,
+      items: items.slice().sort((a, b) => String(a.person || "").localeCompare(String(b.person || ""), "cs"))
+    }));
+
+    const maxPairs = Math.max(1, ...rows.map(r => r.items.length));
+    html += "<div class='tableWrap'><table class='noteTable'><thead><tr>";
+    for (let i = 0; i < maxPairs; i += 1) {
+      if (i > 0) html += "<th class='noteSpacer'></th>";
+      html += "<th>Datum</th><th>Směna</th><th>Jméno</th><th>Důvod</th>";
+    }
+    html += "</tr></thead><tbody>";
+
+    rows.forEach(row => {
+      html += "<tr>";
+      for (let i = 0; i < maxPairs; i += 1) {
+        if (i > 0) html += "<td class='noteSpacer'></td>";
+        const n = row.items[i];
+        if (n) {
+          const parsed = parseDateToken(n.date);
+          const dateOnly = parsed ? String(parsed.day) + "." + String(parsed.month) + "." : n.date;
+          const shift = n.shift || (parsed ? parsed.shift : "");
+          const people = (n.people && n.people.length) ? n.people.join(" a ") : (n.person || "");
+          const reason = n.label || n.code || "";
+          html += "<td>" + escapeHtml(dateOnly) + "</td><td>" + escapeHtml(shift) + "</td><td>" + escapeHtml(people) + "</td><td>" + escapeHtml(reason) + "</td>";
+        } else {
+          html += "<td class='emptyCell'>—</td><td class='emptyCell'>—</td><td class='emptyCell'>—</td><td class='emptyCell'>—</td>";
+        }
+      }
+      html += "</tr>";
     });
-    html += "</div>";
+
+    html += "</tbody></table></div>";
   } else {
     html += "<div class='smallText'>Bez poznámek.</div>";
   }
@@ -1063,6 +1667,7 @@ function showMonthByKey(monthKey) {
 function refreshInitialUI() {
   restoreInputs();
   renderBrusy();
+  renderSoustruhy();
   const currentYear = new Date().getFullYear();
   const currentMonth = monthKeyFromYearMonth(currentYear, new Date().getMonth() + 1);
   const currentYearMonths = getMonthsForYear(app.rotation, currentYear);
@@ -1109,9 +1714,16 @@ function updateImportBoxVisibility() {
 
 document.getElementById("signatureTap").addEventListener("click", () => {
   app.importClicks += 1;
-  if (app.importClicks >= 5) {
-    app.adminUnlocked = true;
-    updateImportBoxVisibility();
+  if (app.importClicks >= 5 && !app.adminUnlocked) {
+    const user = prompt("Jméno:") || "";
+    const pass = prompt("Heslo:") || "";
+    if (user.trim() === "Sp4d4" && pass === "SpadaM772326") {
+      app.adminUnlocked = true;
+      updateImportBoxVisibility();
+    } else {
+      alert("Špatné přihlášení.");
+    }
+    app.importClicks = 0;
   }
 });
 
@@ -1123,6 +1735,7 @@ document.getElementById("statsYearSelect")?.addEventListener("change", (e) => {
   setSelectedYear(e.target.value);
 });
 
+
 document.getElementById("importYearSelect")?.addEventListener("change", (e) => {
   app.importYear = parseInt(e.target.value, 10) || getInitialSelectedYear(app.rotation);
   syncYearControls();
@@ -1131,50 +1744,56 @@ document.getElementById("importYearSelect")?.addEventListener("change", (e) => {
 
 
 async function exportCurrentHtml() {
-  const exportBuild = "2026-04-29-v086-" + Date.now();
+  if (typeof JSZip === "undefined") {
+    alert("Export ZIP není dostupný, nenačetla se knihovna JSZip.");
+    return;
+  }
 
-  const [cssText, jsText] = await Promise.all([
-    fetch("styles.css").then(r => {
-      if (!r.ok) throw new Error("Nepodařilo se načíst styles.css");
-      return r.text();
-    }),
-    fetch("app.js").then(r => {
-      if (!r.ok) throw new Error("Nepodařilo se načíst app.js");
-      return r.text();
-    })
-  ]);
+  try {
+    const appSource = document.getElementById("src-app-js")?.textContent || "";
+    const stylesSource = document.getElementById("src-styles-css")?.textContent || "";
 
-  const rotationJson = JSON.stringify(app.rotation);
+    if (!appSource || !stylesSource) {
+      throw new Error("Chybí zdrojové bloky pro export.");
+    }
 
-  const pages = [...document.querySelectorAll(".page")];
-  const previousActive = pages.find(p => p.classList.contains("active"))?.id || "home";
-  pages.forEach(p => p.classList.remove("active"));
-  const home = document.getElementById("home");
-  if (home) home.classList.add("active");
+    const dataSource = `const initialRotationData = ${JSON.stringify(app.rotation)};\n`;
 
-  const bundledJs = jsText
-    .replace(/const ROTATION_BUILD = "[^"]*";/, `const ROTATION_BUILD = "${exportBuild}";`)
-    .replace(/const initialRotationData = [\s\S]*?;\n/, `const initialRotationData = ${rotationJson};\n`);
+    const pages = [...document.querySelectorAll(".page")];
+    const previousActive = pages.find(p => p.classList.contains("active"))?.id || "home";
+    pages.forEach(p => p.classList.remove("active"));
+    const home = document.getElementById("home");
+    if (home) home.classList.add("active");
 
-  let html = document.documentElement.outerHTML;
-  html = html.replace('<link rel="stylesheet" href="styles.css">', `<style>\n${cssText}\n</style>`);
-  html = html.replace('<script src="app.js"></script>', `<script>\n${bundledJs.replace(/<\/script>/g, "<\\/script>")}\n</script>`);
-  html = "<!DOCTYPE html>\n" + html;
+    const clone = document.documentElement.cloneNode(true);
+    clone.querySelectorAll('#src-app-js, #src-data-js, #src-styles-css').forEach(el => el.remove());
+    const indexText = `<!DOCTYPE html>\n${clone.outerHTML}`;
 
-  pages.forEach(p => p.classList.remove("active"));
-  const restore = document.getElementById(previousActive);
-  if (restore) restore.classList.add("active");
+    pages.forEach(p => p.classList.remove("active"));
+    const restore = document.getElementById(previousActive);
+    if (restore) restore.classList.add("active");
 
-  const blob = new Blob([html], { type: "text/html;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "rotace_a_kalkulacky_v089.html";
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const zip = new JSZip();
+    zip.file("index.html", indexText);
+    zip.file("styles.css", stylesSource);
+    zip.file("data.js", dataSource);
+    zip.file("app.js", appSource);
+
+    const blob = await zip.generateAsync({ type: "blob" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "rotace_v132.zip";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  } catch (err) {
+    console.error(err);
+    alert("Export ZIP se nepovedl: " + (err && err.message ? err.message : err));
+  }
 }
+
 document.getElementById("exportBtn")?.addEventListener("click", () => {
   exportCurrentHtml();
 });
@@ -1185,6 +1804,8 @@ document.getElementById("githubBtn")?.addEventListener("click", () => {
 
 document.getElementById("rotaceReset").addEventListener("click", () => {
   app.selectedName = null;
+  app.selectedStatsName = null;
+  app.selectedStatsMachine = null;
   app.selectedMonth = null;
   app.rotationView = "names";
   setRotaceView(app.rotationView || "names");
@@ -1196,63 +1817,87 @@ document.getElementById("rotaceReset").addEventListener("click", () => {
 });
 
 
+
+
+
 function parseWorkbookFromSheetJS(workbook) {
   const out = { months: {} };
+  const compact = (value) => String(value || "").replace(/\s+/g, " ").trim();
+  const isMonthSheet = (sheetName) => /^\d{2}\.\d{4}$/.test(String(sheetName || ""));
+  const isRosterStartBlocked = (dateLabel) => {
+    const m = /^(\d{1,2})\.(\d{1,2})\./.exec(compact(dateLabel));
+    if (!m) return false;
+    const day = parseInt(m[1], 10);
+    const month = parseInt(m[2], 10);
+    if (NO_START_HOLIDAYS.has(month + "-" + day)) return true;
+    if ((month === 7 && day >= 20) || (month === 8 && day <= 1)) return true;
+    return false;
+  };
+  const isDateLabel = (value) => /^\d{1,2}\.\d{1,2}\.\s*[NR](?:8)?$/.test(compact(value));
 
   workbook.SheetNames.forEach(sheetName => {
-    if (!/^\d{2}\.\d{4}$/.test(sheetName)) return;
-
-    const monthKey = monthKeyFromSheetName(sheetName);
-    if (!monthKey) return;
+    if (!isMonthSheet(sheetName)) return;
 
     const rows = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], {
       header: 1,
       blankrows: false,
       defval: ""
+    }).map(row => {
+      const copy = Array.isArray(row) ? row.slice() : [];
+      while (copy.length < 35) copy.push("");
+      return copy;
     });
 
-    const parseSection = (startIdx, endIdx, machines, includeNotes) => {
+    const findSectionRow = (labelRegex) => rows.findIndex(row => {
+      const first = compact(row && row[0]);
+      return /rotace/i.test(first) && labelRegex.test(first);
+    });
+
+    const hardIdx = findSectionRow(/tvrdota/i);
+    const softIdx = findSectionRow(/měkota|mekota/i);
+    if (hardIdx === -1 || softIdx === -1 || softIdx <= hardIdx) return;
+
+    const parseSection = (startIdx, endIdx, machines, title) => {
       const sectionRows = [];
-      const notes = [];
-
-      for (let r = startIdx; r <= endIdx && r < rows.length; r++) {
+      for (let r = startIdx; r < endIdx && r < rows.length; r += 1) {
         const row = rows[r] || [];
-        const date = String(row[0] || "").trim();
-        if (!/^\d{1,2}\.\d{1,2}\.\d/.test(date)) continue;
-
-        const cells = row.slice(1, 6).map(v => String(v || "").trim());
+        const date = compact(row[0]);
+        if (!isDateLabel(date) || isRosterStartBlocked(date)) continue;
+        const cells = row.slice(1, 6).map(v => compact(v));
         sectionRows.push({ date, cells });
+      }
+      return { title, machines: machines.slice(), rows: sectionRows };
+    };
 
-        if (includeNotes) {
-          const noteDate = String(row[7] || "").trim();
-          if (/^\d{1,2}\.\d{1,2}\.\d/.test(noteDate)) {
-            for (let c = 8; c <= 15; c += 2) {
-              const person = String(row[c] || "").trim();
-              let code = String(row[c + 1] || "").trim();
-              if (!person && !code) continue;
-              if (person && !code) code = "D";
-              notes.push({
-                date: noteDate,
-                person,
-                code,
-                text: [person, code].filter(Boolean).join(" ")
-              });
-            }
-          }
+    const parseNotes = (startIdx, endIdx) => {
+      const notes = [];
+      for (let r = startIdx; r < endIdx && r < rows.length; r += 1) {
+        const row = rows[r] || [];
+        const noteDate = compact(row[7]); // H
+        if (!isDateLabel(noteDate) || isRosterStartBlocked(noteDate)) continue;
+
+        for (const c of [8, 10, 12]) { // I/J, K/L, M/N
+          const person = compact(row[c]);
+          const code = compact(row[c + 1]);
+          if (!person && !code) continue;
+          if (!person) continue;
+          notes.push({
+            date: noteDate,
+            shift: "",
+            person,
+            code: code || "D",
+            text: [person, code || "D"].filter(Boolean).join(" ")
+          });
         }
       }
-
-      return { machines: machines.slice(), rows: sectionRows, notes };
+      return notes;
     };
 
-    const hard = parseSection(1, 16, HARD_MACHINE_HEADERS, true);
-    const soft = parseSection(19, rows.length - 1, SOFT_MACHINE_HEADERS, false);
+    const hard = parseSection(hardIdx + 1, softIdx, HARD_MACHINE_HEADERS, "Rotace tvrdota");
+    const soft = parseSection(softIdx + 1, rows.length, SOFT_MACHINE_HEADERS, "Rotace měkota");
+    const notes = parseNotes(hardIdx + 1, softIdx);
 
-    out.months[monthKey] = {
-      hard: { title: "Rotace tvrdota", machines: hard.machines, rows: hard.rows },
-      soft: { title: "Rotace měkota", machines: soft.machines, rows: soft.rows },
-      notes: hard.notes
-    };
+    out.months[monthKeyFromSheetName(sheetName)] = { hard, soft, notes };
   });
 
   return out;
@@ -1280,7 +1925,7 @@ document.getElementById("importBtn").addEventListener("click", async () => {
 
   Object.entries(imported.months).forEach(([monthKey, monthData]) => {
     const normalized = normalizeMonthForImport(monthData);
-    const existing = app.rotation.months[monthKey];
+    const existed = !!app.rotation.months[monthKey];
 
     if (overwriteMonth && monthKey === overwriteMonth) {
       app.rotation.months[monthKey] = normalized;
@@ -1288,8 +1933,10 @@ document.getElementById("importBtn").addEventListener("click", async () => {
       return;
     }
 
-    if (!existing) {
-      app.rotation.months[monthKey] = normalized;
+    app.rotation.months[monthKey] = normalized;
+    if (existed) {
+      overwritten += 1;
+    } else {
       added += 1;
     }
   });

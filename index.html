@@ -1,12 +1,15 @@
+<!DOCTYPE html>
 <html lang="cs"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Rotace a kalkulačky</title>
 
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4d/Skoda_Auto_logo_2022.svg">
-<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%234CAF50%22/%3E%0A%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2224%22%20fill%3D%22%230b0f0c%22%20opacity%3D%22.12%22/%3E%0A%20%20%3Ctext%20x%3D%2232%22%20y%3D%2240%22%20text-anchor%3D%22middle%22%20font-family%3D%22Kalam%2C%20cursive%22%20font-size%3D%2222%22%20font-weight%3D%22700%22%20fill%3D%22%23ffffff%22%3EM.%C5%A0.%3C/text%3E%0A%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="data.js"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,18 +19,22 @@
 <button class="homeBtn" onclick="showPage('home')" aria-label="Domů">🏠</button>
 
 <h1>Rotace a kalkulačky</h1>
-<div id="shiftTime">Do konce směny zbývá 1 h 17 min</div>
+<div id="shiftTime">Aktuálně v práci: směna A (ranní)<br>Směna D začne za: 2 d 8 h 2 min</div>
 <div class="version">
-  v0.89 | <span class="signature" id="signatureTap">Martin Špadrna</span>
+  v0.133 | <span class="signature" id="signatureTap">Martin Špadrna</span>
 </div>
 
 <!-- HOME -->
 <div id="home" class="page active">
   <div class="grid">
     <div class="tile big" onclick="showPage('rotace')">Rotace</div>
+    <div class="tile" onclick="showPage('soustruhy')">Soustruhy</div>
     <div class="tile" onclick="showPage('frezky')">Frézky</div>
     <div class="tile" onclick="showPage('brusy')">Brusy</div>
     <div class="tile" onclick="showPage('pracka')">Pračka</div>
+  </div>
+  <div class="homeDivider"></div>
+  <div class="grid">
     <div class="tile" onclick="window.open('https://sa.gthcatering.cz/restaurant/c1/', '_blank', 'noopener')">Jídelní lístek</div>
     <div class="tile" onclick="window.open('https://space.skoda.vwgroup.com/', '_blank', 'noopener')">Eportal</div>
   </div>
@@ -42,45 +49,108 @@
   </div>
 
   <div class="subNav">
-    <div class="tile rotTab" id="tabNames" onclick="setRotaceView('names')">Jména</div>
-    <div class="tile rotTab" id="tabMonths" onclick="setRotaceView('months')">Měsíční rozpisy</div>
-    <div class="tile rotTab" id="tabStats" onclick="setRotaceView('stats')">Statistiky</div>
+    <div class="tile rotTab" id="tabNames" onclick="setRotaceView('names')" style="outline: none;">Jména</div>
+    <div class="tile rotTab" id="tabMonths" onclick="setRotaceView('months')" style="outline: rgb(124, 255, 124) solid 3px;">Měsíční rozpisy</div>
+    <div class="tile rotTab" id="tabStats" onclick="setRotaceView('stats')" style="outline: none;">Statistiky</div>
   </div>
 
   <div id="rotaceNamesPanel" class="subPanel">
-    <div class="personCard" id="personView"><div class="smallText">Klikni na jméno a ukáže se, kam jde.</div></div>
     <div id="namesGrid" class="listGrid"><div class="listItem">Blažek</div><div class="listItem">Kmínek</div><div class="listItem">Kříž</div><div class="listItem">Novotný</div><div class="listItem">Pech</div><div class="listItem">Starý</div><div class="listItem">Střížek</div><div class="listItem">Synek</div><div class="listItem">Špadrna</div><div class="listItem">Třasák</div></div>
+    <div class="personCard" id="personView"></div>
   </div>
 
   <div id="rotaceStatsPanel" class="subPanel">
     <div class="card">
       <div class="sectionTitle">Statistiky</div>
       <label for="statsYearSelect">Rok</label>
-      <select id="statsYearSelect"></select>
-      <div class="smallText" style="margin-top:10px;">Klikni na jméno a ukáže se práce i úklid za vybraný rok.</div>
-      <div id="statsNameGrid" class="listGrid"></div>
-      <div id="statsView" class="personCard"><div class="smallText">Klikni na jméno a ukáže se práce, úklid i nepřítomnost za vybraný rok.</div></div>
+      <select id="statsYearSelect"><option value="2025">2025</option><option value="2026">2026</option></select>
+
+      <div class="sectionTitle" style="margin-top:12px;">Jména</div>
+      <div id="statsNameGrid" class="listGrid"><div class="listItem">Blažek</div><div class="listItem">Kmínek</div><div class="listItem">Kříž</div><div class="listItem">Novotný</div><div class="listItem">Pech</div><div class="listItem">Starý</div><div class="listItem">Střížek</div><div class="listItem">Synek</div><div class="listItem">Špadrna</div><div class="listItem">Třasák</div></div>
+      <div id="statsNameView" class="personCard"></div>
+
+      <div class="sectionTitle" style="margin-top:12px;">Stroje</div>
+      <div id="statsMachineGrid" class="listGrid"><div class="listItem" data-machine="MSK">MSK</div><div class="listItem" data-machine="MFK">MFK</div><div class="listItem" data-machine="TNK">TNK</div><div class="listItem" data-machine="TBK">TBK</div><div class="listItem" data-machine="W02">W02</div><div class="listItem" data-machine="W01">W01</div></div>
+      <div id="statsMachineView" class="personCard"></div>
     </div>
   </div>
 
   <div id="rotaceMonthsPanel" class="subPanel active">
     <div class="card" style="padding:12px;">
       <label for="monthYearSelect">Rok</label>
-      <select id="monthYearSelect"></select>
-      <div id="monthsGrid" class="listGrid"></div>
+      <select id="monthYearSelect"><option value="2025">2025</option><option value="2026">2026</option></select>
+      <div id="monthsGrid" class="listGrid"><div class="listItem">1/26</div><div class="listItem">2/26</div><div class="listItem">3/26</div><div class="listItem">4/26</div><div class="listItem activeChoice">5/26</div><div class="listItem">6/26</div><div class="listItem">7/26</div><div class="listItem">8/26</div><div class="listItem">9/26</div><div class="listItem">10/26</div><div class="listItem">11/26</div><div class="listItem">12/26</div></div>
     </div>
     <div class="adminBox" id="adminBox" style="display: block;">
       <div class="smallText">
         Import Excelu: nahraj celý sešit .xlsx. Rok pro přepsání si vyber nahoře; ostatní měsíce se jen doplní, pokud chybí.
       </div>
       <label for="importYearSelect">Rok importu</label>
-      <select id="importYearSelect"></select>
+      <select id="importYearSelect"><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option></select>
       <label for="overwriteMonth">Přepsat měsíc</label>
-      <select id="overwriteMonth"></select>
+      <select id="overwriteMonth"><option value="">— jen doplnit nové měsíce —</option><option value="1/26">1/26</option><option value="2/26">2/26</option><option value="3/26">3/26</option><option value="4/26">4/26</option><option value="5/26">5/26</option><option value="6/26">6/26</option><option value="7/26">7/26</option><option value="8/26">8/26</option><option value="9/26">9/26</option><option value="10/26">10/26</option><option value="11/26">11/26</option><option value="12/26">12/26</option></select>
       <input type="file" id="excelFile" accept=".xlsx,.xls">
-      <div class="adminActions"><button id="importBtn">Import Excelu</button><button id="exportBtn">Export HTML</button><button id="githubBtn" style="grid-column:1 / -1;">Otevřít GitHub upload</button></div>
+      <div class="adminActions"><button id="importBtn">Import Excelu</button><button id="exportBtn">Export ZIP</button><button id="githubBtn" style="grid-column:1 / -1;">Otevřít GitHub upload</button></div>
     </div>
-    <div id="monthView" class="card"></div>
+    <div id="monthView" class="card"><div class="sectionTitle">5/26</div><div class="smallText" style="margin-top:10px;font-weight:bold;">Tvrdota</div><div class="tableWrap"><table class="rotTable"><thead><tr><th>Datum</th><th>TNKS01</th><th>TBKR07</th><th>TPKW01</th><th>TPKW02</th><th>TBKR01</th></tr></thead><tbody><tr><td class="dateCell">4.5. N</td><td>Špadrna</td><td>Blažek</td><td>Střížek</td><td>Pech</td><td>Kmínek</td></tr><tr><td class="dateCell">5.5. N</td><td>Kříž</td><td>Pech</td><td>Synek</td><td>Starý</td><td>Kmínek</td></tr><tr><td class="dateCell">9.5. R</td><td>Kmínek</td><td>Kříž</td><td>Třasák</td><td>Blažek</td><td>Špadrna</td></tr><tr><td class="dateCell">10.5. R8</td><td>Starý</td><td>Špadrna</td><td>Kříž</td><td>Pech</td><td>Blažek</td></tr><tr><td class="dateCell">13.5. N</td><td>Blažek</td><td>Starý</td><td>Špadrna</td><td>Střížek</td><td>Pech</td></tr><tr><td class="dateCell">14.5. N</td><td>Pech</td><td>Blažek</td><td>Starý</td><td>Třasák</td><td>Kříž</td></tr><tr><td class="dateCell">18.5. R</td><td>Kříž</td><td>Pech</td><td>Blažek</td><td>Synek</td><td>Novotný</td></tr><tr><td class="dateCell">19.5. R</td><td>Střížek</td><td>Kříž</td><td>Pech</td><td>Blažek</td><td>Starý</td></tr><tr><td class="dateCell">22.5. N</td><td>Synek</td><td>Novotný</td><td>Starý</td><td>Špadrna</td><td>Blažek</td></tr><tr><td class="dateCell">23.5. N</td><td>Blažek</td><td>Starý</td><td>Novotný</td><td>Kříž</td><td>Pech</td></tr><tr><td class="dateCell">24.5. N8</td><td>Špadrna</td><td>Novotný</td><td>Střížek</td><td>Synek</td><td>Kříž</td></tr><tr><td class="dateCell">27.5. R</td><td>Kříž</td><td>Pech</td><td>Synek</td><td>Starý</td><td>Novotný</td></tr><tr><td class="dateCell">28.5. R</td><td>Novotný</td><td>Kříž</td><td>Pech</td><td>Blažek</td><td>Starý</td></tr></tbody></table></div><div class="smallText" style="margin-top:10px;font-weight:bold;">Měkota</div><div class="tableWrap"><table class="rotTable"><thead><tr><th>Datum</th><th>MSKC01</th><th>MSKC03</th><th>MSKC04</th><th>MFKF06</th><th>MFKF10</th></tr></thead><tbody><tr><td class="dateCell">4.5. N</td><td>Starý</td><td>Kříž</td><td>Synek</td><td class="missingCell">—</td><td>Třasák</td></tr><tr><td class="dateCell">5.5. N</td><td>Třasák</td><td>Střížek</td><td>Špadrna</td><td class="missingCell">—</td><td>Blažek</td></tr><tr><td class="dateCell">9.5. R</td><td class="missingCell">—</td><td>Střížek</td><td>Synek</td><td class="missingCell">—</td><td>Pech</td></tr><tr><td class="dateCell">10.5. R8</td><td>Třasák</td><td>Střížek</td><td>Kmínek</td><td class="missingCell">—</td><td>Synek</td></tr><tr><td class="dateCell">13.5. N</td><td>Třasák</td><td>Synek</td><td>Kmínek</td><td class="missingCell">—</td><td>Kříž</td></tr><tr><td class="dateCell">14.5. N</td><td>Špadrna</td><td>Střížek</td><td>Synek</td><td class="missingCell">—</td><td>Kmínek</td></tr><tr><td class="dateCell">18.5. R</td><td class="missingCell">—</td><td>Střížek</td><td>Špadrna</td><td class="missingCell">—</td><td>Starý</td></tr><tr><td class="dateCell">19.5. R</td><td class="missingCell">—</td><td>Střížek</td><td>Synek</td><td class="missingCell">—</td><td>Novotný</td></tr><tr><td class="dateCell">22.5. N</td><td class="missingCell">—</td><td>Špadrna</td><td>Kříž</td><td class="missingCell">—</td><td>Pech</td></tr><tr><td class="dateCell">23.5. N</td><td class="missingCell">—</td><td>Střížek</td><td>Synek</td><td class="missingCell">—</td><td>Špadrna</td></tr><tr><td class="dateCell">24.5. N8</td><td class="missingCell">—</td><td>Pech</td><td>Blažek</td><td class="missingCell">—</td><td>Starý</td></tr><tr><td class="dateCell">27.5. R</td><td class="missingCell">—</td><td>Špadrna</td><td>Blažek</td><td class="missingCell">—</td><td>Střížek</td></tr><tr><td class="dateCell">28.5. R</td><td class="missingCell">—</td><td>Střížek</td><td>Synek</td><td class="missingCell">—</td><td>Špadrna</td></tr></tbody></table></div><div class="smallText" style="margin-top:12px;font-weight:bold;">Dovolené / absence</div><div class="tableWrap"><table class="noteTable"><thead><tr><th>Datum</th><th>Směna</th><th>Jméno</th><th>Důvod</th><th class="noteSpacer"></th><th>Datum</th><th>Směna</th><th>Jméno</th><th>Důvod</th></tr></thead><tbody><tr><td>4.5.</td><td>N</td><td>Novotný</td><td>Lázně</td><td class="noteSpacer"></td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td></tr><tr><td>5.5.</td><td>N</td><td>Novotný</td><td>Lázně</td><td class="noteSpacer"></td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td></tr><tr><td>9.5.</td><td>R</td><td>Novotný</td><td>Lázně</td><td class="noteSpacer"></td><td>9.5.</td><td>R</td><td>Starý</td><td>Dovolená</td></tr><tr><td>10.5.</td><td>R8</td><td>Novotný</td><td>Lázně</td><td class="noteSpacer"></td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td></tr><tr><td>13.5.</td><td>N</td><td>Novotný</td><td>Lázně</td><td class="noteSpacer"></td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td></tr><tr><td>14.5.</td><td>N</td><td>Novotný</td><td>Lázně</td><td class="noteSpacer"></td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td><td class="emptyCell">—</td></tr><tr><td>18.5.</td><td>R</td><td>Kmínek</td><td>Lázně</td><td class="noteSpacer"></td><td>18.5.</td><td>R</td><td>Třasák</td><td>Lázně</td></tr><tr><td>19.5.</td><td>R</td><td>Kmínek</td><td>Lázně</td><td class="noteSpacer"></td><td>19.5.</td><td>R</td><td>Třasák</td><td>Lázně</td></tr><tr><td>22.5.</td><td>N</td><td>Kmínek</td><td>Lázně</td><td class="noteSpacer"></td><td>22.5.</td><td>N</td><td>Třasák</td><td>Lázně</td></tr><tr><td>23.5.</td><td>N</td><td>Kmínek</td><td>Lázně</td><td class="noteSpacer"></td><td>23.5.</td><td>N</td><td>Třasák</td><td>Lázně</td></tr><tr><td>24.5.</td><td>N8</td><td>Kmínek</td><td>Lázně</td><td class="noteSpacer"></td><td>24.5.</td><td>N8</td><td>Třasák</td><td>Lázně</td></tr><tr><td>27.5.</td><td>R</td><td>Kmínek</td><td>Lázně</td><td class="noteSpacer"></td><td>27.5.</td><td>R</td><td>Třasák</td><td>Lázně</td></tr><tr><td>28.5.</td><td>R</td><td>Kmínek</td><td>Lázně</td><td class="noteSpacer"></td><td>28.5.</td><td>R</td><td>Třasák</td><td>Lázně</td></tr></tbody></table></div></div>
+  </div>
+</div>
+
+
+<!-- SOUSTRUHY -->
+<div id="soustruhy" class="page">
+  <div class="headerBar">
+    <div></div>
+    <h3>Soustruhy</h3>
+    <button class="resetBtn" onclick="resetSoustruhy()" title="Reset polí" aria-label="Reset polí">↻</button>
+  </div>
+
+  <div class="card">
+    <div class="bgrid" style="margin-bottom:12px;">
+      <div class="bbtn" data-soustruh-mode="lis" onclick="setSoustruhMode('lis')">Lis</div>
+      <div class="bbtn activeChoice" data-soustruh-mode="126" onclick="setSoustruhMode('126')">Volné 126ks</div>
+      <div class="bbtn" data-soustruh-mode="106" onclick="setSoustruhMode('106')">Volné 106ks</div>
+    </div>
+
+    <div id="soustruhyLisPanel" class="subPanel">
+      <div class="smallText">Lis: Zadej číslo první dávky a plán. Počítá se po 32 ks.</div>
+      <label>Číslo první dávky</label>
+      <input id="lis_first" type="number">
+      <label>Plán výroby</label>
+      <input id="lis_plan" type="number">
+      <button onclick="calcSoustruhyLis()">Spočítej lis</button>
+      <div class="card" id="soustruhyLisResult"></div>
+    </div>
+
+    <div id="soustruhy126Panel" class="subPanel active">
+      <div class="smallText">Volné 126ks: Zadej číslo první dávky, plán a jestli začínáš 32 nebo 31.</div>
+      <label>Číslo první dávky</label>
+      <input id="v126_first" type="number">
+      <label>Plán výroby</label>
+      <input id="v126_plan" type="number">
+      <div class="bgrid">
+        <div class="bbtn activeChoice" data-startsize="32" onclick="setSoustruh126Start(32)">Začínám 32 ks</div>
+        <div class="bbtn" data-startsize="31" onclick="setSoustruh126Start(31)">Začínám 31 ks</div>
+      </div>
+      <button onclick="calcSoustruhy126()">Spočítej 126</button>
+      <div class="card" id="soustruhy126Result"></div>
+    </div>
+
+    <div id="soustruhy106Panel" class="subPanel">
+      <div class="smallText">Volné 106ks: zadej číslo první dávky, první čtyři dávky a plán.</div>
+      <label>Číslo první dávky</label>
+      <input id="v106_first" type="number">
+      <div class="grid" style="grid-template-columns:1fr 1fr; gap:10px;">
+        <div><label>1. dávka ks</label><input id="v106_c1" type="number"></div>
+        <div><label>2. dávka ks</label><input id="v106_c2" type="number"></div>
+        <div><label>3. dávka ks</label><input id="v106_c3" type="number"></div>
+        <div><label>4. dávka ks</label><input id="v106_c4" type="number"></div>
+      </div>
+      <label>Plán výroby</label>
+      <input id="v106_plan" type="number">
+      <button onclick="calcSoustruhy106()">Spočítej 106</button>
+      <div class="card" id="soustruhy106Result"></div>
+    </div>
   </div>
 </div>
 
@@ -127,13 +197,13 @@
   </div>
 
   <div class="bgrid">
-    <div class="bbtn activeMachine" data-machine="TBKR01" onclick="setMachine('TBKR01')">TBKR01</div>
-    <div class="bbtn" data-machine="TBKR07" onclick="setMachine('TBKR07')">TBKR07</div>
+    <div class="bbtn" data-machine="TBKR01" onclick="setMachine('TBKR01')">TBKR01</div>
+    <div class="bbtn activeMachine activeChoice" data-machine="TBKR07" onclick="setMachine('TBKR07')">TBKR07</div>
   </div>
 
   <div class="indexGrid">
-    <div class="bbtn ad activeIndex" data-prog="AD" onclick="setProg('AD')">AD</div>
-    <div class="bbtn ae" data-prog="AE" onclick="setProg('AE')">AE</div>
+    <div class="bbtn ad" data-prog="AD" onclick="setProg('AD')">AD</div>
+    <div class="bbtn ae activeIndex activeChoice" data-prog="AE" onclick="setProg('AE')">AE</div>
     <div class="bbtn ah" data-prog="AH" onclick="setProg('AH')">AH</div>
 
     <div class="freeWrap">
@@ -141,6 +211,8 @@
       <div class="bbtn aev" data-prog="AEV" onclick="setProg('AEV')">AE volné</div>
     </div>
   </div>
+
+  <div class="card" id="brusyInfo"><div><b>TBKR07 / AE</b></div><div class="smallText">Vyroba kusu: 56,4 s · Orovnává po 58 ks · Orovnává 4 min</div></div>
 
   <label>Hotových kusů v dávce:</label>
   <input id="davka" type="number">
@@ -167,10 +239,15 @@
   <label>Hotovo kusů:</label>
   <input id="p_kusy" type="number">
 
+  <div class="smallText" style="margin-top:-4px;margin-bottom:8px;">V případě opsání kusů z tryskače je potřeba od výsledku odečíst 10 kusů.</div>
+
   <button onclick="calcP()">Spočítej kolik ještě stihnu</button>
 
   <div class="card" id="outP"></div>
 </div>
+
+
+
 
 <script src="app.js"></script>
 </body></html>
