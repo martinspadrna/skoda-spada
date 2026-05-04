@@ -1,5 +1,5 @@
 const APP_KEY = "rotace_kalkulacky_state_v122";
-const ROTATION_BUILD = "2026-05-02-v133-" + Date.now();
+const ROTATION_BUILD = "2026-05-02-v150-" + Date.now();
 
 const HARD_MACHINE_HEADERS = ["TNKS01", "TBKR07", "TPKW01", "TPKW02", "TBKR01"];
 const SOFT_MACHINE_HEADERS = ["MSKC01", "MSKC03", "MSKC04", "MFKF06", "MFKF10"];
@@ -53,7 +53,7 @@ const app = {
   selectedStatsMachine: null,
   soustruhMode: "lis",
   soustruhFirstBatch: "",
-  soustruhPlan: "",
+  soustruhPlan: "1248",
   soustruh126Start: 32,
   soustruh106Counts: ["", "", "", ""],
   selectedYear: new Date().getFullYear(),
@@ -232,12 +232,12 @@ function restoreInputs() {
   setVal("davka", "davka");
   setVal("orovnani", "orovnani");
   setVal("celkem", "celkem");
-  setVal("lis_first", "soustruhFirstBatch");
-  setVal("lis_plan", "soustruhPlan");
-  setVal("v126_first", "soustruhFirstBatch");
-  setVal("v126_plan", "soustruhPlan");
-  setVal("v106_first", "soustruhFirstBatch");
-  setVal("v106_plan", "soustruhPlan");
+  const lisPlanEl = document.getElementById("lis_plan");
+  if (lisPlanEl) lisPlanEl.value = "1248";
+  const v126PlanEl = document.getElementById("v126_plan");
+  if (v126PlanEl) v126PlanEl.value = "1248";
+  const v106PlanEl = document.getElementById("v106_plan");
+  if (v106PlanEl) v106PlanEl.value = "1248";
   try {
     const arr = JSON.parse(localStorage.getItem("soustruh106Counts") || "[\"\",\"\",\"\",\"\"]");
     ["v106_c1","v106_c2","v106_c3","v106_c4"].forEach((id, idx) => { const el = document.getElementById(id); if (el && !el.value) el.value = arr[idx] || ""; });
@@ -963,7 +963,8 @@ function calcF() {
   const celkem = hotovo + ks;
   document.getElementById("outF").innerHTML =
     "Do konce směny ještě stihneš " + ks + " ks, tj. " + formatDoses(ks) + " dávek.<br>" +
-    "Celkově budeš mít " + celkem + " ks, tj. " + formatDoses(celkem) + " dávek.";
+    "Celkově budeš mít " + celkem + " ks, tj. " + formatDoses(celkem) + " dávek.<br><br>" +
+    "Na obou frézkách ještě stihneš " + (ks * 2) + " ks, tj. " + formatDoses(ks * 2) + " dávek.";
   saveRotationData();
 }
 
@@ -1122,12 +1123,9 @@ function renderSoustruhy() {
   const v106C3 = document.getElementById('v106_c3');
   const v106C4 = document.getElementById('v106_c4');
 
-  if (lisFirst && !lisFirst.value) lisFirst.value = app.soustruhFirstBatch || '';
-  if (lisPlan && !lisPlan.value) lisPlan.value = app.soustruhPlan || '';
-  if (v126First && !v126First.value) v126First.value = app.soustruhFirstBatch || '';
-  if (v126Plan && !v126Plan.value) v126Plan.value = app.soustruhPlan || '';
-  if (v106First && !v106First.value) v106First.value = app.soustruhFirstBatch || '';
-  if (v106Plan && !v106Plan.value) v106Plan.value = app.soustruhPlan || '';
+  if (lisPlan && !lisPlan.value) lisPlan.value = app.soustruhPlan || '1248';
+  if (v126Plan && !v126Plan.value) v126Plan.value = app.soustruhPlan || '1248';
+  if (v106Plan && !v106Plan.value) v106Plan.value = app.soustruhPlan || '1248';
   if (v106C1 && !v106C1.value) v106C1.value = app.soustruh106Counts[0] || '';
   if (v106C2 && !v106C2.value) v106C2.value = app.soustruh106Counts[1] || '';
   if (v106C3 && !v106C3.value) v106C3.value = app.soustruh106Counts[2] || '';
@@ -1148,7 +1146,6 @@ function calcSoustruhyLis() {
     out.innerHTML = "<div class='smallText'>Doplň první dávku a plán.</div>";
     return;
   }
-  app.soustruhFirstBatch = String(first);
   app.soustruhPlan = String(plan);
   const batches = getSoustruhBatchList(first, [32], plan);
   out.innerHTML = renderBatchResult('Lis', batches, plan, first);
@@ -1163,7 +1160,6 @@ function calcSoustruhy126() {
     out.innerHTML = "<div class='smallText'>Doplň první dávku a plán.</div>";
     return;
   }
-  app.soustruhFirstBatch = String(first);
   app.soustruhPlan = String(plan);
   const startSize = app.soustruh126Start === 31 ? 31 : 32;
   const sizes = startSize === 32 ? [32, 31] : [31, 32];
@@ -1186,7 +1182,6 @@ function calcSoustruhy106() {
     out.innerHTML = "<div class='smallText'>Doplň první dávku, plán a první čtyři dávky.</div>";
     return;
   }
-  app.soustruhFirstBatch = String(first);
   app.soustruhPlan = String(plan);
   app.soustruh106Counts = counts.map(v => String(v));
   const batches = getSoustruhBatchList(first, counts, plan);
@@ -1484,6 +1479,28 @@ function renderRotace() {
   document.getElementById("adminBox").style.display = app.adminUnlocked ? "block" : "none";
 }
 
+function getSoftMachineDisplayLabel(entry, rotation) {
+  const machine = String(entry && entry.machine ? entry.machine : "").trim();
+  if (!machine) return "";
+  if (String(entry && entry.section ? entry.section : "") !== "soft" || machine !== "MFKF10") return machine;
+
+  const month = rotation && rotation.months ? rotation.months[entry.monthKey] : null;
+  const soft = month && month.soft ? month.soft : null;
+  if (!soft || !Array.isArray(soft.rows) || !Array.isArray(soft.machines)) return machine;
+
+  const row = soft.rows.find(r => String(r && r.date ? r.date : "").trim() === String(entry.date || "").trim());
+  if (!row) return machine;
+
+  const idx06 = soft.machines.indexOf("MFKF06");
+  const idx10 = soft.machines.indexOf("MFKF10");
+  if (idx10 < 0) return machine;
+
+  const has10 = String((row.cells || [])[idx10] || "").trim();
+  const has06 = idx06 >= 0 ? String((row.cells || [])[idx06] || "").trim() : "";
+  if (has10 && !has06) return "MFKF10 (+ MFKF06)";
+  return machine;
+}
+
 function renderPerson(name) {
   const personView = document.getElementById("personView");
   const rawEntries = (buildNameIndex(app.rotation)[name] || []).slice();
@@ -1534,7 +1551,7 @@ function renderPerson(name) {
         sortDate: group.sortDate,
         dateLabel: group.dateLabel || best.dateLabel || best.date || "",
         shift: best.shift || "",
-        target: best.absence ? (best.machine || "Dovolená") : (best.machine || "")
+        target: best.absence ? (best.machine || "Dovolená") : getSoftMachineDisplayLabel(best, app.rotation)
       };
     })
     .sort((a, b) => a.sortDate.localeCompare(b.sortDate));
@@ -1783,7 +1800,7 @@ async function exportCurrentHtml() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "rotace_v132.zip";
+    a.download = "rotace_v150.zip";
     document.body.appendChild(a);
     a.click();
     a.remove();
